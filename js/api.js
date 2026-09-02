@@ -1,18 +1,9 @@
 /**
  * (c) Athletecore Proprietary Biomechanical Engine
  * CONFIDENTIAL & PROTECTED - ALL RIGHTS RESERVED.
- * Unauthorized reverse-engineering, decompilation or redistribution is strictly prohibited.
  */
-var _0x$tbl = ["\x6e\x75\x6d\x62\x65\x72","\x47\x65\x6d\x69\x6e\x69\x20\x41\x50\x49\x20\x45\x72\x72\x6f\x72\x2c\x20\x66\x61\x6c\x6c\x69\x6e\x67\x20\x62\x61\x63\x6b\x20\x74\x6f\x20\x6f\x66\x66\x6c\x69\x6e\x65\x20\x61\x6e\x61\x6c\x79\x73\x69\x73\x3a","\xe2\x9a\xa0\xef\xb8\x8f\x20\x5b\x41\x50\x49\xe3\x82\xa8\xe3\x83\xa9\xe3\x83\xbc\xe3\x81\xab\xe3\x82\x88\xe3\x82\x8a\xe3\x82\xaa\xe3\x83\x95\xe3\x83\xa9\xe3\x82\xa4\xe3\x83\xb3\xe7\x94\x9f\xe6\x88\x90\xe3\x81\x95\xe3\x82\x8c\xe3\x81\xbe\xe3\x81\x97\xe3\x81\x9f\x3a\x20","\x5d\x5c\x6e\x5c\x6e","\x6c\x65\x66\x74\x5f\x61\x6e\x6b\x6c\x65","\x32\x37","\x72\x69\x67\x68\x74\x5f\x61\x6e\x6b\x6c\x65","\x32\x38","\x6e\x6f\x73\x65","\x30","\x6c\x65\x66\x74\x5f\x73\x68\x6f\x75\x6c\x64\x65\x72","\x31\x31","\x72\x69\x67\x68\x74\x5f\x73\x68\x6f\x75\x6c\x64\x65\x72","\x31\x32","\x6c\x65\x66\x74\x5f\x68\x69\x70","\x32\x33","\x72\x69\x67\x68\x74\x5f\x68\x69\x70","\x32\x34","\x64\x79\x6e\x5f\x6f\x76\x65\x72\x68\x65\x61\x64","\x6c\x65\x66\x74\x5f\x6b\x6e\x65\x65","\x32\x35","\x72\x69\x67\x68\x74\x5f\x6b\x6e\x65\x65","\x32\x36","\x64\x79\x6e\x5f\x6f\x76\x65\x72\x68\x65\x61\x64\x5f\x73\x69\x64\x65","\x6c\x65\x66\x74\x5f\x77\x72\x69\x73\x74","\x31\x35","\x72\x69\x67\x68\x74\x5f\x77\x72\x69\x73\x74","\x31\x36","\x64\x79\x6e\x5f\x66\x6c\x65\x78\x5f","\x67\x65\x6d\x69\x6e\x69\x2d\x32\x2e\x35\x2d\x66\x6c\x61\x73\x68","\xe3\x83\xbb\x34\xe9\x9a\x85\x41\x72\x55\x63\x6f\xe5\xba\x8a\xe9\x9d\xa2\xe5\xae\x9f\xe6\xb8\xac","\xe3\x83\xbb\xe5\x8f\x82\xe8\x80\x83\xe5\x80\xa4\xe3\x80\x81\x70\x78\x54\x6f\x43\x6d\x52\x61\x74\x69\x6f\xe3\x81\xab\xe3\x82\x88\xe3\x82\x8b\xe8\xbf\x91\xe4\xbc\xbc\xe6\x8f\x9b\xe7\xae\x97","\xe5\x8f\xb3\xe5\xaf\x84\xe3\x82\x8a","\xe5\xb7\xa6\xe5\xaf\x84\xe3\x82\x8a","\x20\x6d\x6d\x2f\x73","\xe7\xae\x97\xe5\x87\xba\xe4\xb8\x8d\xe5\x8f\xaf","\x6c\x5f\x73\x69\x64\x65","\x72\x5f\x73\x69\x64\x65","\xe5\x89\x8d\xe5\x82\xbe","\xe5\xbe\x8c\xe5\x82\xbe","\xe3\x83\x8b\xe3\x83\xa5\xe3\x83\xbc\xe3\x83\x88\xe3\x83\xa9\xe3\x83\xab","\x50\x4f\x53\x54","\x43\x6f\x6e\x74\x65\x6e\x74\x2d\x54\x79\x70\x65","\x61\x70\x70\x6c\x69\x63\x61\x74\x69\x6f\x6e\x2f\x6a\x73\x6f\x6e","\x66\x72\x6f\x6e\x74","\x62\x61\x63\x6b","\xe5\xb7\xa6\xe8\x84\x9a","\xe5\x8f\xb3\xe8\x84\x9a","\xe5\x89\x8d\xe5\x82\xbe\xe5\x81\xb4","\xe5\xbe\x8c\xe5\x82\xbe\xe5\x81\xb4","\xef\xbc\x88\x34\xe9\x9a\x85\x41\x72\x55\x63\x6f\xe5\xba\x8a\xe9\x9d\xa2\xe5\xae\x9f\xe6\xb8\xac\xef\xbc\x89","\xef\xbc\x88\xe5\x8f\x82\xe8\x80\x83\xe5\x80\xa4\xe3\x83\xbb\x70\x78\x54\x6f\x43\x6d\x52\x61\x74\x69\x6f\xe3\x81\xab\xe3\x82\x88\xe3\x82\x8b\xe8\xbf\x91\xe4\xbc\xbc\xe6\x8f\x9b\xe7\xae\x97\xef\xbc\x89","\xe3\x80\x90\xe9\x87\x8d\xe5\xba\xa6\xe3\x80\x91","\xe3\x80\x90\xe8\xbb\xbd\xe5\xba\xa6\xe3\x80\x9c\xe4\xb8\xad\xe7\xad\x89\xe5\xba\xa6\xe3\x80\x91","\xe5\xb7\xa6\xe5\x81\xb4","\xe5\x8f\xb3\xe5\x81\xb4","\xe5\x8f\xb3","\xe5\xb7\xa6","\x30\xc2\xb0\xef\xbc\x88\xe3\x83\x8b\xe3\x83\xa5\xe3\x83\xbc\xe3\x83\x88\xe3\x83\xa9\xe3\x83\xab\xef\xbc\x89","\xe5\x89\x8d\xe5\x82\xbe\x20","\xc2\xb0","\xe5\xbe\x8c\xe5\x82\xbe\x20","\xe3\x80\x90\xe4\xb8\xad\xe7\xad\x89\xe5\xba\xa6\xe3\x80\x91","\x47\x65\x6d\x69\x6e\x69\x20\x4d\x75\x6c\x74\x69\x2d\x56\x69\x65\x77\x20\x41\x50\x49\x20\x45\x72\x72\x6f\x72\x2c\x20\x66\x61\x6c\x6c\x69\x6e\x67\x20\x62\x61\x63\x6b\x20\x74\x6f\x20\x6f\x66\x66\x6c\x69\x6e\x65\x20\x61\x6e\x61\x6c\x79\x73\x69\x73\x3a","\xe2\x96\xa0\x20","\x2d\x20\xe5\xb7\xa6\xe5\x8f\xb3\xe8\x8d\xb7\xe9\x87\x8d\xe6\xaf\x94\xe7\x8e\x87\x3a\x20\xe5\x85\xa8\xe8\xba\xab\x20\xe5\xb7\xa6\x20","\x25\x20\x2f\x20\xe5\x8f\xb3\x20","\x25","\x2d\x20\xe9\x87\x8d\xe5\xbf\x83\xe5\x8b\x95\xe6\x8f\xba\xe9\x9d\xa2\xe7\xa9\x8d\x3a\x20","\x20\x6d\x6d\xc2\xb2","\xef\xbc\x88\xe5\x8f\x82\xe8\x80\x83\xe5\x80\xa4\xef\xbc\x89","\x2d\x20\xe9\xaa\xa8\xe7\x9b\xa4\xe3\x81\xae\xe5\x82\xbe\xe6\x96\x9c\xe8\xa7\x92\x3a\x20","\xc2\xb0\xef\xbc\x88","\xef\xbc\x89","\x5c\x6e","\x5c\x6e\x5c\x6e","\xe3\x80\x90\xe6\x9c\xaa\xe8\xa8\x88\xe6\xb8\xac\xe3\x81\xae\xe6\x96\xb9\xe5\x90\x91\xe3\x80\x91\x5c\x6e","\xe3\x80\x81","\xe6\x9c\xac\xe3\x82\xbb\xe3\x83\x83\xe3\x82\xb7\xe3\x83\xa7\xe3\x83\xb3\xe3\x81\xa7\xe3\x81\xaf","\xe9\x9d\x99\xe6\xad\xa2\xe5\xa7\xbf\xe5\x8b\xa2\xe3\x83\xbb","\xe3\x83\xbb","\xe3\x81\xae","\xe6\x96\xb9\xe5\x90\x91\xe3\x82\x92\xe8\xa8\x88\xe6\xb8\xac\xe3\x81\x97\xe3\x81\xbe\xe3\x81\x97\xe3\x81\x9f\xe3\x80\x82","\xe9\xaa\xa8\xe7\x9b\xa4\xe3\x81\xae\xe5\x82\xbe\xe6\x96\x9c\xe8\xa7\x92\xe3\x81\xaf\xe5\xb7\xa6\xe5\x81\xb4\xe9\x9d\xa2\x20","\xef\xbc\x89\xe3\x80\x81\xe5\x8f\xb3\xe5\x81\xb4\xe9\x9d\xa2\x20","\xef\xbc\x89\xe3\x81\xa7\xe3\x81\x97\xe3\x81\x9f\xe3\x80\x82","\x4e","\x4c","\x52","\xe3\x81\xae\xe3\x81\x84\xe3\x81\x9a\xe3\x82\x8c\xe3\x81\xab\xe3\x81\x8a\xe3\x81\x84\xe3\x81\xa6\xe3\x82\x82","\xe5\x81\xb4\xe3\x81\xb8\xe3\x81\xae\xe8\x8d\xb7\xe9\x87\x8d\xe5\x81\x8f\xe4\xbd\x8d\xe3\x81\x8c\xe7\xa2\xba\xe8\xaa\x8d\xe3\x81\x95\xe3\x82\x8c\xe3\x81\xa6\xe3\x81\x8a\xe3\x82\x8a\xe3\x80\x81\xe5\x8d\x98\xe4\xb8\x80\xe6\x96\xb9\xe5\x90\x91\xe3\x81\xae\xe6\xb8\xac\xe5\xae\x9a\xe8\xaa\xa4\xe5\xb7\xae\xe3\x81\xa7\xe3\x81\xaf\xe3\x81\xaa\xe3\x81\x8f\xe3\x80\x81\xe4\xb8\x80\xe8\xb2\xab\xe3\x81\x97\xe3\x81\x9f\xe5\xb7\xa6\xe5\x8f\xb3\xe9\x9d\x9e\xe5\xaf\xbe\xe7\xa7\xb0\xe3\x81\xae\xe3\x83\x91\xe3\x82\xbf\xe3\x83\xbc\xe3\x83\xb3\xe3\x81\x8c\xe7\x96\x91\xe3\x82\x8f\xe3\x82\x8c\xe3\x81\xbe\xe3\x81\x99\xe3\x80\x82","\xe6\x96\xb9\xe5\x90\x91\xe3\x81\x94\xe3\x81\xa8\xe3\x81\xab\xe8\x8d\xb7\xe9\x87\x8d\xe3\x81\xae\xe5\x81\x8f\xe4\xbd\x8d\xe5\x82\xbe\xe5\x90\x91\xe3\x81\x8c\xe4\xb8\x80\xe8\x87\xb4\xe3\x81\x97\xe3\x81\xa6\xe3\x81\x84\xe3\x81\xbe\xe3\x81\x9b\xe3\x82\x93\xe3\x80\x82\xe5\x8d\x98\xe7\x99\xba\xe3\x81\xae\xe6\xb8\xac\xe5\xae\x9a\xe8\xaa\xa4\xe5\xb7\xae\xe3\x81\xa7\xe3\x81\x82\xe3\x82\x8b\xe5\x8f\xaf\xe8\x83\xbd\xe6\x80\xa7\xe3\x82\x82\xe3\x81\x82\xe3\x82\x8a\xe3\x81\xbe\xe3\x81\x99\xe3\x81\x8c\xe3\x80\x81\xe5\x8b\x95\xe4\xbd\x9c\xe3\x81\xab\xe4\xbc\xb4\xe3\x81\x86\xe9\x87\x8d\xe5\xbf\x83\xe7\xa7\xbb\xe5\x8b\x95\xe3\x81\xae\xe5\xbd\xb1\xe9\x9f\xbf\xe3\x82\x82\xe8\x80\x83\xe3\x81\x88\xe3\x82\x89\xe3\x82\x8c\xe3\x82\x8b\xe3\x81\x9f\xe3\x82\x81\xe3\x80\x81\xe8\xa4\x87\xe6\x95\xb0\xe5\x9b\x9e\xe3\x81\xae\xe5\x86\x8d\xe6\xb8\xac\xe5\xae\x9a\xe3\x81\xa7\xe3\x81\xae\xe7\xa2\xba\xe8\xaa\x8d\xe3\x82\x92\xe6\x8e\xa8\xe5\xa5\xa8\xe3\x81\x97\xe3\x81\xbe\xe3\x81\x99\xe3\x80\x82","\xe5\x81\xb4\xe3\x81\xb8\xe3\x81\xae\xe8\x8d\xb7\xe9\x87\x8d\xe5\x81\x8f\xe4\xbd\x8d\xe3\x81\x8c\xe8\xa4\x87\xe6\x95\xb0\xe6\x96\xb9\xe5\x90\x91\xe3\x81\xa7\xe4\xb8\x80\xe8\xb2\xab\xe3\x81\x97\xe3\x81\xa6\xe3\x81\x84\xe3\x82\x8b\xe3\x81\x9f\xe3\x82\x81\xe3\x80\x81","\xe8\x84\x9a\xe3\x81\xae\xe7\x89\x87\xe8\x84\x9a\xe3\x83\x87\xe3\x83\x83\xe3\x83\x89\xe3\x83\xaa\xe3\x83\x95\xe3\x83\x88\xe7\xad\x89\xe3\x80\x81","\xe5\x81\xb4\xe3\x81\xae\xe6\x94\xaf\xe6\x8c\x81\xe6\x80\xa7\xe3\x82\x92\xe9\xab\x98\xe3\x82\x81\xe3\x82\x8b\xe3\x83\x88\xe3\x83\xac\xe3\x83\xbc\xe3\x83\x8b\xe3\x83\xb3\xe3\x82\xb0\xe3\x82\x92\xe5\x84\xaa\xe5\x85\x88\xe3\x81\x99\xe3\x82\x8b\xe3\x81\x93\xe3\x81\xa8\xe3\x81\x8c\xe6\x9c\x9b\xe3\x81\xbe\xe3\x82\x8c\xe3\x81\xbe\xe3\x81\x99\xe3\x80\x82","\x2a\x2a\xe6\x89\x80\xe8\xa6\x8b\xe3\x81\xab\xe5\x9f\xba\xe3\x81\xa5\xe3\x81\x8f\xe7\xb7\x8f\xe5\x90\x88\xe7\x9a\x84\xe3\x81\xaa\xe6\x94\xb9\xe5\x96\x84\xe3\x82\xa2\xe3\x83\x97\xe3\x83\xad\xe3\x83\xbc\xe3\x83\x81\x2a\x2a\x3a\x20","\x20","\xe2\x80\xbb\x20\xe4\xbb\x8a\xe5\x9b\x9e\xe3\x81\xaf","\xe3\x81\xae\xe3\x83\x87\xe3\x83\xbc\xe3\x82\xbf\xe3\x81\x8c\xe6\x8f\x83\xe3\x81\xa3\xe3\x81\xa6\xe3\x81\x84\xe3\x81\xaa\xe3\x81\x84\xe3\x81\x9f\xe3\x82\x81\xe3\x80\x81\xe4\xb8\x8a\xe8\xa8\x98\xe3\x81\xaf\xe3\x81\x82\xe3\x81\x8f\xe3\x81\xbe\xe3\x81\xa7\xe5\x8f\x82\xe8\x80\x83\xe6\x83\x85\xe5\xa0\xb1\xe3\x81\xa8\xe3\x81\x97\xe3\x81\xa6\xe3\x81\x94\xe7\xa2\xba\xe8\xaa\x8d\xe3\x81\x8f\xe3\x81\xa0\xe3\x81\x95\xe3\x81\x84\xe3\x80\x82","\xe9\x9d\x99\xe6\xad\xa2\xe5\xa7\xbf\xe5\x8b\xa2\xe3\x83\xbb\xe5\x89\x8d\xe9\x9d\xa2","\xe9\x9d\x99\xe6\xad\xa2\xe5\xa7\xbf\xe5\x8b\xa2\xe3\x83\xbb\xe5\xbe\x8c\xe9\x9d\xa2","\xe9\x9d\x99\xe6\xad\xa2\xe5\xa7\xbf\xe5\x8b\xa2\xe3\x83\xbb\xe5\xb7\xa6\xe5\x81\xb4\xe9\x9d\xa2","\xe9\x9d\x99\xe6\xad\xa2\xe5\xa7\xbf\xe5\x8b\xa2\xe3\x83\xbb\xe5\x8f\xb3\xe5\x81\xb4\xe9\x9d\xa2","\xe3\x82\xaa\xe3\x83\xbc\xe3\x83\x90\xe3\x83\xbc\xe3\x83\x98\xe3\x83\x83\xe3\x83\x89\xe3\x82\xb9\xe3\x82\xaf\xe3\x83\xaf\xe3\x83\x83\xe3\x83\x88\x20\x28\xe5\x89\x8d\xe9\x9d\xa2\x29","\xe3\x82\xaa\xe3\x83\xbc\xe3\x83\x90\xe3\x83\xbc\xe3\x83\x98\xe3\x83\x83\xe3\x83\x89\xe3\x82\xb9\xe3\x82\xaf\xe3\x83\xaf\xe3\x83\x83\xe3\x83\x88\x20\x28\xe5\x81\xb4\xe9\x9d\xa2\x29","\x64\x79\x6e\x5f\x73\x69\x6e\x67\x6c\x65\x5f\x72","\xe7\x89\x87\xe8\x84\x9a\xe7\xab\x8b\xe4\xbd\x8d\xe3\x83\x90\xe3\x83\xa9\xe3\x83\xb3\xe3\x82\xb9\x20\x28\xe5\x8f\xb3\xe8\xbb\xb8\xe8\x84\x9a\x29","\x64\x79\x6e\x5f\x73\x69\x6e\x67\x6c\x65\x5f\x6c","\xe7\x89\x87\xe8\x84\x9a\xe7\xab\x8b\xe4\xbd\x8d\xe3\x83\x90\xe3\x83\xa9\xe3\x83\xb3\xe3\x82\xb9\x20\x28\xe5\xb7\xa6\xe8\xbb\xb8\xe8\x84\x9a\x29","\x64\x79\x6e\x5f\x66\x6c\x65\x78\x5f\x66\x77\x64","\xe7\xab\x8b\xe4\xbd\x8d\xe4\xbd\x93\xe5\x89\x8d\xe5\xb1\x88\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88","\x64\x79\x6e\x5f\x66\x6c\x65\x78\x5f\x62\x77\x64","\xe7\xab\x8b\xe4\xbd\x8d\xe4\xbd\x93\xe5\xbe\x8c\xe5\xb1\x88\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88","\x64\x79\x6e\x5f\x73\x68\x6f\x75\x6c\x64\x65\x72\x5f\x72","\xe8\x82\xa9\xe8\xa4\x87\xe5\x90\x88\xe5\x8f\xaf\xe5\x8b\x95\xe6\x80\xa7\x20\x28\xe5\x8f\xb3\xe4\xb8\x8a\x29","\x64\x79\x6e\x5f\x73\x68\x6f\x75\x6c\x64\x65\x72\x5f\x6c","\xe8\x82\xa9\xe8\xa4\x87\xe5\x90\x88\xe5\x8f\xaf\xe5\x8b\x95\xe6\x80\xa7\x20\x28\xe5\xb7\xa6\xe4\xb8\x8a\x29"];
-function _0x$getStr(idx) {
-    var raw = _0x$tbl[idx];
-    try {
-        var bytes = raw.match(/\\x[0-9a-f]{2}/gi);
-        if (!bytes) return raw;
-        var u8 = new Uint8Array(bytes.map(function(b){ return parseInt(b.slice(2), 16); }));
-        return new TextDecoder('utf-8').decode(u8);
-    } catch(e) { return raw; }
-}
+var _0x$b=["bnVtYmVy","R2VtaW5pIEFQSSBFcnJvciwgZmFsbGluZyBiYWNrIHRvIG9mZmxpbmUgYW5hbHlzaXM6","4pqg77iPIFtBUEnjgqjjg6njg7zjgavjgojjgorjgqrjg5Xjg6njgqTjg7PnlJ/miJDjgZXjgozjgb7jgZfjgZ86IA==","XVxuXG4=","XG5cbi0tLVxuXG4jIyDwn5Gp4oCN4pqV77iPIOaLheW9k+WwgumWgOWutuODu+ODoeODs+OCv+ODvOOBq+OCiOOCi+ipleS+oeOCq+ODq+ODhlxu","KirmjIflsI7ogIXjgqLjgrvjgrnjg6Hjg7Pjg4gqKjpcbiR7c2Vzc2lvbi5leHBlcnRDb21tZW50fVxuXG4=","KirmjIflsI7ogIXlh6bmlrnjg6rjg4/jg5Pjg6rjg6Hjg4vjg6Xjg7wqKjpcbiR7c2Vzc2lvbi5leHBlcnRFeGVyY2lzZXN9XG4=","bGVmdF9hbmtsZQ==","Mjc=","cmlnaHRfYW5rbGU=","Mjg=","bm9zZQ==","bGVmdF9zaG91bGRlcg==","MTE=","cmlnaHRfc2hvdWxkZXI=","MTI=","bGVmdF9oaXA=","MjM=","cmlnaHRfaGlw","MjQ=","ZHluX292ZXJoZWFk","bGVmdF9rbmVl","MjU=","cmlnaHRfa25lZQ==","MjY=","ZHluX292ZXJoZWFkX3NpZGU=","bGVmdF93cmlzdA==","MTU=","cmlnaHRfd3Jpc3Q=","MTY=","ZHluX2ZsZXhf","Z2VtaW5pLTIuNS1mbGFzaA==","aHR0cHM6Ly9nZW5lcmF0aXZlbGFuZ3VhZ2UuZ29vZ2xlYXBpcy5jb20vdjFiZXRhL21vZGVscy8ke21vZGVsfTpnZW5lcmF0ZUNvbnRlbnQ/a2V5PSR7YXBpS2V5fQ==","LSDotrPlupXlnKfkuK3lv4MgKENPUCkg6YeN5b+D5YuV5o+644OH44O844K/77yI5Y2Y5L2NOiBtbSR7c3cucHJlY2lzZSA/ICfjg7s06ZqFQXJVY2/luorpnaLlrp/muKwnIDogJ+ODu+WPguiAg+WApOOAgXB4VG9DbVJhdGlv44Gr44KI44KL6L+R5Ly85o+b566XJ33vvIk6CiAgLSDlt6blj7Pjga7lubPlnYflgY/kvY06ICR7c3cuYXZnRGV2aWF0aW9uWC50b0ZpeGVkKDEpfSBtbSAoJHtzdy5hdmdEZXZpYXRpb25YID4gMCA/ICLlj7Plr4TjgooiIDogIuW3puWvhOOCiiJ9KQogIC0g6YeN5b+D5YuV5o+66Z2i56mNICg5NSXkv6HpoLzmpZXlhobov5HkvLwpOiAke3N3LnN3YXlBcmVhLnRvRml4ZWQoMSl9IG1twrIKICAtIOe3j+i7jOi3oemVtzogJHtzdy5wYXRoTGVuZ3RoLnRvRml4ZWQoMSl9IG1tCiAgLSDlubPlnYfli5Xmj7rpgJ/luqY6ICR7c3cuc3dheVNwZWVkICE9PSBudWxsID8gc3cuc3dheVNwZWVkLnRvRml4ZWQoMSkgKyAiIG1tL3MiIDogIueul+WHuuS4jeWPryJ9","44GC44Gq44Gf44Gv55CG5a2m55mC5rOV5aOr44CB44OQ44Kk44Kq44Oh44Kr44OL44Kv44K556CU56m26ICF44CB44GK44KI44GzQUnoh6jluorlp7/li6LliIbmnpDjga7lsILploDlrrbjgafjgZnjgIIK5Lul5LiL44Gu5ae/5Yui44O75YuV5L2c6KiI5ris44OH44O844K/44Gr5Z+644Gl44GE44Gm44CB5qW144KB44Gm6Kmz57Sw44Gn5bCC6ZaA55qE44Gq6Ieo5bqK44OQ44Kk44Kq44Oh44Kr44OL44Kv44K56KmV5L6h44Os44Od44O844OI44KS5pel5pys6Kqe44Gn5L2c5oiQ44GX44Gm44GP44Gg44GV44GE44CCCgrjgJDoqIjmuKzjg4fjg7zjgr/jgJEKLSDmuKzlrprpoIXnm646ICR7bWV0cmljcy5tb2RlfSAoJHt0aGlzLmdldE1vZGVOYW1lSnAobWV0cmljcy5tb2RlKX0pCi0g6KKr5ris5a6a6ICF44Gu6Lqr6ZW3OiAke21ldHJpY3MuaGVpZ2h0fSBjbQotIOiiq+a4rOWumuiAheOBrui2s+OCteOCpOOCujogJHttZXRyaWNzLmZvb3RTaXplfSBjbQotIOe3j+ioiOa4rOODleODrOODvOODoOaVsDogJHttZXRyaWNzLmZyYW1lQ291bnR9Cgoke21ldHJpY3Mud2VpZ2h0QmVhcmluZyA/IA==","IDogIiJ9Cgoke3N3YXlUZXh0fQoKJHtPYmplY3Qua2V5cyhtZXRyaWNzLmpvaW50QW5nbGVzKS5sZW5ndGggPiAwID8g","IDogIiJ9CgokeyhtZXRyaWNzLm1vZGUgPT09ICdsX3NpZGUnIHx8IG1ldHJpY3MubW9kZSA9PT0gJ3Jfc2lkZScpID8g","5YmN5YK+","5b6M5YK+","44OL44Ol44O844OI44Op44Or","IDogIiJ9Cgoke1NUQVRJQ19NT0RFUy5pbmRleE9mKG1ldHJpY3MubW9kZSkgIT09IC0xID8g","IDog","UE9TVA==","Q29udGVudC1UeXBl","YXBwbGljYXRpb24vanNvbg==","SFRUUCAke3Jlc3BvbnNlLnN0YXR1c306ICR7ZXJyVGV4dH0=","IyDwn5OKIOODkOOCpOOCquODoeOCq+ODi+OCr+OCueewoeaYk+ipleS+oeODrOODneODvOODiCAoQ09OTkVDVCBBSSBFeHBlcnQgTG9jYWwgRW5naW5lKVxuXG4=","KirmuKzlrprpoIXnm64qKjogJHt0aGlzLmdldE1vZGVOYW1lSnAobW9kZSl9ICBcbg==","KiroqIjmuKzml6XmmYIqKjogJHtuZXcgRGF0ZShtZXRyaWNzLnRpbWVzdGFtcCkudG9Mb2NhbGVTdHJpbmcoKX0gIFxuXG4=","IyMg8J+TiyDpnZnmraLlp7/li6LjgqLjg6njgqTjg6Hjg7Pjg4joqZXkvqFcbg==","ZnJvbnQ=","YmFjaw==","5YmN6Z2iL+W+jOmdouOCouODqeOCpOODoeODs+ODiOa4rOWumuOBq+OBiuOBhOOBpuOAgeWGoOeKtumdou+8iOW3puWPs++8ieOBp+OBruWvvuensOaAp+OBqOiNt+mHjeWIhuW4g+OCkuipleS+oeOBl+OBvuOBl+OBn+OAglxu","4oC7IOacrOa4rOWumuOBr+OAjOOCouODq+OCs+ODnuODvOOCq+ODvOato+S4ree3muODouODvOODieOAje+8iDTpmoVBclVjb+agoeato+a4iOOBv+OBruWbuuWumuioree9rueSsOWig+OBq+OBiuOBkeOCi+e1tuWvvuWfuua6lue3mu+8ieOBp+ipleS+oeOBl+OBpuOBhOOBvuOBmeOAguWfuua6lueCueOBr+W3puWPs+OBrui2s+OBruS4reeCueOBp+OBr+OBquOBj+OAgeagoeato+a4iOOBv+ODnuODvOOCq+ODvOODnOODvOODieS4reW/g+OBruaKleW9seS9jee9ruOBp+OBmeOAglxu","5bem5Y+z44Gu6I236YeN44OQ44Op44Oz44K544Gv5qW144KB44Gm6Imv5aW977yI5bem5Y+z5beuICR7ZGlmZjAudG9GaXhlZCgxKX0l77yJ44Gn44CB44G744G85Z2H562J44Gr6I236YeN44GM5YiG5pWj44GV44KM44Gm44GE44G+44GZ44CC6aqo5qC844Gr44GL44GL44KL6Z2Z55qE6LKg6I2344Gv5a++56ew55qE44Gn44GZ44CCXG4=","5bem5Y+z44Gu6I236YeN44Gr6Lu95bqm44Gq6Z2e5a++56ew5oCn77yI5bem5Y+z5beuICR7ZGlmZjAudG9GaXhlZCgxKX0l77yJ44GM6Kaz5a+f44GV44KM44G+44GZ44CC6I236YeN5YGP5L2N5YG044GvICoqJHt3Yi50b3RhbC5MID4gd2IudG90YWwuUiA/ICLlt6bohJoiIDogIuWPs+iEmiJ9Kiog44Gn44GZ44CCXG4=","5bem5Y+z44Gu6I236YeN44Gr6aGV6JGX44Gq6Z2e5a++56ew5oCn77yI5bem5Y+z5beuICR7ZGlmZjAudG9GaXhlZCgxKX0l77yJ44GM6KaL44KJ44KM44G+44GZ44CCKioke3diLnRvdGFsLkwgPiB3Yi50b3RhbC5SID8gIuW3puiEmiIgOiAi5Y+z6ISaIn0qKiDjgavpgY7libDjgarojbfph43jgYzjgYvjgYvjgaPjgabjgYrjgorjgIHku6PlhJ/li5XkvZzjgoTplqLnr4Djga7lsYDmiYDnmoTjgrnjg4jjg6zjgrnjga7ljp/lm6Djgajjgarjgorjgb7jgZnjgIJcbg==","55+i54q26Z2i77yI5YG06Z2i77yJ44Ki44Op44Kk44Oh44Oz44OI5ris5a6a44Gr44GK44GE44Gm44CB44Kx44Oz44OA44Or44Gu5ae/5Yui5YiG6aGe44Gr5Z+644Gl44GP6KmV5L6h44KS6KGM44GE44G+44GX44Gf44CCXG4=","6aqo55uk44Gu5YK+5pac6KeSOiAqKiR7TWF0aC5hYnModGlsdCkudG9GaXhlZCgxKX3CsCoq77yIJHt0aWx0ID4gMCA/ICLliY3lgr7lgbQiIDogKHRpbHQgPCAwID8gIuW+jOWCvuWBtCIgOiAi44OL44Ol44O844OI44Op44OrIil977yJXG4=","6Z2Z5q2i5Lit44Gu6Laz5bqV5Zyn5Lit5b+D77yIQ09Q77yJ44Gu5YuV5o+6JHtzd2F5LnByZWNpc2UgPyAn77yINOmahUFyVWNv5bqK6Z2i5a6f5ris77yJJyA6ICfvvIjlj4LogIPlgKTjg7tweFRvQ21SYXRpb+OBq+OCiOOCi+i/keS8vOaPm+eul++8iSd944KC6KmV5L6h5a++6LGh44Gr5ZCr44KB44Gm44GE44G+44GZ44CCXG4=","XG4=","IyMg8J+UjSDmpJzlh7rjgZXjgozjgZ/lgY/kvY3jg7vjgqLjg7Pjg5Djg6njg7Pjgrnjga7oqbPntLBcbg==","44CQ6YeN5bqm44CR","44CQ6Lu95bqm44Cc5Lit562J5bqm44CR","LSAqKuiNt+mHjeODkOODqeODs+OCuemdnuWvvuensOaApyAke3NldmVyaXR5MX0qKjog6I236YeN5Lit5b+D44GMICR7d2IudG90YWwuTCA+IHdiLnRvdGFsLlIgPyAi5bem5YG0IiA6ICLlj7PlgbQifSDjgasgJHtkaWZmMS50b0ZpeGVkKDEpfSUg5YGP5L2N44GX44Gm44GE44G+44GZ44CCXG4=","LSAqKkNPUOmHjeW/g+WLleaPuumgmOWfn+OBruWil+WkpyDjgJDkuK3nrYnluqbjgJEqKjog5YuV5o+66Z2i56mN44GMICR7c3dheS5zd2F5QXJlYS50b0ZpeGVkKDEpfSBtbcKyJHtzd2F5LnByZWNpc2UgPyAn77yINOmahUFyVWNv5bqK6Z2i5a6f5ris77yJJyA6ICfvvIjlj4LogIPlgKTjg7tweFRvQ21SYXRpb+OBq+OCiOOCi+i/keS8vOaPm+eul++8iSd944Go5bqD44GP44CB6Z2Z55qE44OQ44Op44Oz44K544Gu57at5oyB44Gr44GK44GR44KL5a6J5a6a5oCn5L2O5LiL77yI6Laz5bqV5Y+X5a655Zmo44O75YmN5bqt57O744O76KaW6Kaa44Gr44KI44KL44OV44Kj44O844OJ44OQ44OD44Kv44Gu6YGF44KM44KE6Laz6Zai56+A44Gu5Ymb5oCn5LiN6Laz77yJ44KS56S644GX44Gm44GE44G+44GZ44CCXG4=","6aGV6JGX44Gq44OQ44Kk44Kq44Oh44Kr44OL44Kv44K555qE6YC46ISx44Gv5qSc5Ye644GV44KM44G+44Gb44KT44Gn44GX44Gf44CC44GZ44G544Gm44Ki44Op44Kk44Oh44Oz44OI5oyH5qiZ44Gv5a6J5YWo5Z+65rqW56+E5Zuy5YaF44Gn44GZ44CCXG4=","IyMg8J+Pi++4jyDmiYDopovjgavln7rjgaXjgY/mjqjlpajmlLnlloTjgqLjg5fjg63jg7zjg4Fcbg==","IyMjIOWFqOi6q+OBruOCs+OCouOCueOCv+ODk+ODquODhuOCo+OBrue2reaMgVxu","LSAqKuODkOODvOODieODieODg+OCsCAoQmlyZC1Eb2cpKipcbg==","ICAtIOOCv+ODvOOCsuODg+ODiDog6ISK5p+x6LW356uL562L44CB5aSa6KOC562L44CB6IeA562L44CB44Kz44Ki44Gu5a++6KeS5pSv5oyB5oCnXG4=","ICAtIOOCouODl+ODreODvOODgTog5Zub44Gk44KT6YCZ44GE44GL44KJ5Y+z5omL44Go5bem6ISa77yI44G+44Gf44Gv5bem5omL44Go5Y+z6ISa77yJ44KS5rC05bmz44Gr5Ly444Gw44GX44CBM+enkue2reaMgeOBl+OBvuOBmeOAguW3puWPs+S6pOS6kuOBqzE15Zuew5cz44K744OD44OI44CCXG4=","IyMjIOiNt+mHjeW3puWPs+W3ruOBruaYr+ato1xu","LSAqKiR7d2Vha1NpZGUwfeiEmuOBrueJh+iEmuODh+ODg+ODieODquODleODiCAoU2luZ2xlLUxlZyBSb21hbmlhbiBEZWFkbGlmdCkqKlxu","ICAtIOOCv+ODvOOCsuODg+ODiDogJHt3ZWFrU2lkZTB95YG044Gu5aSn6IeA562L44CB44OP44Og44K544OI44Oq44Oz44Kw44K544CB6aqo55uk44Gu5rC05bmz5a6J5a6a5oCnXG4=","ICAtIOOCouODl+ODreODvOODgTog54mH6ISa44Gn56uL44Gh44CB6IOM6YOo44KS5Ly444Gw44GX44Gf44G+44G+6IKh6Zai56+A44GL44KJ5LiK5L2T44KS5YmN44Gr5YCS44GX44G+44GZ44CCMTDlm57DlzPjgrvjg4Pjg4jjgIJcbg==","IyMjIOmdmeeahOODkOODqeODs+OCue+8iENPUOWLleaPuu+8ieOBruaUueWWhFxu","LSAqKueJh+iEmueri+S9jeODkOODqeODs+OCueODiOODrOODvOODi+ODs+OCsCAoU2luZ2xlLUxlZyBCYWxhbmNlKSoqXG4=","ICAtIOOCv+ODvOOCsuODg+ODiDog6Laz5bqV5Y+X5a655Zmo44O76Laz6Zai56+A5ZGo5Zuy562L44Gu5Zu65pyJ5Y+X5a655oSf6KaaXG4=","ICAtIOOCouODl+ODreODvOODgTog6KO46Laz44Gn54mH6ISa56uL44Gh44KSMzDnp5Ljgq3jg7zjg5fjgILmhaPjgozjgabjgY3jgZ/jgonnm67jgpLplonjgZjjgovjgIHkuI3lronlrprjgarluorvvIjjgq/jg4Pjgrfjg6fjg7PnrYnvvInjga7kuIrjgafooYzjgYbjgarjganpm6PmmJPluqbjgpLkuIrjgZLjgb7jgZnjgILlt6blj7PlkIQz44K744OD44OI44CCXG4=","IyMg8J+TiyDlp7/li6Ljg7vjgqLjg6njgqTjg6Hjg7Pjg4jnt4/lkIjoqZXkvqFcbg==","5bem5Y+z44Gu6I236YeN44OQ44Op44Oz44K544Gv5qW144KB44Gm6Imv5aW977yI5bem5Y+z5beuICR7ZGlmZi50b0ZpeGVkKDEpfSXvvInjgafjgIHjgbvjgbzlnYfnrYnjgavojbfph43jgYzliIbmlaPjgZXjgozjgabjgYTjgb7jgZnjgILpqqjmoLzjgavjgYvjgYvjgovpnZnnmoTosqDojbfjga/lr77np7DnmoTjgafjgZnjgIJcbg==","5bem5Y+z44Gu6I236YeN44Gr6Lu95bqm44Gq6Z2e5a++56ew5oCn77yI5bem5Y+z5beuICR7ZGlmZi50b0ZpeGVkKDEpfSXvvInjgYzoprPlr5/jgZXjgozjgb7jgZnjgILojbfph43lgY/kvY3lgbTjga8gKioke3diLnRvdGFsLkwgPiB3Yi50b3RhbC5SID8gIuW3puiEmiIgOiAi5Y+z6ISaIn0qKiDjgafjgZnjgIJcbg==","5bem5Y+z44Gu6I236YeN44Gr6aGV6JGX44Gq6Z2e5a++56ew5oCn77yI5bem5Y+z5beuICR7ZGlmZi50b0ZpeGVkKDEpfSXvvInjgYzopovjgonjgozjgb7jgZnjgIIqKiR7d2IudG90YWwuTCA+IHdiLnRvdGFsLlIgPyAi5bem6ISaIiA6ICLlj7PohJoifSoqIOOBq+mBjuWJsOOBquiNt+mHjeOBjOOBi+OBi+OBo+OBpuOBiuOCiuOAgeS7o+WEn+WLleS9nOOChOmWouevgOOBruWxgOaJgOeahOOCueODiOODrOOCueOBruWOn+WboOOBqOOBquOCiuOBvuOBmeOAglxu","bF9zaWRl","cl9zaWRl","6aqo55uk44Gu5YK+5pac6KeS44GvICoqJHt0aWx0ID09PSAwID8gIjDCsO+8iOODi+ODpeODvOODiOODqeODq++8iSIgOiAodGlsdCA+IDAgPyAi5YmN5YK+ICIgKyB0aWx0ICsgIsKwIiA6ICLlvozlgr4gIiArIE1hdGguYWJzKHRpbHQpICsgIsKwIil9Kiog44Gn44GZ44CCXG4=","6aqo55uk44Gu6YGO5bqm44Gq5YmN5YK+44GM6KqN44KB44KJ44KM44CB6IWw5qSO5YmN5byv44Gu5Lqi6YCy44Gr5Ly044GG44CM5Y+N44KK6IWw77yITG9yZG9zaXPvvInjgI3jgb7jgZ/jga/jgIzjgqvjgqTjg5vjgrfjgrnjg7vjg63jg7zjg4njgrfjgrnvvIjlhobog4zjg7vlj43jgorohbDvvInjgI3jgqLjg6njgqTjg6Hjg7Pjg4jjga7lgr7lkJHjgavjgYLjgorjgb7jgZnjgIJcbg==","6aqo55uk44Gu5b6M5YK+44GM6KqN44KB44KJ44KM44CB44OV44Op44OD44OI44OQ44OD44Kv77yI5bmz6IOM77yJ44G+44Gf44Gv44K544Km44Kn44Kk44OQ44OD44Kv77yI6aqo55uk5YmN5pa55YGP5L2N44O75b6M5YK+77yJ5ae/5Yui44Gu5YK+5ZCR44Gr44GC44KK44G+44GZ44CCXG4=","6aqo55uk5YK+5pac6KeS44Gv44G744G85q2j5bi456+E5Zuy5YaF44Gn44GZ44CC5L2T5bm544K744Kw44Oh44Oz44OI44GK44KI44Gz6aCt6YOo44CB6IKp44CB5aSn6Lui5a2Q44CB5aSW5p6c44Gu44Ki44Op44Kk44Oh44Oz44OI44Op44Kk44Oz44Gv44GK44GK44KA44Gt6Imv5aW944Gq5Z6C55u044Ki44Op44Kk44Oh44Oz44OI77yIUGx1bWItbGluZe+8ieOCkue2reaMgeOBl+OBpuOBhOOBvuOBmeOAglxu","5YuV55qE5YuV5L2c77yI44Kq44O844OQ44O844OY44OD44OJ44K544Kv44Ov44OD44OI77yJ44Gr44GK44GR44KL44Ki44Op44Kk44Oh44Oz44OI44KS6KmV5L6h44GX44G+44GX44Gf44CC44K544Kv44Ov44OD44OI5YuV5L2c44Gv6IKh6Zai56+A44O76Iad6Zai56+A44O76Laz6Zai56+A44Gu5Y2U6Kq/6YGL5YuV44Go44CB5L2T5bm544Gu5pSv5oyB5oCn44KS57eP5ZCI55qE44Gr56S644GZ5qmf6IO955qE6KmV5L6h44Gn44GZ44CCXG4=","5YuV55qE5qmf6IO944GK44KI44Gz5Y+v5YuV5oCn44OG44K544OI44KS5a6f5pa944GX44CB44Ki44Op44Kk44Oh44Oz44OI5YGP5L2N44KS5ris5a6a44GX44G+44GX44Gf44CCXG4=","IyMg8J+UjSDjg5DjgqTjgqrjg6Hjgqvjg4vjgq/jgrnnmoTpgLjohLFcbg==","LSAqKuiNt+mHjeODkOODqeODs+OCuemdnuWvvuensOaApyAke3NldmVyaXR5fSoqOiDojbfph43kuK3lv4PjgYwgJHt3Yi50b3RhbC5MID4gd2IudG90YWwuUiA/ICLlt6blgbQiIDogIuWPs+WBtCJ9IOOBqyAke2RpZmYudG9GaXhlZCgxKX0lIOWBj+S9jeOBl+OBpuOBhOOBvuOBmeOAglxu","44CQ5Lit562J5bqm44CR","LSAqKumqqOebpOOCouODqeOCpOODoeODs+ODiOeVsOW4uCAke3NldmVyaXR5fSoqOiDpqqjnm6TjgYwgJHt0aWx0ID4gMCA/ICLliY3lgr4iIDogIuW+jOWCviJ9IOOBqyAke01hdGguYWJzKHRpbHQpfcKwIOWCvuaWnOOBl+OBpuOBhOOBvuOBmeOAglxu","LSAqKuiGnemWouevgOWxiOabsumdnuWvvuensOaApyDjgJDkuK3nrYnluqbjgJEqKjog44K544Kv44Ov44OD44OI5pmC44Gu6Iad6Zai56+A6KeS5bqm44GrICR7a25lZURpZmYudG9GaXhlZCgxKX3CsCDjga7lt6blj7Plt67jgYzjgYLjgorjgb7jgZnvvIjlt6Y6ICR7amEubGVmdEtuZWVBbmdsZS50b0ZpeGVkKDEpfcKwIC8g5Y+zOiAke2phLnJpZ2h0S25lZUFuZ2xlLnRvRml4ZWQoMSl9wrDvvInjgIJcbg==","LSAqKuS9k+W5ueWJjeWCvuOBrumBjuWkmiDjgJDkuK3nrYnluqbjgJzph43luqbjgJEqKjog5L2T5bm544Gu5YmN5YK+6KeS44GMICR7amEudHJ1bmtMZWFuLnRvRml4ZWQoMSl9wrAg44Go5rex44GP44CB6IKh6Zai56+A44GK44KI44Gz5aSn6IW/5Zub6aCt562L44Gu56Gs44GV44CB44GC44KL44GE44Gv5L2T5bm55rex5bGk562L44Gu5pSv5oyB5oCn5L2O5LiL44KS56S65ZSG44GX44G+44GZ44CCXG4=","LSAqKuS4iuiFleaMmeS4iuS4jei2syDjgJDkuK3nrYnluqbjgJEqKjog44K544Kv44Ov44OD44OI5Lit44Gu6IWV44Go5L2T5bm544Gu44Gq44GZ6KeS5bqm44GMICR7amEuc2hvdWxkZXJBcm1BbmdsZS50b0ZpeGVkKDEpfcKwIOOBqOeLreOBj+OAgeW6g+iDjOeti+OChOWkp+iDuOeti+OBruehrOOBleOAgeOBvuOBn+OBr+iCqeeUsumqqOWRqOWbsueti+OBruapn+iDveS9juS4i+OCkuekuuOBl+OBvuOBmeOAglxu","IyMg4pqhIOiHqOW6iueahOOCpOODs+ODl+ODquOCseODvOOCt+ODp+ODs+OBqOa9nOWcqOeahOmanOWus+ODquOCueOCr1xu","LSAqKiR7ZG9taW5hbnRTaWRlfeiGneODu+iCoemWouevgOODu+i2s+mWouevgOOBrumBjuiyoOiNtyoqOiDojbfph43jgYzlopflpKfjgZfjgabjgYTjgovlgbTjga7plqLnr4DjgavjgYrjgZHjgovou5/pqqjjg7vpna3luK/jgbjjga7mqZ/morDnmoTjgrnjg4jjg6zjgrnjgYzlopflpKfjgZfjgIHplbfmnJ/nmoTjgavlpInlvaLmgKfplqLnr4Dnl4fjgoTohbHngo7jga7jg6rjgrnjgq/jgYzpq5jjgb7jgorjgb7jgZnjgIJcbg==","LSAqKiR7bGlnaHRTaWRlfeiFsOiDjOmDqOOBrueti+eti+iGnOaAp+OCueODiOODrOOCuSoqOiDojbfph43pnZ7lr77np7DmgKfjgpLku6PlhJ/jgZnjgovjgZ/jgoHjgavjgIHlj43lr77lgbTjga7ohbDmpI7lkajlm7LnrYvvvIjohbDmlrnlvaLnrYvjgIHohIrmn7Hotbfnq4vnrYvvvInjgYzpgY7libDjgavnt4rlvLXjgZfjgIHpnZ7nibnnlbDnmoTohbDnl5vjgpLnmbrnl4fjgZfjgoTjgZnjgY/jgarjgorjgb7jgZnjgIJcbg==","LSAqKuS7meiFuOmWouevgOOBiuOCiOOBs+iFsOakjuakjumWk+mWouevgOeXhyoqOiDpqqjnm6Tjga7liY3lgr7jga/ohbDmpI7jga7pgY7liY3lvK/jgpLlvJXjgY3otbfjgZPjgZfjgIHmpI7plpPplqLnr4Djga7lnKfov6vjgrnjg4jjg6zjgrnvvIjohbDnl5vvvInjgoTjgIHlpKfohb/lm5vpoK3nrYvjg7vohbjohbDnrYvjga7nn63nuK7jgIHjg4/jg6Djgrnjg4jjg6rjg7PjgrDjgrnjga7kvLjlvLXmgKfpgY7nt4rlvLXjgpLoqpjnmbrjgZfjgb7jgZnjgIJcbg==","LSAqKuakjumWk+adv+ODmOODq+ODi+OCouOBiuOCiOOBs+ODleODqeODg+ODiOODkOODg+OCr+eXh+WAmee+pCoqOiDpqqjnm6Tjga7lvozlgr7jga/ohIrmpI7mnKzmnaXjga7nt6nooZ3mqZ/og73jgpLlj7jjgotT5a2X44Kr44O844OW44KS5raI5aSx44GV44Gb44CB5qSO6ZaT5p2/77yI54m544GrTDQvTDUtUzHvvInjgbjjga7ou7jlnKfjgrnjg4jjg6zjgrnjgpLlopflpKfjgZXjgZvjgIHjg5jjg6vjg4vjgqLjgoTlnZDpqqjnpZ7ntYznl5vjga7jg6rjgrnjgq/jgajjgarjgorjgb7jgZnjgIJcbg==","LSAqKuiFsOmDqOODu+iGnemWouevgOiTi+Wkp+iFv+mWouevgOOBuOOBruS7o+WEn+OCueODiOODrOOCuSoqOiDkvZPlubnjga7pgY7luqbjgarliY3lgr7jga/jgIHlpKfohb/lm5vpoK3nrYvjgbjjga7kvp3lrZjjgpLlvLfjgoHjgIHohp3ok4vohbHngo7vvIjjgrjjg6Pjg7Pjg5Hjg7zohp3vvInjgoTohp3liY3pnaLnl5vjga7ljp/lm6Djgajjgarjgorjgb7jgZnjgILjgb7jgZ/jgIHohbDmpI7pg6jjga7jg6Ljg7zjg6Hjg7Pjg4jjgqLjg7zjg6DjgYzplbfjgY/jgarjgorjgIHohIrmn7Hotbfnq4vnrYvjgbjjga7osqDmi4XjgYzmpbXnq6/jgavlopfliqDjgZfjgb7jgZnjgIJcbg==","LSAqKuS4gOiIrOeahOOBquWnv+WLoue2reaMgeapn+iDveOBrue2reaMgSoqOiDnj77lnKjjga/oia/lpb3jgarnirbmhYvjgafjgZnjgYzjgIHjg4fjgrnjgq/jg6/jg7zjgq/jgarjganjga7mjIHntprnmoTjgarlkIzlp7/li6LjgavjgojjgorjgqTjg7Pjg4rjg7zjg57jg4Pjgrnjg6vvvIjjgrPjgqLvvInjgYzlvLHljJbjgZnjgovjgajjgIHjgqLjg6njgqTjg6Hjg7Pjg4jkuI3oia/jgbjnp7vooYzjgZnjgovlj6/og73mgKfjgYzjgYLjgorjgb7jgZnjgIJcbg==","IyMg8J+Pi++4jyDmjqjlpajjgZXjgozjgovjgqLjg5fjg63jg7zjg4Hjg7vjg6rjg4/jg5Pjg6rpgYvli5XnmYLms5Vcbg==","IyMjIDEuIOiNt+mHjeW3puWPs+W3ruOBruaYr+ato1xu","LSAqKiR7d2Vha1NpZGV96ISa44Gu54mH6ISa44OH44OD44OJ44Oq44OV44OIIChTaW5nbGUtTGVnIFJvbWFuaWFuIERlYWRsaWZ0KSoqXG4=","ICAtIOOCv+ODvOOCsu+/ve+/ve+/veODiDogJHt3ZWFrU2lkZX3lgbTjga7lpKfoh4DnrYvjgIHjg4/jg6Djgrnjg4jjg6rjg7PjgrDjgrnjgIHpqqjnm6Tjga7msLTlubPlronlrprmgKdcbg==","IyMjIDIuIOmqqOebpOWJjeWCvuODu+WPjeOCiuiFsOOBruaUueWWhFxu","LSAqKuiFuOiFsOeti+ODu+Wkp+iFv+Wbm+mgreeti+OBruOCueODiOODrOODg+ODgSoqXG4=","ICAtIOOCouODl+ODreODvOODgTog54mH6Iad56uL44Gh44Gr44Gq44KK44CB6aqo55uk44KS5b6M5YK+44GV44Gb44Gq44GM44KJ5YmN5pa544Gr5L2T6YeN44KS56e75YuV44GX44CB6IKh6Zai56+A5YmN6Z2i44KS5Ly444Gw44GX44G+44GZ44CC5bem5Y+z5ZCEMzDnp5LDlzPlm57jgIJcbg==","LSAqKuODl+ODqeODs+OCryAoUGxhbmspICYg44OJ44Ot44O844Kk44OzKipcbg==","ICAtIOOCouODl+ODreODvOODgTog5YmN6IWV44Go44Gk44G+5YWI44Gn5L2T44KS5pSv44GI44CB6IW55qiq562L44KS5oSP6K2Y44GX44Gm6aqo55uk44KS44OL44Ol44O844OI44Op44Or44Gr57at5oyB44GX44G+44GZ44CCMzDjgJw2MOenksOXM+OCu+ODg+ODiOOAglxu","IyMjIDIuIOmqqOebpOW+jOWCvuODu+W5s+iDjOOBruaUueWWhFxu","LSAqKuODj+ODoOOCueODiOODquODs+OCsOOCueOBruWLleeahOOCueODiOODrOODg+ODgSoqXG4=","ICAtIOOCouODl+ODreODvOODgTog5Luw5ZCR44GR44Gr5a+d44Gm54mH6Iad44KS5oqx44GI44CB44Gd44GT44GL44KJ6Iad44KS44KG44Gj44GP44KK5Ly444Gw44GX44Gm5aSq44KC44KC6KOP5YG044KS5Ly444Gw44GX44G+44GZ44CC5bem5Y+z5ZCEMjDlm57DlzLjgrvjg4Pjg4jjgIJcbg==","LSAqKuOCreODo+ODg+ODiO+8huOCq+OCpiAoQ2F0ICYgQ293KSoqXG4=","ICAtIOOCouODl+ODreODvOODgTog5Zub44Gk44KT6YCZ44GE44Gr44Gq44KK44CB6aqo55uk44GL44KJ6IOM6aqo44KS5LiA44Gk44Ga44Gk5YuV44GL44GZ44KI44GG44Gr44CB5Li444KB44KL44O75Y+N44KJ44GZ44KS57mw44KK6L+U44GX44G+44GZ44CCMTXlm57DlzLjgrvjg4Pjg4jjgIJcbg==","IyMjIDMuIOOCquODvOODkOODvOODmOODg+ODieOCueOCr+ODr+ODg+ODiOODkeOCv+ODvOODs+OBruaUueWWhFxu","LSAqKuODkuODg+ODl+ODkuODs+OCuOOBrue3tOe/kiAoSGlwIEhpbmdlIFByYWN0aWNlIHdpdGggV2FsbCkqKlxu","ICAtIOOCouODl+ODreODvOODgTog5aOB44GL44KJ6LazMei2s+WIhuWJjeOBq+eri+OBoeOAgeOBiuWwu+OCkuW+jOOCjeOBruWjgeOBq+OCv+ODg+ODgeOBleOBm+OCi+OCiOOBhuOBq+iCoemWouevgOOBi+OCieWxiOabsuOBl+OBvuOBmeOAguiGneOCkuWJjeOBq+WHuuOBleOBquOBhOaEn+immuOCkumkiuOBhOOBvuOBmeOAgjE15Zuew5cz44K744OD44OI44CCXG4=","LSAqKuiDuOakjuOBruS8uOWxleODu+WbnuaXi+ODouODk+ODquODhuOCoyoqXG4=","ICAtIOOCouODl+ODreODvOODgTog5Zub44Gk44KT6YCZ44GE44GL44KJ54mH5omL44KS6aCt44Gu5b6M44KN44Gr44GC44Gm44CB6IO444KS5qiq44Gr6ZaL44GP44KI44GG44Gr5L2T5bm544KS5Zue5peL44GX44G+44GZ44CC5LiK6IWV44Gu5oyZ5LiK5Y+v5YuV5Z+f44KS5pS55ZaE44GX44G+44GZ44CC5bem5Y+z5ZCEMTDlm57DlzPjgrvjg4Pjg4jjgIJcbg==","IyMjIDEuIOWFqOi6q+OBruOCs+OCouOCueOCv+ODk+ODquODhuOCo+OBrue2reaMgVxu","R2VtaW5pIE11bHRpLVZpZXcgQVBJIEVycm9yLCBmYWxsaW5nIGJhY2sgdG8gb2ZmbGluZSBhbmFseXNpczo=","4pagIA==","LSDlt6blj7Pojbfph43mr5Tnjoc6IOWFqOi6qyDlt6Yg","JSAvIOWPsyA=","LSDph43lv4Pli5Xmj7rpnaLnqY06IA==","IG1twrI=","77yI5Y+C6ICD5YCk77yJ","LSDpqqjnm6Tjga7lgr7mlpzop5I6IA==","wrDvvIg=","XG5cbg==","44GC44Gq44Gf44Gv55CG5a2m55mC5rOV5aOr44CB44OQ44Kk44Kq44Oh44Kr44OL44Kv44K556CU56m26ICF44CB44GK44KI44GzQUnoh6jluorlp7/li6LliIbmnpDjga7lsILploDlrrbjgafjgZnjgIIK5Lul5LiL44Gv44CB5ZCM5LiA44Gu6KKr5ris5a6a6ICF44KS6Z2Z5q2i5ae/5Yui44Gn6KSH5pWw5pa55ZCR77yI5YmN6Z2i44O75b6M6Z2i44O75bem5YG06Z2i44O75Y+z5YG06Z2i44Gu44GG44Gh5LiA6YOo44CB44G+44Gf44Gv5YWo6YOo77yJ44GL44KJ5pKu5b2x44GX44Gf6KiI5ris44OH44O844K/44Gn44GZ44CC5ZCE5pa55ZCR44GU44Go44Gu5YCL5Yil44Gu6Kmz57Sw6KmV5L6h77yI6Z2Z5q2i5ae/5Yui44Ki44Op44Kk44Oh44Oz44OI6KmV5L6h44O75qSc5Ye644GV44KM44Gf5YGP5L2N44O75omA6KaL44Gr5Z+644Gl44GP5o6o5aWo5pS55ZaE44Ki44OX44Ot44O844OB44GuM+OCu+OCr+OCt+ODp+ODs+ani+aIkO+8ieOBr+WIpemAlOWHuuWKm+a4iOOBv+OBruOBn+OCgeOAgeOBk+OBk+OBp+OBr+aWueWQkeOCkuaoquaWreOBl+OBpuWIneOCgeOBpuimi+OBiOOBpuOBj+OCi+aJgOimi+OBq+e1nuOCiuOAgeewoea9lOOBquOAjDTmlrnlkJHnt4/lkIjmiYDopovjgI3jgpLml6XmnKzoqp7jgafkvZzmiJDjgZfjgabjgY/jgaDjgZXjgYTjgILlp7/li6Ljg7vojbfph43jg7tDT1Dph43lv4Pli5Xmj7rjgIzku6XlpJbjgI3vvIjli5XkvZzop6PmnpDjg7vlj6/li5Xln5/jg4bjgrnjg4jnrYnvvInjga7oqbHpoYzjgavjga/op6bjgozjgarjgYTjgZPjgajjgIIKCuOAkOioiOa4rOa4iOOBv+OBruaWueWQkeOAkQoke3NlY3Rpb25zVGV4dH0KCiR7bWlzc2luZ01vZGVzLmxlbmd0aCA+IDAgPyAi44CQ5pyq6KiI5ris44Gu5pa55ZCR44CRXG4iICsgbWlzc2luZ01vZGVzLm1hcChtID0+IHNlbGYuZ2V0TW9kZU5hbWVKcChtKSkuam9pbigi44CBIikgKyAiXG4iIDogIiJ9CgrjgJDlh7rlipvopoHku7bjgJEKMS4g44Oe44O844Kv44OA44Km44Oz5b2i5byP44CC44Gf44Gg44GX5aSn6KaL5Ye644GXKCMsICMjKeOBr+S7mOOBkeOBquOBhOOBk+OBqO+8iOWRvOOBs+WHuuOBl+WBtOOBp+imi+WHuuOBl+OCkuS7mOS4juOBmeOCi+OBn+OCgeOAgeacrOaWh+OBruOBv+OCkuWHuuWKm+OBmeOCi++8ieOAggoyLiDku6XkuIvjga4y54K544KS44CB5ZCI44KP44Gb44GmNuOAnDnmlofnqIvluqbjgafjgb7jgajjgoHjgovjgZPjgajvvJoKICAgKGEpIOaWueWQkeOCkuaoquaWreOBl+OBpuWIneOCgeOBpuiogOOBiOOCi+Wnv+WLouODu+iNt+mHjeODu0NPUOWLleaPuuOBruOCouODqeOCpOODoeODs+ODiOaJgOimi+OBrue1seWQiO+8iOS+izog5YmN6Z2i44O75b6M6Z2i44Gn6KaL44KJ44KM44Gf6I236YeN5YGP5L2N44Go44CB5YG06Z2i44Gn6KaL44KJ44KM44Gf5omA6KaL44Go44Gu6Zai6YCj5oCn44Gq44Gp77yJ44CC5Y2Y44Gr5ZCE5pa55ZCR44Gu57WQ5p6c44KS5YaN5o6y44GX44Gq44GE44GT44Go44CC5pa55ZCR6ZaT44Gn55+b55u+44GZ44KL5omA6KaL44GM44GC44KM44Gw44CB44Gd44Gu5peo44KC5oyH5pGY44GZ44KL44GT44Go44CCCiAgIChiKSAoYSnjga7ntbHlkIjmiYDopovjgYvjgonlsI7jgYvjgozjgovjgIHopIfmlbDmlrnlkJHjgpLouI/jgb7jgYjjgZ/nt4/lkIjnmoTjgarmlLnlloTjgqLjg5fjg63jg7zjg4HvvIjpgYvli5XnmYLms5XvvInjga7mj5DmoYjjgILlkITmlrnlkJHjga7lgIvliKXjg6zjg53jg7zjg4jjgafml6Ljgavmj5DmoYjjgZfjgZ/lhoXlrrnjga7ljZjntJTjgarlho3mjrLjgafjga/jgarjgY/jgIHmlrnlkJHjgpLmqKrmlq3jgZfjgZ/jgYvjgonjgZPjgZ3oqIDjgYjjgovlhKrlhYjpoIbkvY3jgoTplqLpgKPmgKfjgpLouI/jgb7jgYjjgovjgZPjgajjgIIKMy4g5pat5a6a55qE44GZ44GO44KL6KGo54++44Gv6YG/44GR44CB44CM5YK+5ZCR44GM6KaL44KJ44KM44G+44GZ44CN44CM56S65ZSG44GV44KM44G+44GZ44CN562J44Gu5LiB5a+n44Gq6Ieo5bqK44OI44O844Oz44KS5L+d44Gk44GT44Go44CCCjQuIOacquioiOa4rOOBruaWueWQkeOBjOOBguOCi+WgtOWQiOOBr+OAgeOBneOCjOOCkui4j+OBvuOBiOOBn+WPguiAg+aDheWgseOBp+OBguOCi+aXqOOBq+i7veOBj+inpuOCjOOCi+OBk+OBqOOAggo=","5pys44K744OD44K344On44Oz44Gn44Gv","6Z2Z5q2i5ae/5Yui44O7","5pa55ZCR44KS6KiI5ris44GX44G+44GX44Gf44CC","6aqo55uk44Gu5YK+5pac6KeS44Gv5bem5YG06Z2iIA==","77yJ44CB5Y+z5YG06Z2iIA==","77yJ44Gn44GX44Gf44CC","44Gu44GE44Ga44KM44Gr44GK44GE44Gm44KC","5YG044G444Gu6I236YeN5YGP5L2N44GM56K66KqN44GV44KM44Gm44GK44KK44CB5Y2Y5LiA5pa55ZCR44Gu5ris5a6a6Kqk5beu44Gn44Gv44Gq44GP44CB5LiA6LKr44GX44Gf5bem5Y+z6Z2e5a++56ew44Gu44OR44K/44O844Oz44GM55aR44KP44KM44G+44GZ44CC","5pa55ZCR44GU44Go44Gr6I236YeN44Gu5YGP5L2N5YK+5ZCR44GM5LiA6Ie044GX44Gm44GE44G+44Gb44KT44CC5Y2Y55m644Gu5ris5a6a6Kqk5beu44Gn44GC44KL5Y+v6IO95oCn44KC44GC44KK44G+44GZ44GM44CB5YuV5L2c44Gr5Ly044GG6YeN5b+D56e75YuV44Gu5b2x6Z+/44KC6ICD44GI44KJ44KM44KL44Gf44KB44CB6KSH5pWw5Zue44Gu5YaN5ris5a6a44Gn44Gu56K66KqN44KS5o6o5aWo44GX44G+44GZ44CC","5YG044G444Gu6I236YeN5YGP5L2N44GM6KSH5pWw5pa55ZCR44Gn5LiA6LKr44GX44Gm44GE44KL44Gf44KB44CB","6ISa44Gu54mH6ISa44OH44OD44OJ44Oq44OV44OI562J44CB","5YG044Gu5pSv5oyB5oCn44KS6auY44KB44KL44OI44Os44O844OL44Oz44Kw44KS5YSq5YWI44GZ44KL44GT44Go44GM5pyb44G+44KM44G+44GZ44CC","KirmiYDopovjgavln7rjgaXjgY/nt4/lkIjnmoTjgarmlLnlloTjgqLjg5fjg63jg7zjg4EqKjog","4oC7IOS7iuWbnuOBrw==","44Gu44OH44O844K/44GM5o+D44Gj44Gm44GE44Gq44GE44Gf44KB44CB5LiK6KiY44Gv44GC44GP44G+44Gn5Y+C6ICD5oOF5aCx44Go44GX44Gm44GU56K66KqN44GP44Gg44GV44GE44CC","6Z2Z5q2i5ae/5Yui44O75YmN6Z2i","6Z2Z5q2i5ae/5Yui44O75b6M6Z2i","6Z2Z5q2i5ae/5Yui44O75bem5YG06Z2i","6Z2Z5q2i5ae/5Yui44O75Y+z5YG06Z2i","44Kq44O844OQ44O844OY44OD44OJ44K544Kv44Ov44OD44OIICjliY3pnaIp","44Kq44O844OQ44O844OY44OD44OJ44K544Kv44Ov44OD44OIICjlgbTpnaIp","ZHluX3NpbmdsZV9y","54mH6ISa56uL5L2N44OQ44Op44Oz44K5ICjlj7Pou7johJop","ZHluX3NpbmdsZV9s","54mH6ISa56uL5L2N44OQ44Op44Oz44K5ICjlt6bou7johJop","ZHluX2ZsZXhfZndk","56uL5L2N5L2T5YmN5bGI44OG44K544OI","ZHluX2ZsZXhfYndk","56uL5L2N5L2T5b6M5bGI44OG44K544OI","ZHluX3Nob3VsZGVyX3I=","6IKp6KSH5ZCI5Y+v5YuV5oCnICjlj7PkuIop","ZHluX3Nob3VsZGVyX2w=","6IKp6KSH5ZCI5Y+v5YuV5oCnICjlt6bkuIop"];
+function _0x$d(i){try{return decodeURIComponent(escape(atob(_0x$b[i])));}catch(e){return atob(_0x$b[i]);}}
 /**
  * CONNECT AI - API & Clinical Report Engine
  * Integrates Google Gemini API for advanced biomechanical clinical reports.
@@ -68,8 +59,8 @@ function averageKeypointsBackHalf(dataPoints) {
         latterHalf.forEach(function (entry) {
             var frameKps = entry.keypoints || [];
             var kp = frameKps.find(function (k) { return k && k.name === refKp.name; });
-            if (kp && typeof kp.x === _0x$getStr(0) && typeof kp.y === _0x$getStr(0) && (typeof kp.score !== _0x$getStr(0) || kp.score > 0.3)) {
-                sumX += kp.x; sumY += kp.y; sumScore += (typeof kp.score === _0x$getStr(0) ? kp.score : 0); n++;
+            if (kp && typeof kp.x === _0x$d(0) && typeof kp.y === _0x$d(0) && (typeof kp.score !== _0x$d(0) || kp.score > 0.3)) {
+                sumX += kp.x; sumY += kp.y; sumScore += (typeof kp.score === _0x$d(0) ? kp.score : 0); n++;
             }
         });
         if (n === 0) return refKp;
@@ -93,8 +84,8 @@ var apiManager = {
             try {
                 report = await this.fetchGeminiReport(metrics, apiKey);
             } catch (e) {
-                console.error(_0x$getStr(1), e);
-                report = this.generateOfflineReport(metrics, _0x$getStr(2) + e + _0x$getStr(3));
+                console.error(_0x$d(1), e);
+                report = this.generateOfflineReport(metrics, _0x$d(2) + e + _0x$d(3));
             }
         } else {
             report = this.generateOfflineReport(metrics);
@@ -102,10 +93,10 @@ var apiManager = {
 
         // Append expert evaluation if present!
         if (session.expertComment && session.expertComment.trim() !== "") {
-            report += `\n\n---\n\n## 👩‍⚕️ 担当専門家・メンターによる評価カルテ\n`;
-            report += `**指導者アセスメント**:\n${session.expertComment}\n\n`;
+            report += _0x$d(4);
+            report += _0x$d(5);
             if (session.expertExercises && session.expertExercises.trim() !== "") {
-                report += `**指導者処方リハビリメニュー**:\n${session.expertExercises}\n`;
+                report += _0x$d(6);
             }
         }
         return report;
@@ -153,7 +144,7 @@ var apiManager = {
         // （2026-07-29ご指摘）。ここで逆回転した座標に補正してから、以降の
         // 計算（荷重左右比率）に使う。角度が記録されていない場合
         // （ジャイロ未検出の端末、または動作解析種目）はそのまま無補正。
-        if (typeof session.capturedRollDeg === _0x$getStr(0) && session.canvasWidth && session.canvasHeight) {
+        if (typeof session.capturedRollDeg === _0x$d(0) && session.canvasWidth && session.canvasHeight) {
             kps = rotateKeypointsForRoll(kps, session.capturedRollDeg, session.canvasWidth, session.canvasHeight);
         }
 
@@ -164,22 +155,22 @@ var apiManager = {
         // （2026-08-04のArUco×縦置き回転補正での座標系不一致バグと同種の
         // 問題を防ぐため）。
         var arucoMidlineXForCalc = null;
-        if (typeof session.capturedArucoMidlineX === _0x$getStr(0) && typeof session.capturedArucoMidlineY === _0x$getStr(0)) {
+        if (typeof session.capturedArucoMidlineX === _0x$d(0) && typeof session.capturedArucoMidlineY === _0x$d(0)) {
             var arucoMidlinePt = { x: session.capturedArucoMidlineX, y: session.capturedArucoMidlineY };
-            if (typeof session.capturedRollDeg === _0x$getStr(0) && session.canvasWidth && session.canvasHeight) {
+            if (typeof session.capturedRollDeg === _0x$d(0) && session.canvasWidth && session.canvasHeight) {
                 arucoMidlinePt = rotateKeypointsForRoll([arucoMidlinePt], session.capturedRollDeg, session.canvasWidth, session.canvasHeight)[0];
             }
             arucoMidlineXForCalc = arucoMidlinePt.x;
         }
 
         // Extract weight bearing if applicable (from the last frame or average)
-        var lAnkle = kps.find(k=>k.name===_0x$getStr(4)||k.name===_0x$getStr(5));
-        var rAnkle = kps.find(k=>k.name===_0x$getStr(6)||k.name===_0x$getStr(7));
-        var nose = kps.find(k=>k.name===_0x$getStr(8)||k.name===_0x$getStr(9));
-        var lSh = kps.find(k=>k.name===_0x$getStr(10)||k.name===_0x$getStr(11));
-        var rSh = kps.find(k=>k.name===_0x$getStr(12)||k.name===_0x$getStr(13));
-        var lHip = kps.find(k=>k.name===_0x$getStr(14)||k.name===_0x$getStr(15));
-        var rHip = kps.find(k=>k.name===_0x$getStr(16)||k.name===_0x$getStr(17));
+        var lAnkle = kps.find(k=>k.name===_0x$d(7)||k.name===_0x$d(8));
+        var rAnkle = kps.find(k=>k.name===_0x$d(9)||k.name===_0x$d(10));
+        var nose = kps.find(k=>k.name===_0x$d(11)||k.name==='0');
+        var lSh = kps.find(k=>k.name===_0x$d(12)||k.name===_0x$d(13));
+        var rSh = kps.find(k=>k.name===_0x$d(14)||k.name===_0x$d(15));
+        var lHip = kps.find(k=>k.name===_0x$d(16)||k.name===_0x$d(17));
+        var rHip = kps.find(k=>k.name===_0x$d(18)||k.name===_0x$d(19));
 
         if (lAnkle && rAnkle && lAnkle.score > 0.3 && rAnkle.score > 0.3) {
             var dPx = rAnkle.x - lAnkle.x;
@@ -210,21 +201,21 @@ var apiManager = {
         }
 
         // Calculate dynamic specific parameters
-        if (mode === _0x$getStr(18)) {
+        if (mode === _0x$d(20)) {
             // Knee Valgus/Varus (knee-in/out)
             var calcAngle = (a, b, c) => {
                 var ang = Math.abs(Math.atan2(c.y-b.y, c.x-b.x) - Math.atan2(a.y-b.y, a.x-b.x)) * 180 / Math.PI;
                 return ang > 180 ? 360 - ang : ang;
             };
-            var lKnee = kps.find(k=>k.name===_0x$getStr(19)||k.name===_0x$getStr(20));
-            var rKnee = kps.find(k=>k.name===_0x$getStr(21)||k.name===_0x$getStr(22));
+            var lKnee = kps.find(k=>k.name===_0x$d(21)||k.name===_0x$d(22));
+            var rKnee = kps.find(k=>k.name===_0x$d(23)||k.name===_0x$d(24));
             if (lHip && lKnee && lAnkle) result.jointAngles.leftKneeAngle = calcAngle(lHip, lKnee, lAnkle);
             if (rHip && rKnee && rAnkle) result.jointAngles.rightKneeAngle = calcAngle(rHip, rKnee, rAnkle);
-        } else if (mode === _0x$getStr(23)) {
-            var lKnee = kps.find(k=>k.name===_0x$getStr(19)||k.name===_0x$getStr(20));
-            var rKnee = kps.find(k=>k.name===_0x$getStr(21)||k.name===_0x$getStr(22));
-            var lWrist = kps.find(k=>k.name===_0x$getStr(24)||k.name===_0x$getStr(25));
-            var rWrist = kps.find(k=>k.name===_0x$getStr(26)||k.name===_0x$getStr(27));
+        } else if (mode === _0x$d(25)) {
+            var lKnee = kps.find(k=>k.name===_0x$d(21)||k.name===_0x$d(22));
+            var rKnee = kps.find(k=>k.name===_0x$d(23)||k.name===_0x$d(24));
+            var lWrist = kps.find(k=>k.name===_0x$d(26)||k.name===_0x$d(27));
+            var rWrist = kps.find(k=>k.name===_0x$d(28)||k.name===_0x$d(29));
             var isLeft = (lSh && rSh && lSh.score > rSh.score);
             var s = isLeft ? lSh : rSh, h = isLeft ? lHip : rHip, k = isLeft ? lKnee : rKnee, a = isLeft ? lAnkle : rAnkle, w = isLeft ? lWrist : rWrist;
             
@@ -241,8 +232,8 @@ var apiManager = {
                     result.jointAngles.shoulderArmAngle = armAng;
                 }
             }
-        } else if (mode.startsWith(_0x$getStr(28))) {
-            var lKnee = kps.find(k=>k.name===_0x$getStr(19)||k.name===_0x$getStr(20));
+        } else if (mode.startsWith(_0x$d(30))) {
+            var lKnee = kps.find(k=>k.name===_0x$d(21)||k.name===_0x$d(22));
             var isLeft = (lSh && rSh && lSh.score > rSh.score);
             var s = isLeft ? lSh : rSh, h = isLeft ? lHip : rHip, k = isLeft ? lKnee : rKnee;
             if (s && h && k) {
@@ -278,7 +269,7 @@ var apiManager = {
             // 共有したい」とのご指摘への対応）。挙動・結果は変更していない
             // （既存ロジックをそのまま関数化しただけ）。
             var copCtx = {
-                rollDeg: (typeof session.capturedRollDeg === _0x$getStr(0)) ? session.capturedRollDeg : null,
+                rollDeg: (typeof session.capturedRollDeg === _0x$d(0)) ? session.capturedRollDeg : null,
                 canvasWidth: session.canvasWidth,
                 canvasHeight: session.canvasHeight,
                 floorHomography: hasFloorHomography ? session.floorHomography : null,
@@ -338,43 +329,22 @@ var apiManager = {
      * Call the Gemini API.
      */
     fetchGeminiReport: async function(metrics, apiKey) {
-        var model = _0x$getStr(29);
-        var url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+        var model = _0x$d(31);
+        var url = _0x$d(32);
         // 2026-08-24更新: mm単位に統一（4隅ArUco床面実測ならprecise:true、
         // pxToCmRatioによる近似ならprecise:falseで精度の注記のみ添える。
         // 従来のmm/px二重表記はやめた）。
         var swayText = "";
         if (metrics.swayMetrics) {
             var sw = metrics.swayMetrics;
-            swayText = `- 足底圧中心 (COP) 重心動揺データ（単位: mm${sw.precise ? _0x$getStr(30) : _0x$getStr(31)}）:
-  - 左右の平均偏位: ${sw.avgDeviationX.toFixed(1)} mm (${sw.avgDeviationX > 0 ? _0x$getStr(32) : _0x$getStr(33)})
-  - 重心動揺面積 (95%信頼楕円近似): ${sw.swayArea.toFixed(1)} mm²
-  - 総軌跡長: ${sw.pathLength.toFixed(1)} mm
-  - 平均動揺速度: ${sw.swaySpeed !== null ? sw.swaySpeed.toFixed(1) + _0x$getStr(34) : _0x$getStr(35)}`;
+            swayText = _0x$d(33);
         }
 
-        var prompt = `あなたは理学療法士、バイオメカニクス研究者、およびAI臨床姿勢分析の専門家です。
-以下の姿勢・動作計測データに基づいて、極めて詳細で専門的な臨床バイオメカニクス評価レポートを日本語で作成してください。
-
-【計測データ】
-- 測定項目: ${metrics.mode} (${this.getModeNameJp(metrics.mode)})
-- 被測定者の身長: ${metrics.height} cm
-- 被測定者の足サイズ: ${metrics.footSize} cm
-- 総計測フレーム数: ${metrics.frameCount}
-
-${metrics.weightBearing ? `- 左右荷重比率: 
+        var prompt = _0x$d(34)- 左右荷重比率: 
   - 全身: 左 ${metrics.weightBearing.total.L.toFixed(1)}% | 右 ${metrics.weightBearing.total.R.toFixed(1)}%
   - 上半身偏位: 左 ${metrics.weightBearing.upper.L.toFixed(1)}% | 右 ${metrics.weightBearing.upper.R.toFixed(1)}%
-  - 下半身偏位: 左 ${metrics.weightBearing.lower.L.toFixed(1)}% | 右 ${metrics.weightBearing.lower.R.toFixed(1)}%` : ""}
-
-${swayText}
-
-${Object.keys(metrics.jointAngles).length > 0 ? `- 主要関節・セグメント角度:
-  ${JSON.stringify(metrics.jointAngles)}` : ""}
-
-${(metrics.mode === _0x$getStr(36) || metrics.mode === _0x$getStr(37)) ? `- 骨盤の傾斜角: ${Math.abs(metrics.pelvicTilt).toFixed(1)}°（${metrics.pelvicTilt > 0 ? _0x$getStr(38) : (metrics.pelvicTilt < 0 ? _0x$getStr(39) : _0x$getStr(40))}）` : ""}
-
-${STATIC_MODES.indexOf(metrics.mode) !== -1 ? `【レポート要件】
+  - 下半身偏位: 左 ${metrics.weightBearing.lower.L.toFixed(1)}% | 右 ${metrics.weightBearing.lower.R.toFixed(1)}%_0x$d(35)- 主要関節・セグメント角度:
+  ${JSON.stringify(metrics.jointAngles)}_0x$d(36)- 骨盤の傾斜角: ${Math.abs(metrics.pelvicTilt).toFixed(1)}°（${metrics.pelvicTilt > 0 ? _0x$d(37) : (metrics.pelvicTilt < 0 ? _0x$d(38) : _0x$d(39))}）_0x$d(40)【レポート要件】
 1. マークダウン形式で出力すること。
 2. 本測定は静止姿勢（前面/後面/左右側面のいずれか1方向）のみが対象のため、動作解析（スクワット等の動的種目）や可動域テストの話題には一切触れないこと。以下の3つのセクションを必ず含めること：
    - ## 📋 静止姿勢アライメント評価 (Static Posture Alignment Assessment)
@@ -384,7 +354,7 @@ ${STATIC_MODES.indexOf(metrics.mode) !== -1 ? `【レポート要件】
    - ## 🏋️ 所見に基づく推奨改善アプローチ (Recommended Corrective Approach)
      上記①②で述べた所見「から導かれる」、具体的なストレッチ・筋力トレーニングメニュー（ターゲット部位、回数、セット数を含む）を提案すること。所見と直接関係の無い一般論は書かないこと。
 3. トーンはプロフェッショナルで、アカデミックかつ実用的なものにすること。専門用語を適切に使用しつつ、クライアント向けの説明としても十分に理解できる表現にしてください。
-` : `【レポート要件】
+_0x$d(41)【レポート要件】
 1. マークダウン形式で出力すること。
 2. 以下の4つのセクションを必ず含めること：
    - ## 📋 姿勢・アライメント総合評価 (Summary of Posture Alignment)
@@ -399,8 +369,8 @@ ${STATIC_MODES.indexOf(metrics.mode) !== -1 ? `【レポート要件】
 `}`;
 
         var response = await fetch(url, {
-            method: _0x$getStr(41),
-            headers: { _0x$getStr(42): _0x$getStr(43) },
+            method: _0x$d(42),
+            headers: { _0x$d(43): _0x$d(44) },
             body: JSON.stringify({
                 contents: [{ parts: [{ text: prompt }] }],
                 generationConfig: { temperature: 0.2 }
@@ -409,7 +379,7 @@ ${STATIC_MODES.indexOf(metrics.mode) !== -1 ? `【レポート要件】
 
         if (!response.ok) {
             var errText = await response.text();
-            throw new Error(`HTTP ${response.status}: ${errText}`);
+            throw new Error(_0x$d(45));
         }
 
         var json = await response.json();
@@ -431,81 +401,81 @@ ${STATIC_MODES.indexOf(metrics.mode) !== -1 ? `【レポート要件】
         var sway = metrics.swayMetrics;
         var tilt = metrics.pelvicTilt;
 
-        var report = prefix + `# 📊 バイオメカニクス簡易評価レポート (CONNECT AI Expert Local Engine)\n\n`;
-        report += `**測定項目**: ${this.getModeNameJp(mode)}  \n`;
-        report += `**計測日時**: ${new Date(metrics.timestamp).toLocaleString()}  \n\n`;
+        var report = prefix + _0x$d(46);
+        report += _0x$d(47);
+        report += _0x$d(48);
 
         // 1. 静止姿勢アライメント評価（姿勢・荷重・COP動揺のみに基づく）
-        report += `## 📋 静止姿勢アライメント評価\n`;
-        if (mode === _0x$getStr(44) || mode === _0x$getStr(45)) {
-            report += `前面/後面アライメント測定において、冠状面（左右）での対称性と荷重分布を評価しました。\n`;
+        report += _0x$d(49);
+        if (mode === _0x$d(50) || mode === _0x$d(51)) {
+            report += _0x$d(52);
             if (metrics.usedArucoMidline) {
-                report += `※ 本測定は「アルコマーカー正中線モード」（4隅ArUco校正済みの固定設置環境における絶対基準線）で評価しています。基準点は左右の足の中点ではなく、校正済みマーカーボード中心の投影位置です。\n`;
+                report += _0x$d(53);
             }
             if (wb) {
                 var diff0 = Math.abs(wb.total.L - wb.total.R);
                 if (diff0 < 5) {
-                    report += `左右の荷重バランスは極めて良好（左右差 ${diff0.toFixed(1)}%）で、ほぼ均等に荷重が分散されています。骨格にかかる静的負荷は対称的です。\n`;
+                    report += _0x$d(54);
                 } else if (diff0 < 12) {
-                    report += `左右の荷重に軽度な非対称性（左右差 ${diff0.toFixed(1)}%）が観察されます。荷重偏位側は **${wb.total.L > wb.total.R ? _0x$getStr(46) : _0x$getStr(47)}** です。\n`;
+                    report += _0x$d(55);
                 } else {
-                    report += `左右の荷重に顕著な非対称性（左右差 ${diff0.toFixed(1)}%）が見られます。**${wb.total.L > wb.total.R ? _0x$getStr(46) : _0x$getStr(47)}** に過剰な荷重がかかっており、代償動作や関節の局所的ストレスの原因となります。\n`;
+                    report += _0x$d(56);
                 }
             }
         } else {
-            report += `矢状面（側面）アライメント測定において、ケンダルの姿勢分類に基づく評価を行いました。\n`;
-            if (typeof tilt === _0x$getStr(0)) {
-                report += `骨盤の傾斜角: **${Math.abs(tilt).toFixed(1)}°**（${tilt > 0 ? _0x$getStr(48) : (tilt < 0 ? _0x$getStr(49) : _0x$getStr(40))}）\n`;
+            report += _0x$d(57);
+            if (typeof tilt === _0x$d(0)) {
+                report += _0x$d(58);
             }
         }
         if (sway) {
-            report += `静止中の足底圧中心（COP）の動揺${sway.precise ? _0x$getStr(50) : _0x$getStr(51)}も評価対象に含めています。\n`;
+            report += _0x$d(59);
         }
-        report += `\n`;
+        report += _0x$d(60);
 
         // 2. 検出された偏位・アンバランスの詳細
-        report += `## 🔍 検出された偏位・アンバランスの詳細\n`;
+        report += _0x$d(61);
         var hasDeviations0 = false;
 
         if (wb && Math.abs(wb.total.L - wb.total.R) > 5) {
             var diff1 = Math.abs(wb.total.L - wb.total.R);
-            var severity1 = diff1 > 12 ? _0x$getStr(52) : _0x$getStr(53);
-            report += `- **荷重バランス非対称性 ${severity1}**: 荷重中心が ${wb.total.L > wb.total.R ? _0x$getStr(54) : _0x$getStr(55)} に ${diff1.toFixed(1)}% 偏位しています。\n`;
+            var severity1 = diff1 > 12 ? _0x$d(62) : _0x$d(63);
+            report += _0x$d(64);
             hasDeviations0 = true;
         }
 
         if (sway && sway.swayArea > 800) {
-            report += `- **COP重心動揺領域の増大 【中等度】**: 動揺面積が ${sway.swayArea.toFixed(1)} mm²${sway.precise ? _0x$getStr(50) : _0x$getStr(51)}と広く、静的バランスの維持における安定性低下（足底受容器・前庭系・視覚によるフィードバックの遅れや足関節の剛性不足）を示しています。\n`;
+            report += _0x$d(65);
             hasDeviations0 = true;
         }
 
         if (!hasDeviations0) {
-            report += `顕著なバイオメカニクス的逸脱は検出されませんでした。すべてアライメント指標は安全基準範囲内です。\n`;
+            report += _0x$d(66);
         }
-        report += `\n`;
+        report += _0x$d(60);
 
         // 3. 所見に基づく推奨改善アプローチ（運動療法）
-        report += `## 🏋️ 所見に基づく推奨改善アプローチ\n`;
+        report += _0x$d(67);
         if (!hasDeviations0) {
-            report += `### 全身のコアスタビリティの維持\n`;
-            report += `- **バードドッグ (Bird-Dog)**\n`;
-            report += `  - ターゲット: 脊柱起立筋、多裂筋、臀筋、コアの対角支持性\n`;
-            report += `  - アプローチ: 四つん這いから右手と左脚（または左手と右脚）を水平に伸ばし、3秒維持します。左右交互に15回×3セット。\n`;
+            report += _0x$d(68);
+            report += _0x$d(69);
+            report += _0x$d(70);
+            report += _0x$d(71);
         }
 
         if (wb && Math.abs(wb.total.L - wb.total.R) > 5) {
-            var weakSide0 = wb.total.L > wb.total.R ? _0x$getStr(56) : _0x$getStr(57);
-            report += `### 荷重左右差の是正\n`;
-            report += `- **${weakSide0}脚の片脚デッドリフト (Single-Leg Romanian Deadlift)**\n`;
-            report += `  - ターゲット: ${weakSide0}側の大臀筋、ハムストリングス、骨盤の水平安定性\n`;
-            report += `  - アプローチ: 片脚で立ち、背部を伸ばしたまま股関節から上体を前に倒します。10回×3セット。\n`;
+            var weakSide0 = wb.total.L > wb.total.R ? "右" : "左";
+            report += _0x$d(72);
+            report += _0x$d(73);
+            report += _0x$d(74);
+            report += _0x$d(75);
         }
 
         if (sway && sway.swayArea > 800) {
-            report += `### 静的バランス（COP動揺）の改善\n`;
-            report += `- **片脚立位バランストレーニング (Single-Leg Balance)**\n`;
-            report += `  - ターゲット: 足底受容器・足関節周囲筋の固有受容感覚\n`;
-            report += `  - アプローチ: 裸足で片脚立ちを30秒キープ。慣れてきたら目を閉じる、不安定な床（クッション等）の上で行うなど難易度を上げます。左右各3セット。\n`;
+            report += _0x$d(76);
+            report += _0x$d(77);
+            report += _0x$d(78);
+            report += _0x$d(79);
         }
 
         return report;
@@ -529,77 +499,77 @@ ${STATIC_MODES.indexOf(metrics.mode) !== -1 ? `【レポート要件】
         var ja = metrics.jointAngles;
         var tilt = metrics.pelvicTilt;
 
-        var report = prefix + `# 📊 バイオメカニクス簡易評価レポート (CONNECT AI Expert Local Engine)\n\n`;
-        report += `**測定項目**: ${this.getModeNameJp(mode)}  \n`;
-        report += `**計測日時**: ${new Date(metrics.timestamp).toLocaleString()}  \n\n`;
+        var report = prefix + _0x$d(46);
+        report += _0x$d(47);
+        report += _0x$d(48);
 
         // 1. Summary
-        report += `## 📋 姿勢・アライメント総合評価\n`;
-        if (mode === _0x$getStr(44) || mode === _0x$getStr(45)) {
-            report += `前面/後面アライメント測定において、冠状面（左右）での対称性と荷重分布を評価しました。\n`;
+        report += _0x$d(80);
+        if (mode === _0x$d(50) || mode === _0x$d(51)) {
+            report += _0x$d(52);
             if (metrics.usedArucoMidline) {
-                report += `※ 本測定は「アルコマーカー正中線モード」（4隅ArUco校正済みの固定設置環境における絶対基準線）で評価しています。基準点は左右の足の中点ではなく、校正済みマーカーボード中心の投影位置です。\n`;
+                report += _0x$d(53);
             }
             if (wb) {
                 var diff = Math.abs(wb.total.L - wb.total.R);
                 if (diff < 5) {
-                    report += `左右の荷重バランスは極めて良好（左右差 ${diff.toFixed(1)}%）で、ほぼ均等に荷重が分散されています。骨格にかかる静的負荷は対称的です。\n`;
+                    report += _0x$d(81);
                 } else if (diff < 12) {
-                    report += `左右の荷重に軽度な非対称性（左右差 ${diff.toFixed(1)}%）が観察されます。荷重偏位側は **${wb.total.L > wb.total.R ? _0x$getStr(46) : _0x$getStr(47)}** です。\n`;
+                    report += _0x$d(82);
                 } else {
-                    report += `左右の荷重に顕著な非対称性（左右差 ${diff.toFixed(1)}%）が見られます。**${wb.total.L > wb.total.R ? _0x$getStr(46) : _0x$getStr(47)}** に過剰な荷重がかかっており、代償動作や関節の局所的ストレスの原因となります。\n`;
+                    report += _0x$d(83);
                 }
             }
-        } else if (mode === _0x$getStr(36) || mode === _0x$getStr(37)) {
-            report += `矢状面（側面）アライメント測定において、ケンダルの姿勢分類に基づく評価を行いました。\n`;
-            report += `骨盤の傾斜角は **${tilt === 0 ? _0x$getStr(58) : (tilt > 0 ? _0x$getStr(59) + tilt + _0x$getStr(60) : _0x$getStr(61) + Math.abs(tilt) + _0x$getStr(60))}** です。\n`;
+        } else if (mode === _0x$d(84) || mode === _0x$d(85)) {
+            report += _0x$d(57);
+            report += _0x$d(86);
             
             if (tilt > 8) {
-                report += `骨盤の過度な前傾が認められ、腰椎前弯の亢進に伴う「反り腰（Lordosis）」または「カイホシス・ロードシス（円背・反り腰）」アライメントの傾向にあります。\n`;
+                report += _0x$d(87);
             } else if (tilt < -5) {
-                report += `骨盤の後傾が認められ、フラットバック（平背）またはスウェイバック（骨盤前方偏位・後傾）姿勢の傾向にあります。\n`;
+                report += _0x$d(88);
             } else {
-                report += `骨盤傾斜角はほぼ正常範囲内です。体幹セグメントおよび頭部、肩、大転子、外果のアライメントラインはおおむね良好な垂直アライメント（Plumb-line）を維持しています。\n`;
+                report += _0x$d(89);
             }
-        } else if (mode.startsWith(_0x$getStr(18))) {
-            report += `動的動作（オーバーヘッドスクワット）におけるアライメントを評価しました。スクワット動作は股関節・膝関節・足関節の協調運動と、体幹の支持性を総合的に示す機能的評価です。\n`;
+        } else if (mode.startsWith(_0x$d(20))) {
+            report += _0x$d(90);
         } else {
-            report += `動的機能および可動性テストを実施し、アライメント偏位を測定しました。\n`;
+            report += _0x$d(91);
         }
-        report += `\n`;
+        report += _0x$d(60);
 
         // 2. Deviations
-        report += `## 🔍 バイオメカニクス的逸脱\n`;
+        report += _0x$d(92);
         var hasDeviations = false;
         
         if (wb && Math.abs(wb.total.L - wb.total.R) > 5) {
             var diff = Math.abs(wb.total.L - wb.total.R);
-            var severity = diff > 12 ? _0x$getStr(52) : _0x$getStr(53);
-            report += `- **荷重バランス非対称性 ${severity}**: 荷重中心が ${wb.total.L > wb.total.R ? _0x$getStr(54) : _0x$getStr(55)} に ${diff.toFixed(1)}% 偏位しています。\n`;
+            var severity = diff > 12 ? _0x$d(62) : _0x$d(63);
+            report += _0x$d(93);
             hasDeviations = true;
         }
 
         if (tilt > 8 || tilt < -5) {
-            var severity = Math.abs(tilt) > 15 ? _0x$getStr(52) : _0x$getStr(62);
-            report += `- **骨盤アライメント異常 ${severity}**: 骨盤が ${tilt > 0 ? _0x$getStr(38) : _0x$getStr(39)} に ${Math.abs(tilt)}° 傾斜しています。\n`;
+            var severity = Math.abs(tilt) > 15 ? _0x$d(62) : _0x$d(94);
+            report += _0x$d(95);
             hasDeviations = true;
         }
 
-        if (ja.leftKneeAngle && ja.rightKneeAngle && mode === _0x$getStr(18)) {
+        if (ja.leftKneeAngle && ja.rightKneeAngle && mode === _0x$d(20)) {
             var kneeDiff = Math.abs(ja.leftKneeAngle - ja.rightKneeAngle);
             if (kneeDiff > 5) {
-                report += `- **膝関節屈曲非対称性 【中等度】**: スクワット時の膝関節角度に ${kneeDiff.toFixed(1)}° の左右差があります（左: ${ja.leftKneeAngle.toFixed(1)}° / 右: ${ja.rightKneeAngle.toFixed(1)}°）。\n`;
+                report += _0x$d(96);
                 hasDeviations = true;
             }
         }
 
-        if (ja.trunkLean && mode === _0x$getStr(23)) {
+        if (ja.trunkLean && mode === _0x$d(25)) {
             if (ja.trunkLean > 40) {
-                report += `- **体幹前傾の過多 【中等度〜重度】**: 体幹の前傾角が ${ja.trunkLean.toFixed(1)}° と深く、股関節および大腿四頭筋の硬さ、あるいは体幹深層筋の支持性低下を示唆します。\n`;
+                report += _0x$d(97);
                 hasDeviations = true;
             }
             if (ja.shoulderArmAngle && ja.shoulderArmAngle < 155) {
-                report += `- **上腕挙上不足 【中等度】**: スクワット中の腕と体幹のなす角度が ${ja.shoulderArmAngle.toFixed(1)}° と狭く、広背筋や大胸筋の硬さ、または肩甲骨周囲筋の機能低下を示します。\n`;
+                report += _0x$d(98);
                 hasDeviations = true;
             }
         }
@@ -608,78 +578,78 @@ ${STATIC_MODES.indexOf(metrics.mode) !== -1 ? `【レポート要件】
             // 2026-08-24更新: mm単位に統一。閾値(800mm²)は実測データがまだ
             // 十分に無い暫定値のため、被験者計測が進み次第見直す前提。
             if (sway.swayArea > 800) {
-                report += `- **COP重心動揺領域の増大 【中等度】**: 動揺面積が ${sway.swayArea.toFixed(1)} mm²${sway.precise ? _0x$getStr(50) : _0x$getStr(51)}と広く、静的バランスの維持における安定性低下（足底受容器・前庭系・視覚によるフィードバックの遅れや足関節の剛性不足）を示しています。\n`;
+                report += _0x$d(65);
                 hasDeviations = true;
             }
         }
 
         if (!hasDeviations) {
-            report += `顕著なバイオメカニクス的逸脱は検出されませんでした。すべてアライメント指標は安全基準範囲内です。\n`;
+            report += _0x$d(66);
         }
-        report += `\n`;
+        report += _0x$d(60);
 
         // 3. Clinical Implications
-        report += `## ⚡ 臨床的インプリケーションと潜在的障害リスク\n`;
+        report += _0x$d(99);
         if (wb && Math.abs(wb.total.L - wb.total.R) > 5) {
-            var dominantSide = wb.total.L > wb.total.R ? _0x$getStr(57) : _0x$getStr(56);
-            var lightSide = wb.total.L > wb.total.R ? _0x$getStr(56) : _0x$getStr(57);
-            report += `- **${dominantSide}膝・股関節・足関節の過負荷**: 荷重が増大している側の関節における軟骨・靭帯への機械的ストレスが増大し、長期的に変形性関節症や腱炎のリスクが高まります。\n`;
-            report += `- **${lightSide}腰背部の筋筋膜性ストレス**: 荷重非対称性を代償するために、反対側の腰椎周囲筋（腰方形筋、脊柱起立筋）が過剰に緊張し、非特異的腰痛を発症しやすくなります。\n`;
+            var dominantSide = wb.total.L > wb.total.R ? "左" : "右";
+            var lightSide = wb.total.L > wb.total.R ? "右" : "左";
+            report += _0x$d(100);
+            report += _0x$d(101);
         }
 
         if (tilt > 8) {
-            report += `- **仙腸関節および腰椎椎間関節症**: 骨盤の前傾は腰椎の過前弯を引き起こし、椎間関節の圧迫ストレス（腰痛）や、大腿四頭筋・腸腰筋の短縮、ハムストリングスの伸張性過緊張を誘発します。\n`;
+            report += _0x$d(102);
         } else if (tilt < -5) {
-            report += `- **椎間板ヘルニアおよびフラットバック症候群**: 骨盤の後傾は脊椎本来の緩衝機能を司るS字カーブを消失させ、椎間板（特にL4/L5-S1）への軸圧ストレスを増大させ、ヘルニアや坐骨神経痛のリスクとなります。\n`;
+            report += _0x$d(103);
         }
 
-        if (ja.trunkLean && ja.trunkLean > 40 && mode === _0x$getStr(23)) {
-            report += `- **腰部・膝関節蓋大腿関節への代償ストレス**: 体幹の過度な前傾は、大腿四頭筋への依存を強め、膝蓋腱炎（ジャンパー膝）や膝前面痛の原因となります。また、腰椎部のモーメントアームが長くなり、脊柱起立筋への負担が極端に増加します。\n`;
+        if (ja.trunkLean && ja.trunkLean > 40 && mode === _0x$d(25)) {
+            report += _0x$d(104);
         }
 
         if (wb === null && tilt === 0 && !ja.trunkLean) {
-            report += `- **一般的な姿勢維持機能の維持**: 現在は良好な状態ですが、デスクワークなどの持続的な同姿勢によりインナーマッスル（コア）が弱化すると、アライメント不良へ移行する可能性があります。\n`;
+            report += _0x$d(105);
         }
-        report += `\n`;
+        report += _0x$d(60);
 
         // 4. Corrective Exercise
-        report += `## 🏋️ 推奨されるアプローチ・リハビリ運動療法\n`;
+        report += _0x$d(106);
         
         if (wb && Math.abs(wb.total.L - wb.total.R) > 5) {
-            var weakSide = wb.total.L > wb.total.R ? _0x$getStr(56) : _0x$getStr(57);
-            report += `### 1. 荷重左右差の是正\n`;
-            report += `- **${weakSide}脚の片脚デッドリフト (Single-Leg Romanian Deadlift)**\n`;
-            report += `  - ターゲ���ト: ${weakSide}側の大臀筋、ハムストリングス、骨盤の水平安定性\n`;
-            report += `  - アプローチ: 片脚で立ち、背部を伸ばしたまま股関節から上体を前に倒します。10回×3セット。\n`;
+            var weakSide = wb.total.L > wb.total.R ? "右" : "左";
+            report += _0x$d(107);
+            report += _0x$d(108);
+            report += _0x$d(109);
+            report += _0x$d(75);
         }
 
         if (tilt > 8) {
-            report += `### 2. 骨盤前傾・反り腰の改善\n`;
-            report += `- **腸腰筋・大腿四頭筋のストレッチ**\n`;
-            report += `  - アプローチ: 片膝立ちになり、骨盤を後傾させながら前方に体重を移動し、股関節前面を伸ばします。左右各30秒×3回。\n`;
-            report += `- **プランク (Plank) & ドローイン**\n`;
-            report += `  - アプローチ: 前腕とつま先で体を支え、腹横筋を意識して骨盤をニュートラルに維持します。30〜60秒×3セット。\n`;
+            report += _0x$d(110);
+            report += _0x$d(111);
+            report += _0x$d(112);
+            report += _0x$d(113);
+            report += _0x$d(114);
         } else if (tilt < -5) {
-            report += `### 2. 骨盤後傾・平背の改善\n`;
-            report += `- **ハムストリングスの動的ストレッチ**\n`;
-            report += `  - アプローチ: 仰向けに寝て片膝を抱え、そこから膝をゆっくり伸ばして太もも裏側を伸ばします。左右各20回×2セット。\n`;
-            report += `- **キャット＆カウ (Cat & Cow)**\n`;
-            report += `  - アプローチ: 四つん這いになり、骨盤から背骨を一つずつ動かすように、丸める・反らすを繰り返します。15回×2セット。\n`;
+            report += _0x$d(115);
+            report += _0x$d(116);
+            report += _0x$d(117);
+            report += _0x$d(118);
+            report += _0x$d(119);
         }
 
-        if (ja.trunkLean && ja.trunkLean > 40 && mode === _0x$getStr(23)) {
-            report += `### 3. オーバーヘッドスクワットパターンの改善\n`;
-            report += `- **ヒップヒンジの練習 (Hip Hinge Practice with Wall)**\n`;
-            report += `  - アプローチ: 壁から足1足分前に立ち、お尻を後ろの壁にタッチさせるように股関節から屈曲します。膝を前に出さない感覚を養います。15回×3セット。\n`;
-            report += `- **胸椎の伸展・回旋モビリティ**\n`;
-            report += `  - アプローチ: 四つん這いから片手を頭の後ろにあて、胸を横に開くように体幹を回旋します。上腕の挙上可動域を改善します。左右各10回×3セット。\n`;
+        if (ja.trunkLean && ja.trunkLean > 40 && mode === _0x$d(25)) {
+            report += _0x$d(120);
+            report += _0x$d(121);
+            report += _0x$d(122);
+            report += _0x$d(123);
+            report += _0x$d(124);
         }
 
         if (!wb && tilt === 0 && !ja.trunkLean) {
-            report += `### 1. 全身のコアスタビリティの維持\n`;
-            report += `- **バードドッグ (Bird-Dog)**\n`;
-            report += `  - ターゲット: 脊柱起立筋、多裂筋、臀筋、コアの対角支持性\n`;
-            report += `  - アプローチ: 四つん這いから右手と左脚（または左手と右脚）を水平に伸ばし、3秒維持します。左右交互に15回×3セット。\n`;
+            report += _0x$d(125);
+            report += _0x$d(69);
+            report += _0x$d(70);
+            report += _0x$d(71);
         }
 
         return report;
@@ -703,57 +673,42 @@ ${STATIC_MODES.indexOf(metrics.mode) !== -1 ? `【レポート要件】
             try {
                 return await this.fetchGeminiMultiViewSynthesis(metricsByMode, apiKey);
             } catch (e) {
-                console.error(_0x$getStr(63), e);
-                return _0x$getStr(2) + e + _0x$getStr(3) + this.generateOfflineMultiViewSynthesis(metricsByMode);
+                console.error(_0x$d(126), e);
+                return _0x$d(2) + e + _0x$d(3) + this.generateOfflineMultiViewSynthesis(metricsByMode);
             }
         }
         return this.generateOfflineMultiViewSynthesis(metricsByMode);
     },
 
     fetchGeminiMultiViewSynthesis: async function(metricsByMode, apiKey) {
-        var model = _0x$getStr(29);
-        var url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+        var model = _0x$d(31);
+        var url = _0x$d(32);
         var self = this;
 
-        var modeOrder = [_0x$getStr(44), _0x$getStr(36), _0x$getStr(45), _0x$getStr(37)];
+        var modeOrder = [_0x$d(50), _0x$d(84), _0x$d(51), _0x$d(85)];
         var availableModes = modeOrder.filter(m => !!metricsByMode[m]);
         var missingModes = modeOrder.filter(m => !metricsByMode[m]);
 
         var sectionsText = availableModes.map(function (mode) {
             var m = metricsByMode[mode];
-            var lines = [_0x$getStr(64) + self.getModeNameJp(mode)];
+            var lines = [_0x$d(127) + self.getModeNameJp(mode)];
             if (m.weightBearing) {
-                lines.push(_0x$getStr(65) + m.weightBearing.total.L.toFixed(1) + _0x$getStr(66) + m.weightBearing.total.R.toFixed(1) + _0x$getStr(67));
+                lines.push(_0x$d(128) + m.weightBearing.total.L.toFixed(1) + _0x$d(129) + m.weightBearing.total.R.toFixed(1) + "%");
             }
             if (m.swayMetrics) {
-                lines.push(_0x$getStr(68) + m.swayMetrics.swayArea.toFixed(1) + _0x$getStr(69) + (m.swayMetrics.precise ? "" : _0x$getStr(70)));
+                lines.push(_0x$d(130) + m.swayMetrics.swayArea.toFixed(1) + _0x$d(131) + (m.swayMetrics.precise ? "" : _0x$d(132)));
             }
-            if ((mode === _0x$getStr(36) || mode === _0x$getStr(37)) && typeof m.pelvicTilt === _0x$getStr(0)) {
-                lines.push(_0x$getStr(71) + Math.abs(m.pelvicTilt).toFixed(1) + _0x$getStr(72) + (m.pelvicTilt > 0 ? _0x$getStr(38) : (m.pelvicTilt < 0 ? _0x$getStr(39) : _0x$getStr(40))) + _0x$getStr(73));
+            if ((mode === _0x$d(84) || mode === _0x$d(85)) && typeof m.pelvicTilt === _0x$d(0)) {
+                lines.push(_0x$d(133) + Math.abs(m.pelvicTilt).toFixed(1) + _0x$d(134) + (m.pelvicTilt > 0 ? _0x$d(37) : (m.pelvicTilt < 0 ? _0x$d(38) : _0x$d(39))) + "）");
             }
-            return lines.join(_0x$getStr(74));
-        }).join(_0x$getStr(75));
+            return lines.join(_0x$d(60));
+        }).join(_0x$d(135));
 
-        var prompt = `あなたは理学療法士、バイオメカニクス研究者、およびAI臨床姿勢分析の専門家です。
-以下は、同一の被測定者を静止姿勢で複数方向（前面・後面・左側面・右側面のうち一部、または全部）から撮影した計測データです。各方向ごとの個別の詳細評価（静止姿勢アライメント評価・検出された偏位・所見に基づく推奨改善アプローチの3セクション構成）は別途出力済みのため、ここでは方向を横断して初めて見えてくる所見に絞り、簡潔な「4方向総合所見」を日本語で作成してください。姿勢・荷重・COP重心動揺「以外」（動作解析・可動域テスト等）の話題には触れないこと。
-
-【計測済みの方向】
-${sectionsText}
-
-${missingModes.length > 0 ? _0x$getStr(76) + missingModes.map(m => self.getModeNameJp(m)).join(_0x$getStr(77)) + _0x$getStr(74) : ""}
-
-【出力要件】
-1. マークダウン形式。ただし大見出し(#, ##)は付けないこと（呼び出し側で見出しを付与するため、本文のみを出力する）。
-2. 以下の2点を、合わせて6〜9文程度でまとめること：
-   (a) 方向を横断して初めて言える姿勢・荷重・COP動揺のアライメント所見の統合（例: 前面・後面で見られた荷重偏位と、側面で見られた所見との関連性など）。単に各方向の結果を再掲しないこと。方向間で矛盾する所見があれば、その旨も指摘すること。
-   (b) (a)の統合所見から導かれる、複数方向を踏まえた総合的な改善アプローチ（運動療法）の提案。各方向の個別レポートで既に提案した内容の単純な再掲ではなく、方向を横断したからこそ言える優先順位や関連性を踏まえること。
-3. 断定的すぎる表現は避け、「傾向が見られます」「示唆されます」等の丁寧な臨床トーンを保つこと。
-4. 未計測の方向がある場合は、それを踏まえた参考情報である旨に軽く触れること。
-`;
+        var prompt = _0x$d(136);
 
         var response = await fetch(url, {
-            method: _0x$getStr(41),
-            headers: { _0x$getStr(42): _0x$getStr(43) },
+            method: _0x$d(42),
+            headers: { _0x$d(43): _0x$d(44) },
             body: JSON.stringify({
                 contents: [{ parts: [{ text: prompt }] }],
                 generationConfig: { temperature: 0.2 }
@@ -762,7 +717,7 @@ ${missingModes.length > 0 ? _0x$getStr(76) + missingModes.map(m => self.getModeN
 
         if (!response.ok) {
             var errText = await response.text();
-            throw new Error(`HTTP ${response.status}: ${errText}`);
+            throw new Error(_0x$d(45));
         }
 
         var json = await response.json();
@@ -776,23 +731,23 @@ ${missingModes.length > 0 ? _0x$getStr(76) + missingModes.map(m => self.getModeN
      */
     generateOfflineMultiViewSynthesis: function(metricsByMode) {
         var self = this;
-        var modeOrder = [_0x$getStr(44), _0x$getStr(36), _0x$getStr(45), _0x$getStr(37)];
+        var modeOrder = [_0x$d(50), _0x$d(84), _0x$d(51), _0x$d(85)];
         var availableModes = modeOrder.filter(m => !!metricsByMode[m]);
         var missingModes = modeOrder.filter(m => !metricsByMode[m]);
 
         var lines = [];
-        lines.push(_0x$getStr(78) + availableModes.map(m => self.getModeNameJp(m).replace(_0x$getStr(79), '')).join(_0x$getStr(80)) + _0x$getStr(81) + availableModes.length + _0x$getStr(82));
+        lines.push(_0x$d(137) + availableModes.map(m => self.getModeNameJp(m).replace(_0x$d(138), '')).join("・") + "の" + availableModes.length + _0x$d(139));
 
         // 2026-08-25追加: 左右の骨盤傾斜角は平均化せず側面ごとに独立して
         // 保存しているため（企画者の「左右別に扱いたい」とのご要望）、
         // 両側面が揃っている場合はここで左右を並べて明示する。
-        if (metricsByMode[_0x$getStr(36)] && metricsByMode[_0x$getStr(37)] &&
-            typeof metricsByMode[_0x$getStr(36)].pelvicTilt === _0x$getStr(0) && typeof metricsByMode[_0x$getStr(37)].pelvicTilt === _0x$getStr(0)) {
-            var tiltL = metricsByMode[_0x$getStr(36)].pelvicTilt;
-            var tiltR = metricsByMode[_0x$getStr(37)].pelvicTilt;
-            var tiltLLabel = tiltL > 0 ? _0x$getStr(38) : (tiltL < 0 ? _0x$getStr(39) : _0x$getStr(40));
-            var tiltRLabel = tiltR > 0 ? _0x$getStr(38) : (tiltR < 0 ? _0x$getStr(39) : _0x$getStr(40));
-            lines.push(_0x$getStr(83) + Math.abs(tiltL).toFixed(1) + _0x$getStr(72) + tiltLLabel + _0x$getStr(84) + Math.abs(tiltR).toFixed(1) + _0x$getStr(72) + tiltRLabel + _0x$getStr(85));
+        if (metricsByMode[_0x$d(84)] && metricsByMode[_0x$d(85)] &&
+            typeof metricsByMode[_0x$d(84)].pelvicTilt === _0x$d(0) && typeof metricsByMode[_0x$d(85)].pelvicTilt === _0x$d(0)) {
+            var tiltL = metricsByMode[_0x$d(84)].pelvicTilt;
+            var tiltR = metricsByMode[_0x$d(85)].pelvicTilt;
+            var tiltLLabel = tiltL > 0 ? _0x$d(37) : (tiltL < 0 ? _0x$d(38) : _0x$d(39));
+            var tiltRLabel = tiltR > 0 ? _0x$d(37) : (tiltR < 0 ? _0x$d(38) : _0x$d(39));
+            lines.push(_0x$d(140) + Math.abs(tiltL).toFixed(1) + _0x$d(134) + tiltLLabel + _0x$d(141) + Math.abs(tiltR).toFixed(1) + _0x$d(134) + tiltRLabel + _0x$d(142));
         }
 
         // 2026-08-24追加: 総合所見から導かれる改善アプローチを最後にまとめる
@@ -806,15 +761,15 @@ ${missingModes.length > 0 ? _0x$getStr(76) + missingModes.map(m => self.getModeN
             var sides = wbModes.map(function (m) {
                 var wb = metricsByMode[m].weightBearing.total;
                 var diff = wb.L - wb.R;
-                if (Math.abs(diff) < 3) return _0x$getStr(86);
-                return diff > 0 ? _0x$getStr(87) : _0x$getStr(88);
+                if (Math.abs(diff) < 3) return 'N';
+                return diff > 0 ? 'L' : 'R';
             });
-            var nonNeutral = sides.filter(s => s !== _0x$getStr(86));
+            var nonNeutral = sides.filter(s => s !== 'N');
             if (nonNeutral.length > 1 && nonNeutral.every(s => s === nonNeutral[0])) {
-                lines.push(wbModes.map(m => self.getModeNameJp(m).replace(_0x$getStr(79), '')).join(_0x$getStr(80)) + _0x$getStr(89) + (nonNeutral[0] === _0x$getStr(87) ? _0x$getStr(57) : _0x$getStr(56)) + _0x$getStr(90));
+                lines.push(wbModes.map(m => self.getModeNameJp(m).replace(_0x$d(138), '')).join("・") + _0x$d(143) + (nonNeutral[0] === 'L' ? "左" : "右") + _0x$d(144));
                 consistentWbSide = nonNeutral[0];
             } else if (nonNeutral.length > 1) {
-                lines.push(_0x$getStr(91));
+                lines.push(_0x$d(145));
             }
         }
 
@@ -823,16 +778,16 @@ ${missingModes.length > 0 ? _0x$getStr(76) + missingModes.map(m => self.getModeN
         // 方向を横断して優先度が高いと考えられるものを1〜2点に絞って挙げる）。
         if (consistentWbSide) {
             var approachLines = [];
-            var weakSideM = consistentWbSide === _0x$getStr(87) ? _0x$getStr(56) : _0x$getStr(57);
-            approachLines.push((consistentWbSide === _0x$getStr(87) ? _0x$getStr(57) : _0x$getStr(56)) + _0x$getStr(92) + weakSideM + _0x$getStr(93) + weakSideM + _0x$getStr(94));
-            lines.push(_0x$getStr(95) + approachLines.join(_0x$getStr(96)));
+            var weakSideM = consistentWbSide === 'L' ? '右' : '左';
+            approachLines.push((consistentWbSide === 'L' ? '左' : '右') + _0x$d(146) + weakSideM + _0x$d(147) + weakSideM + _0x$d(148));
+            lines.push(_0x$d(149) + approachLines.join(" "));
         }
 
         if (missingModes.length > 0) {
-            lines.push(_0x$getStr(97) + missingModes.map(m => self.getModeNameJp(m).replace(_0x$getStr(79), '')).join(_0x$getStr(80)) + _0x$getStr(98));
+            lines.push(_0x$d(150) + missingModes.map(m => self.getModeNameJp(m).replace(_0x$d(138), '')).join("・") + _0x$d(151));
         }
 
-        return lines.join(_0x$getStr(75));
+        return lines.join(_0x$d(135));
     },
 
     /**
@@ -840,18 +795,18 @@ ${missingModes.length > 0 ? _0x$getStr(76) + missingModes.map(m => self.getModeN
      */
     getModeNameJp: function(mode) {
         var names = {
-            _0x$getStr(44): _0x$getStr(99),
-            _0x$getStr(45): _0x$getStr(100),
-            _0x$getStr(36): _0x$getStr(101),
-            _0x$getStr(37): _0x$getStr(102),
-            _0x$getStr(18): _0x$getStr(103),
-            _0x$getStr(23): _0x$getStr(104),
-            _0x$getStr(105): _0x$getStr(106),
-            _0x$getStr(107): _0x$getStr(108),
-            _0x$getStr(109): _0x$getStr(110),
-            _0x$getStr(111): _0x$getStr(112),
-            _0x$getStr(113): _0x$getStr(114),
-            _0x$getStr(115): _0x$getStr(116)
+            _0x$d(50): _0x$d(152),
+            _0x$d(51): _0x$d(153),
+            _0x$d(84): _0x$d(154),
+            _0x$d(85): _0x$d(155),
+            _0x$d(20): _0x$d(156),
+            _0x$d(25): _0x$d(157),
+            _0x$d(158): _0x$d(159),
+            _0x$d(160): _0x$d(161),
+            _0x$d(162): _0x$d(163),
+            _0x$d(164): _0x$d(165),
+            _0x$d(166): _0x$d(167),
+            _0x$d(168): _0x$d(169)
         };
         return names[mode] || mode;
     }

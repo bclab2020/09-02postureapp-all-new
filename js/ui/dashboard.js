@@ -290,7 +290,7 @@ export function initDashboard(dataService) {
             ? reportDataStore['l_side']
             : ((reportDataStore['r_side'] && reportDataStore['r_side'].length > 0)
                 ? reportDataStore['r_side']
-                : ((metrics.mode === 'l_side' || metrics.mode === 'r_side') ? (session.keypoints || null) : null));
+                : ((metrics.mode === 'l_side' || metrics.mode === 'r_side') ? (activeSession.poseData && activeSession.poseData[0] ? activeSession.poseData[0].keypoints : null) : null));
         var sideMode = (reportDataStore['l_side'] && reportDataStore['l_side'].length > 0) ? 'l_side' : ((reportDataStore['r_side'] && reportDataStore['r_side'].length > 0) ? 'r_side' : metrics.mode);
         var kendallOffsets = sideKps ? biomechanics.extractKendallOffsets(sideKps, sideMode) : null;
 
@@ -299,7 +299,7 @@ export function initDashboard(dataService) {
             var th3 = kendallOffsets.th3Cm;
             var s2 = kendallOffsets.s2Cm;
 
-            var patientAge = (session && session.patientAge) ? parseInt(session.patientAge, 10) : null;
+            var patientAge = (activeSession && activeSession.patientAge) ? parseInt(activeSession.patientAge, 10) : null;
             var AGE_PROFILES = {
                 child:  { headKg: 3.5, thoracicKg: 9.0,  lumbarKg: 15.0 }, // 6-9歳 (体重約25kg)
                 junior: { headKg: 4.2, thoracicKg: 16.0, lumbarKg: 27.0 }, // 10-14歳 (体重約45kg)

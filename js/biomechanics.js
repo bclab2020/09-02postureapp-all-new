@@ -1,10 +1,4 @@
 /**
- * (c) Athletecore Proprietary Biomechanical Engine
- * CONFIDENTIAL & PROTECTED - ALL RIGHTS RESERVED.
- */
-var _0x$b=["Ym9sZCA=","cHggc2Fucy1zZXJpZg==","I2ZmNTI1Mg==","cm91bmQ=","dmlydHVhbF9hc2lzX2w=","dmlydHVhbF9hc2lzX3I=","IzY3M2FiNw==","IzAwYmZmZg==","I2ZmOTEwMA==","I2ZmZg==","I2ZmZWIzYg==","IzAwMA==","cmdiYSgyNTUsIDI1NSwgMjU1LCAwLjE1KQ==","bF9zaWRl","cl9zaWRl","bnVtYmVy","cmdiYSgxNzksIDEzNiwgMjU1LCAwLjg1KQ==","cmdiYSg1NywgMjU1LCAyMCwgMC44KQ==","QzIgKOmguOakjik=","VGgzICjog7jmpI4p","UzIgKOS7memqqCk=","TDMgKOiFsOakjik=","VGgxMSAo6IO46IWw56e76KGMKQ==","cmdiYSgyNTUsIDIzNSwgNTksIDAuNCk=","I2RlZmY5YQ==","cmlnaHQ=","bGVmdA==","JHtwdC5uYW1lfTogJHtkaWZmQ20gPiAwID8gJysnIDogJyd9JHtkaWZmQ20udG9GaXhlZCgxKX1jbQ==","44Ki44Op44Kk44Oh44Oz44OI6KiI5ris5LitLi4u","4pyFIOODi+ODpeODvOODiOODqeODqyAo5q2j5bi444Ki44Op44Kk44Oh44Oz44OIKQ==","IzM5ZmYxNA==","4pqg77iPIOOCueOCpuOCp+OCpOODkOODg+OCryAoU3dheSBCYWNrKQ==","4pqg77iPIOOCq+OCpOODm+OCt+OCueODu+ODreODvOODieOCt+OCuSAoS3lwaG9zaXMtTG9yZG9zaXMp","4pqg77iPIOWGhuiDjCAoVGhvcmFjaWMgS3lwaG9zaXMp","4pqg77iPIOW5s+iDjCAoRmxhdCBCYWNrKQ==","I2ZmYzEwNw==","4oS577iPIOi7veW6puOBquOCouODqeOCpOODoeODs+ODiOWBj+S9jSAo6Kix5a6556+E5Zuy5YaFKQ==","44CQ44Kx44Oz44OA44Or5ae/5Yui44Ki44Op44Kk44Oh44Oz44OI5YiG6aGe","44O75q2j5Lit57eaOuOCouODq+OCs+Wfuua6lg==","cmdiYSgwLCAwLCAwLCAwLjgp","cmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEp","I2FhYQ==","44CQ5YWo6Lqr6I236YeNJHt1c2VBcnVjbyA/ICfjg7vmraPkuK3nt5o644Ki44Or44Kz5Z+65rqWJyA6ICcnfeOAkSDlt6Y6ICR7dG90YWxSYXRpby5MLnRvRml4ZWQoMSl9JSB8IOWPszogJHt0b3RhbFJhdGlvLlIudG9GaXhlZCgxKX0l","5LiK5Y2K6Lqr5YGP5L2NIOW3pjogJHt1cHBlclJhdGlvLkwudG9GaXhlZCgxKX0lIHwg5Y+zOiAke3VwcGVyUmF0aW8uUi50b0ZpeGVkKDEpfSU=","5LiL5Y2K6Lqr5YGP5L2NIOW3pjogJHtsb3dlclJhdGlvLkwudG9GaXhlZCgxKX0lIHwg5Y+zOiAke2xvd2VyUmF0aW8uUi50b0ZpeGVkKDEpfSU=","cmdiYSgwLDAsMCwwLjgp","cmdiYSgxNzksIDEzNiwgMjU1LCAwLjUp","cmdiYSgyNTUsMjU1LDI1NSwwLjEp","Y2VudGVy","cmdiYSgyNTUsMjU1LDI1NSwwLjMp","44OL44O844Kk44OzIA==","44OL44O844Ki44Km44OIIA==","5L2T5bm55YmN5YK+OiA=","6Iad5bGI5puyOiA=","5oyZ5LiK5Yi26ZmQOiA=","cmdiYSgyNTUsMjU1LDI1NSwwLjQp","ZHluX2ZsZXhfZndk","5YmN5bGIKOiCoemWouevgOWxiOabsik6ICR7aGlwRmxleGlvbi50b0ZpeGVkKDEpfcKw","5b6M5bGIKOiCoemWouevgOS8uOWxlSk6ICR7aGlwRmxleGlvbi50b0ZpeGVkKDEpfcKw","ZHluX3Nob3VsZGVyX3I=","5omL6Zai56+A6ZaT6Led6ZuiOiAke2Rpc3RQeC50b0ZpeGVkKDEpfSBweA==","cmdiYSgyNTUsIDgyLCA4MiwgMC4xKQ==","cmdiYSg1NywgMjU1LCAyMCwgMC4xKQ==","cmdiYSgyNTUsIDgyLCA4MiwgMC40KQ==","cmdiYSg1NywgMjU1LCAyMCwgMC40KQ==","Y2FudmFz","MmQ=","IzBiMTIyMA==","cmdiYSgyNTUsMjU1LDI1NSwwLjE4KQ==","cmdiYSgyNTUsMjU1LDI1NSwwLjU1KQ==","MTFweCBzYW5zLXNlcmlm","bW0=","cmdiYSgyNTUsMjU1LDI1NSwwLjEyKQ==","cmdiYSg1NywgMjU1LCAyMCwgMC44NSk=","cmdiYSgyNTUsIDgyLCA4MiwgMC44NSk=","cmdiYSgyNTUsMjU1LDI1NSwwLjYp","cmdiYSgyNTUsMjU1LDI1NSwwLjQ1KQ==","MTBweCBzYW5zLXNlcmlm","5Y+C6ICD5YCk77yIcHhUb0NtUmF0aW/jgavjgojjgovov5HkvLzmj5vnrpfvvIk=","aW1hZ2UvcG5n","bGVmdF9hbmtsZQ==","Mjc=","cmlnaHRfYW5rbGU=","Mjg=","bm9zZQ==","bGVmdF9zaG91bGRlcg==","MTE=","cmlnaHRfc2hvdWxkZXI=","MTI=","bGVmdF9oaXA=","MjM=","cmlnaHRfaGlw","MjQ=","ZnVuY3Rpb24=","W2Jpb21lY2hhbmljc10gcmVuZGVyUGhvdG9XaXRoT3ZlcmxheeOBrmRyYXdGbuOBp+OCqOODqeODvDo=","aW1hZ2UvanBlZw==","IzA1MDgxMQ==","W2Jpb21lY2hhbmljc10gcmVuZGVyUGhvdG9XaXRoT3ZlcmxheSBmYWlsZWQsIGZhbGxpbmcgYmFjayB0byBwbGFpbiBwaG90bzo=","W2Jpb21lY2hhbmljc10gcmVuZGVyVXByaWdodFBob3RvIGZhaWxlZCwgZmFsbGluZyBiYWNrIHRvIG9yaWdpbmFsIGltYWdlOg==","cmdiYSgxNDgsIDE2MywgMTg0LCAwLjI1KQ==","I2UxMWQ0OA==","IzM4YmRmOA==","IzMzNDE1NQ==","cmdiYSgzMCwgNDEsIDU5LCAwLjQp","IzY0NzQ4Yg==","OHB4IHNhbnMtc2VyaWY=","44Gk44G+5YWI","44GL44GL44Go","I2NiZDVlMQ==","IzBmMTcyYQ==","Izk0YTNiOA==","cmdiYSgxNDgsIDE2MywgMTg0LCAwLjQp","QzI=","I2Y4ZmFmYw==","VGgz","TDM=","UzI=","SGlw","S25lZQ==","QW5rbGU=","OC41cHggc2Fucy1zZXJpZg=="];
-function _0x$d(i){try{return decodeURIComponent(escape(atob(_0x$b[i])));}catch(e){return atob(_0x$b[i]);}}
-/**
  * CONNECT AI - Biomechanics Drawing & Calculation Engine
  * Contains all mathematical calculations, drawing logic, skeleton connections,
  * Kendall posture alignment, weight-bearing, dynamic movement analyses,
@@ -25,7 +19,7 @@ function _0x$d(i){try{return decodeURIComponent(escape(atob(_0x$b[i])));}catch(e
 // 2.5倍に調整（企画者からは「あとで修正するかも」との想定通りの反応）。
 var OVERLAY_FONT_SCALE = 2.5;
 function overlayFont(basePx, bold) {
-    return (bold ? _0x$d(0) : '') + Math.round(basePx * OVERLAY_FONT_SCALE) + _0x$d(1);
+    return (bold ? 'bold ' : '') + Math.round(basePx * OVERLAY_FONT_SCALE) + 'px sans-serif';
 }
 
 var biomechanics = {
@@ -48,15 +42,15 @@ var biomechanics = {
     /**
      * Draws the complete skeleton on the canvas.
      */
-    drawSkeleton: function(ctx, kps, color = _0x$d(2)) {
+    drawSkeleton: function(ctx, kps, color = '#ff5252') {
         if (!kps) return;
         
         ctx.save();
         // Draw connection lines
         ctx.strokeStyle = color;
         ctx.lineWidth = 4;
-        ctx.lineCap = _0x$d(3);
-        ctx.lineJoin = _0x$d(3);
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
 
         this.skeletonConnections.forEach(([p1, p2]) => {
             var kp1 = kps[p1];
@@ -70,13 +64,13 @@ var biomechanics = {
         });
 
         // Draw virtual ASIS lines if they exist
-        var asisL = kps.find(k => k.name === _0x$d(4));
-        var asisR = kps.find(k => k.name === _0x$d(5));
+        var asisL = kps.find(k => k.name === 'virtual_asis_l');
+        var asisR = kps.find(k => k.name === 'virtual_asis_r');
         var lHip = kps[23];
         var rHip = kps[24];
         if (asisL && asisR) {
             // Draw ASIS line
-            ctx.strokeStyle = _0x$d(6); // Purple for ASIS
+            ctx.strokeStyle = '#673ab7'; // Purple for ASIS
             ctx.lineWidth = 3;
             ctx.beginPath();
             ctx.moveTo(asisL.x, asisL.y);
@@ -95,13 +89,13 @@ var biomechanics = {
         // Draw joints
         kps.forEach((kp, idx) => {
             if (kp && kp.score > 0.3 && idx < 33) {
-                ctx.fillStyle = (idx % 2 === 0) ? _0x$d(7) : _0x$d(8); // Cyan/Orange joints
+                ctx.fillStyle = (idx % 2 === 0) ? '#00bfff' : '#ff9100'; // Cyan/Orange joints
                 ctx.beginPath();
                 ctx.arc(kp.x, kp.y, 6, 0, 2 * Math.PI);
                 ctx.fill();
                 
                 // Outline
-                ctx.strokeStyle = _0x$d(9);
+                ctx.strokeStyle = '#fff';
                 ctx.lineWidth = 1.5;
                 ctx.stroke();
             }
@@ -110,11 +104,11 @@ var biomechanics = {
         // Draw virtual ASIS nodes
         [asisL, asisR].forEach(asis => {
             if (asis) {
-                ctx.fillStyle = _0x$d(10); // Yellow for virtual points
+                ctx.fillStyle = '#ffeb3b'; // Yellow for virtual points
                 ctx.beginPath();
                 ctx.arc(asis.x, asis.y, 7, 0, 2 * Math.PI);
                 ctx.fill();
-                ctx.strokeStyle = _0x$d(11);
+                ctx.strokeStyle = '#000';
                 ctx.lineWidth = 2;
                 ctx.stroke();
             }
@@ -128,7 +122,7 @@ var biomechanics = {
      */
     drawCenterGrid: function(ctx, canvas) {
         ctx.save();
-        ctx.strokeStyle = _0x$d(12);
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
         ctx.lineWidth = 1;
         ctx.setLineDash([5, 10]);
         
@@ -151,7 +145,7 @@ var biomechanics = {
      */
     drawCrosshair: function(ctx, point, canvas) {
         ctx.save();
-        ctx.strokeStyle = _0x$d(10);
+        ctx.strokeStyle = '#ffeb3b';
         ctx.lineWidth = 1.5;
         ctx.beginPath();
         // Horiz line
@@ -175,8 +169,8 @@ var biomechanics = {
      *   null/undefinedの場合は従来通り足首基準（後方互換、デフォルト挙動）。
      */
     drawKendallAlignment: function(ctx, kps, pxToCmRatio, footSize, estimatedPelvicTilt, currentTab, canvasWidth, canvasHeight, arucoMidlineX) {
-        if (currentTab !== _0x$d(13) && currentTab !== _0x$d(14)) return;
-        var isLeft = currentTab === _0x$d(13);
+        if (currentTab !== 'l_side' && currentTab !== 'r_side') return;
+        var isLeft = currentTab === 'l_side';
         var dir = isLeft ? -1 : 1;
 
         var ear = isLeft ? kps[7] : kps[8]; // Ear index
@@ -195,7 +189,7 @@ var biomechanics = {
         var ratio = pxToCmRatio || 0.15;
         var footCm = footSize || 25;
 
-        var useAruco = typeof arucoMidlineX === _0x$d(15) && isFinite(arucoMidlineX);
+        var useAruco = typeof arucoMidlineX === 'number' && isFinite(arucoMidlineX);
         var plumbX;
         if (useAruco) {
             plumbX = arucoMidlineX;
@@ -207,7 +201,7 @@ var biomechanics = {
 
         // Draw plumb line（アルコ正中線モード時は紫系にして区別する）
         ctx.save();
-        ctx.strokeStyle = useAruco ? _0x$d(16) : _0x$d(17); // Lime green plumbline (default) / purple (ArUco)
+        ctx.strokeStyle = useAruco ? 'rgba(179, 136, 255, 0.85)' : 'rgba(57, 255, 20, 0.8)'; // Lime green plumbline (default) / purple (ArUco)
         ctx.lineWidth = 2.5;
         ctx.beginPath();
         ctx.moveTo(plumbX, 0); 
@@ -216,9 +210,9 @@ var biomechanics = {
 
         // Calculate anatomical alignment points relative to the plumbline
         // C2: 頸椎 (ear x coordinate back translation)
-        var c2 = { x: ear.x - (dir * (1.0 / ratio)), y: ear.y + (2.0 / ratio), name: _0x$d(18), d0: 1.5 };
+        var c2 = { x: ear.x - (dir * (1.0 / ratio)), y: ear.y + (2.0 / ratio), name: "C2 (頸椎)", d0: 1.5 };
         // Th3: 胸椎 (shoulder x coordinate)
-        var th3 = { x: sh.x, y: sh.y, name: _0x$d(19), d0: 1.0 };
+        var th3 = { x: sh.x, y: sh.y, name: "Th3 (胸椎)", d0: 1.0 };
         
         // S2: 仙骨 (computed using hip coordinate, shifted back based on pelvic tilt)
         var tiltRad = estimatedPelvicTilt * (Math.PI / 180);
@@ -226,18 +220,18 @@ var biomechanics = {
         var s2OffsetY = 2.0 / ratio;
         var s2X = hip.x - (dir * (s2OffsetZ * Math.cos(tiltRad) - s2OffsetY * Math.sin(tiltRad)));
         var s2Y = hip.y + (s2OffsetZ * Math.sin(tiltRad) + s2OffsetY * Math.cos(tiltRad));
-        var s2 = { x: s2X, y: s2Y, name: _0x$d(20), d0: 1.0 };
+        var s2 = { x: s2X, y: s2Y, name: "S2 (仙骨)", d0: 1.0 };
         
         // L3: 腰椎 (computed using spinal depth curve offset by pelvic tilt)
         var lumbarDepth = (3.0 + (estimatedPelvicTilt * 0.1)) / ratio;
         var l3Y = s2.y - ((s2.y - sh.y) * 0.3);
         var l3X = s2.x + (dir * lumbarDepth);
-        var l3 = { x: l3X, y: l3Y, name: _0x$d(21), d0: 2.0 };
+        var l3 = { x: l3X, y: l3Y, name: "L3 (腰椎)", d0: 2.0 };
         
         // Th11: 胸腰移行部
         var th11Y = s2.y - ((s2.y - sh.y) * 0.65);
         var th11X = s2.x + (dir * (0.8 / ratio));
-        var th11 = { x: th11X, y: th11Y, name: _0x$d(22), d0: 1.2 };
+        var th11 = { x: th11X, y: th11Y, name: "Th11 (胸腰移行)", d0: 1.2 };
 
         var spinalPoints = [c2, th3, th11, l3, s2];
 
@@ -247,16 +241,16 @@ var biomechanics = {
             var diffCm = diffPx * ratio * dir; // positive is forward alignment, negative is backward
             
             // Draw marker
-            ctx.fillStyle = _0x$d(10);
+            ctx.fillStyle = '#ffeb3b';
             ctx.beginPath();
             ctx.arc(pt.x, pt.y, 6, 0, 2*Math.PI);
             ctx.fill();
-            ctx.strokeStyle = _0x$d(11);
+            ctx.strokeStyle = '#000';
             ctx.lineWidth = 1.5;
             ctx.stroke();
 
             // Link line to plumbline
-            ctx.strokeStyle = _0x$d(23);
+            ctx.strokeStyle = 'rgba(255, 235, 59, 0.4)';
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(pt.x, pt.y);
@@ -264,13 +258,13 @@ var biomechanics = {
             ctx.stroke();
 
             // Render offset labels
-            ctx.fillStyle = _0x$d(24);
+            ctx.fillStyle = '#deff9a';
             ctx.font = overlayFont(12, true);
-            ctx.textAlign = isLeft ? _0x$d(25) : _0x$d(26);
+            ctx.textAlign = isLeft ? 'right' : 'left';
             // 2026-08-24: フォント拡大に伴い、マーカーの点や正中線と重ならない
             // よう文字の開始位置もあわせて離す（元は12px固定オフセット）。
             var textX = pt.x + (dir * (12 + (OVERLAY_FONT_SCALE - 1) * 4));
-            var labelText = _0x$d(27);
+            var labelText = `${pt.name}: ${diffCm > 0 ? '+' : ''}${diffCm.toFixed(1)}cm`;
             ctx.fillText(labelText, textX, pt.y + 4);
         });
 
@@ -279,40 +273,40 @@ var biomechanics = {
         var th3Offset = (th3.x - plumbX) * ratio * dir;
         var s2Offset = (s2.x - plumbX) * ratio * dir;
 
-        var postureClass = _0x$d(28);
-        var textColor = _0x$d(9);
+        var postureClass = "アライメント計測中...";
+        var textColor = "#fff";
         
         // Kendall Classification Algorithm (不感帯・誤差マージン考慮モデル: 2026-09-01改訂)
         // ① 正常許容領域（不感帯: 体表認識・呼吸動揺の誤差範囲内 ±1.5cm）
         if (Math.abs(s2Offset) <= 1.5 && Math.abs(th3Offset) <= 1.5 && Math.abs(c2Offset) <= 2.0) {
-            postureClass = _0x$d(29);
-            textColor = _0x$d(30);
+            postureClass = "✅ ニュートラル (正常アライメント)";
+            textColor = "#39ff14";
         }
         // ② 確定判定領域（誤差マージン 3.0cm〜3.5cm を明確に超えた有意なアライメント崩れ）
         else if (s2Offset < -3.5 && th3Offset > 2.5) {
-            postureClass = _0x$d(31);
-            textColor = _0x$d(2);
+            postureClass = "⚠️ スウェイバック (Sway Back)";
+            textColor = "#ff5252";
         } else if (s2Offset > 3.0 && th3Offset > 3.0) {
-            postureClass = _0x$d(32);
-            textColor = _0x$d(8);
+            postureClass = "⚠️ カイホシス・ロードシス (Kyphosis-Lordosis)";
+            textColor = "#ff9100";
         } else if (Math.abs(s2Offset) <= 2.0 && th3Offset > 3.5) {
-            postureClass = _0x$d(33);
-            textColor = _0x$d(8);
+            postureClass = "⚠️ 円背 (Thoracic Kyphosis)";
+            textColor = "#ff9100";
         } else if (s2Offset < -3.0 && Math.abs(th3Offset) <= 2.0) {
-            postureClass = _0x$d(34);
-            textColor = _0x$d(35);
+            postureClass = "⚠️ 平背 (Flat Back)";
+            textColor = "#ffc107";
         }
         // ③ 境界領域（軽度の偏位・許容範囲内の揺らぎ）
         else {
-            postureClass = _0x$d(36);
-            textColor = _0x$d(10);
+            postureClass = "ℹ️ 軽度なアライメント偏位 (許容範囲内)";
+            textColor = "#ffeb3b";
         }
 
         // Draw HUD overlay in bottom right
         // 2026-08-24: フォント拡大に伴い、固定サイズの背景ボックスだと文字が
         // はみ出してしまうため、実際のテキスト幅を測って箱の大きさを
         // 動的に決める（右下を基準に、テキストが長くなった分だけ左に広がる）。
-        var headerText = _0x$d(37) + (useAruco ? _0x$d(38) : '') + "】";
+        var headerText = "【ケンダル姿勢アライメント分類" + (useAruco ? '・正中線:アルコ基準' : '') + "】";
         ctx.font = overlayFont(12, false);
         var headerW = ctx.measureText(headerText).width;
         ctx.font = overlayFont(15, true);
@@ -326,15 +320,15 @@ var biomechanics = {
         var boxX = canvasWidth - boxW - 15;
         var boxY = canvasHeight - boxH - 15;
 
-        ctx.fillStyle = _0x$d(39);
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.8)';
         ctx.fillRect(boxX, boxY, boxW, boxH);
-        ctx.strokeStyle = _0x$d(40);
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
         ctx.lineWidth = 1;
         ctx.strokeRect(boxX, boxY, boxW, boxH);
 
         ctx.font = overlayFont(12, false);
-        ctx.fillStyle = _0x$d(41);
-        ctx.textAlign = _0x$d(26);
+        ctx.fillStyle = '#aaa';
+        ctx.textAlign = 'left';
         ctx.fillText(headerText, boxX + hudPadding, boxY + lineH1);
 
         ctx.font = overlayFont(15, true);
@@ -362,7 +356,7 @@ var biomechanics = {
         var dPx = rAnkle.x - lAnkle.x;
         if (Math.abs(dPx) < 10) return null;
 
-        var useAruco = typeof arucoMidlineX === _0x$d(15) && isFinite(arucoMidlineX);
+        var useAruco = typeof arucoMidlineX === 'number' && isFinite(arucoMidlineX);
         var centerX = useAruco ? arucoMidlineX : (lAnkle.x + rAnkle.x) / 2;
 
         // Weight distribution Center of Mass (COM) models
@@ -394,9 +388,9 @@ var biomechanics = {
         // 文字がはみ出してしまうため、実際のテキスト幅・行数から箱のサイズを
         // 動的に決める（Kendallアライメント分類HUDと同じ考え方）。
         ctx.save();
-        var wbLine1 = _0x$d(42);
-        var wbLine2 = _0x$d(43);
-        var wbLine3 = _0x$d(44);
+        var wbLine1 = `【全身荷重${useAruco ? '・正中線:アルコ基準' : ''}】 左: ${totalRatio.L.toFixed(1)}% | 右: ${totalRatio.R.toFixed(1)}%`;
+        var wbLine2 = `上半身偏位 左: ${upperRatio.L.toFixed(1)}% | 右: ${upperRatio.R.toFixed(1)}%`;
+        var wbLine3 = `下半身偏位 左: ${lowerRatio.L.toFixed(1)}% | 右: ${lowerRatio.R.toFixed(1)}%`;
         ctx.font = overlayFont(14, true);
         var wbMaxW = Math.max(ctx.measureText(wbLine1).width, ctx.measureText(wbLine2).width, ctx.measureText(wbLine3).width);
 
@@ -407,25 +401,25 @@ var biomechanics = {
         var wbBoxX = canvasWidth / 2 - wbBoxW / 2;
         var wbBoxY = canvasHeight - wbBoxH - 15;
 
-        ctx.fillStyle = _0x$d(45);
+        ctx.fillStyle = "rgba(0,0,0,0.8)";
         ctx.fillRect(wbBoxX, wbBoxY, wbBoxW, wbBoxH);
-        ctx.strokeStyle = useAruco ? _0x$d(46) : _0x$d(47);
+        ctx.strokeStyle = useAruco ? "rgba(179, 136, 255, 0.5)" : "rgba(255,255,255,0.1)";
         ctx.strokeRect(wbBoxX, wbBoxY, wbBoxW, wbBoxH);
-        ctx.textAlign = _0x$d(48);
+        ctx.textAlign = "center";
 
-        ctx.fillStyle = Math.abs(totalRatio.L - 50) > 5 ? _0x$d(2) : _0x$d(30);
+        ctx.fillStyle = Math.abs(totalRatio.L - 50) > 5 ? "#ff5252" : "#39ff14";
         ctx.fillText(wbLine1, canvasWidth/2, wbBoxY + wbLineH * 1 - wbLineH * 0.15);
 
-        ctx.fillStyle = Math.abs(upperRatio.L - 50) > 5 ? _0x$d(8) : _0x$d(9);
+        ctx.fillStyle = Math.abs(upperRatio.L - 50) > 5 ? "#ff9100" : "#fff";
         ctx.fillText(wbLine2, canvasWidth/2, wbBoxY + wbLineH * 2 - wbLineH * 0.15);
 
-        ctx.fillStyle = Math.abs(lowerRatio.L - 50) > 5 ? _0x$d(8) : _0x$d(9);
+        ctx.fillStyle = Math.abs(lowerRatio.L - 50) > 5 ? "#ff9100" : "#fff";
         ctx.fillText(wbLine3, canvasWidth/2, wbBoxY + wbLineH * 3 - wbLineH * 0.15);
 
         // Draw COM indicator line（正中線ガイド）。アルコ正中線モード時は
         // 「両足の中心」の代わりに絶対座標の基準線を使っていることが一目で
         // 分かるよう、色を紫系に変えて区別する。
-        ctx.strokeStyle = useAruco ? _0x$d(16) : _0x$d(49);
+        ctx.strokeStyle = useAruco ? "rgba(179, 136, 255, 0.85)" : "rgba(255,255,255,0.3)";
         ctx.setLineDash([5,5]);
         ctx.beginPath();
         ctx.moveTo(centerX, 0);
@@ -434,20 +428,20 @@ var biomechanics = {
         ctx.setLineDash([]);
 
         // Upper body COM dot
-        ctx.fillStyle = _0x$d(8); 
+        ctx.fillStyle = "#ff9100"; 
         ctx.beginPath(); 
         ctx.arc(upperComX, (lSh.y + rSh.y)/2, 6, 0, 2*Math.PI); 
         ctx.fill();
 
         // Lower body COM dot
-        ctx.fillStyle = _0x$d(8); 
+        ctx.fillStyle = "#ff9100"; 
         ctx.beginPath(); 
         ctx.arc(lowerComX, (lHip.y + rHip.y)/2, 6, 0, 2*Math.PI); 
         ctx.fill();
 
         // Total body COM indicator (Yellow target symbol)
-        ctx.fillStyle = _0x$d(10); 
-        ctx.strokeStyle = _0x$d(11); 
+        ctx.fillStyle = "#ffeb3b"; 
+        ctx.strokeStyle = "#000"; 
         ctx.lineWidth = 2.5; 
         ctx.beginPath(); 
         ctx.arc(totalComX, (lAnkle.y + rAnkle.y)/2 - 15, 9, 0, 2*Math.PI); 
@@ -473,8 +467,8 @@ var biomechanics = {
             
             if (angle > 2.0) {
                 var isIn = label === 'R' ? k.x > refX : k.x < refX;
-                ctx.fillStyle = isIn ? _0x$d(2) : _0x$d(8); // Red for valgus (in), Orange for varus (out)
-                var labelText = (isIn ? _0x$d(50) : _0x$d(51)) + angle.toFixed(1) + "°";
+                ctx.fillStyle = isIn ? "#ff5252" : "#ff9100"; // Red for valgus (in), Orange for varus (out)
+                var labelText = (isIn ? "ニーイン " : "ニーアウト ") + angle.toFixed(1) + "°";
                 // 2026-08-24: フォント拡大で文字幅が変わるため、実測して
                 // 膝関節点からの位置を決める（Rは膝の左に収まるよう終端を
                 // 揃え、Lは膝の右から書き始める＝どちらも画面中央寄りに出す
@@ -517,21 +511,21 @@ var biomechanics = {
         ctx.font = overlayFont(15, true);
 
         // Draw trunk lean status
-        ctx.fillStyle = trunkLean > 45 ? _0x$d(2) : _0x$d(30);
-        ctx.fillText(_0x$d(52) + trunkLean.toFixed(1) + "°", s.x - 30, s.y - 30);
+        ctx.fillStyle = trunkLean > 45 ? "#ff5252" : "#39ff14";
+        ctx.fillText("体幹前傾: " + trunkLean.toFixed(1) + "°", s.x - 30, s.y - 30);
 
         // Draw knee flexion status
-        ctx.fillStyle = _0x$d(7);
-        ctx.fillText(_0x$d(53) + kneeAng.toFixed(1) + "°", k.x + 25, k.y + 4);
+        ctx.fillStyle = "#00bfff";
+        ctx.fillText("膝屈曲: " + kneeAng.toFixed(1) + "°", k.x + 25, k.y + 4);
 
         // Draw arm alignment relative to trunk
         if (w && w.score > 0.3) {
             var armAng = Math.abs((Math.atan2(w.y-s.y, w.x-s.x) - Math.atan2(h.y-s.y, h.x-s.x)) * 180 / Math.PI);
             if (armAng > 180) armAng = 360 - armAng;
-            ctx.fillStyle = armAng < 155 ? _0x$d(2) : _0x$d(30);
-            ctx.fillText(_0x$d(54) + armAng.toFixed(1) + "°", s.x + 40, s.y + 20);
+            ctx.fillStyle = armAng < 155 ? "#ff5252" : "#39ff14";
+            ctx.fillText("挙上制限: " + armAng.toFixed(1) + "°", s.x + 40, s.y + 20);
             
-            ctx.strokeStyle = _0x$d(55); 
+            ctx.strokeStyle = "rgba(255,255,255,0.4)"; 
             ctx.lineWidth = 2;
             ctx.beginPath(); ctx.moveTo(s.x, s.y); ctx.lineTo(w.x, w.y); ctx.stroke();
         } 
@@ -555,8 +549,8 @@ var biomechanics = {
 
         ctx.save();
         ctx.font = overlayFont(16, true);
-        ctx.fillStyle = _0x$d(30);
-        var labelText = mode === _0x$d(56) ? _0x$d(57) : _0x$d(58);
+        ctx.fillStyle = "#39ff14";
+        var labelText = mode === "dyn_flex_fwd" ? `前屈(股関節屈曲): ${hipFlexion.toFixed(1)}°` : `後屈(股関節伸展): ${hipFlexion.toFixed(1)}°`;
         ctx.fillText(labelText, h.x + 30, h.y - 10);
         ctx.restore();
     },
@@ -566,7 +560,7 @@ var biomechanics = {
      */
     drawShoulderAnalysis: function(ctx, kps, mode) {
         var lSh = kps[11], rSh = kps[12], lEl = kps[13], rEl = kps[14], lWr = kps[15], rWr = kps[16];
-        var isRightUp = (mode === _0x$d(59));
+        var isRightUp = (mode === "dyn_shoulder_r");
         var upWr = isRightUp ? rWr : lWr;
         var loWr = isRightUp ? lWr : rWr;
 
@@ -574,7 +568,7 @@ var biomechanics = {
 
         // Draw distance line between wrists
         ctx.save();
-        ctx.strokeStyle = _0x$d(10);
+        ctx.strokeStyle = "#ffeb3b";
         ctx.lineWidth = 3;
         ctx.setLineDash([5, 5]);
         ctx.beginPath();
@@ -584,22 +578,22 @@ var biomechanics = {
         ctx.setLineDash([]);
 
         var distPx = Math.hypot(upWr.x - loWr.x, upWr.y - loWr.y);
-        ctx.fillStyle = _0x$d(10);
+        ctx.fillStyle = "#ffeb3b";
         ctx.font = overlayFont(16, true);
-        ctx.textAlign = _0x$d(48);
-        ctx.fillText(_0x$d(60), (upWr.x + loWr.x)/2, (upWr.y + loWr.y)/2 - 15);
+        ctx.textAlign = "center";
+        ctx.fillText(`手関節間距離: ${distPx.toFixed(1)} px`, (upWr.x + loWr.x)/2, (upWr.y + loWr.y)/2 - 15);
         ctx.restore();
     },
 
     /**
      * Draws the background grids and circles for the COP Radar.
      */
-    clearRadar: function(ctx, color = _0x$d(2)) {
+    clearRadar: function(ctx, color = "#ff5252") {
         var w = 150, h = 150;
         ctx.clearRect(0, 0, w, h);
         
         // Draw circular grid layers
-        ctx.strokeStyle = _0x$d(12);
+        ctx.strokeStyle = "rgba(255, 255, 255, 0.15)";
         ctx.lineWidth = 1;
         [25, 50, 75].forEach(r => {
             ctx.beginPath();
@@ -617,7 +611,7 @@ var biomechanics = {
     /**
      * Draws the 95% confidence ellipse on the radar canvas based on coordinate history.
      */
-    drawSwayEllipse: function(ctx, history, color = _0x$d(2)) {
+    drawSwayEllipse: function(ctx, history, color = "#ff5252") {
         if (history.length < 5) return;
         var w = 150, h = 150;
         
@@ -676,7 +670,7 @@ var biomechanics = {
         ctx.stroke();
 
         // Fill transparent color
-        ctx.fillStyle = color === _0x$d(2) ? _0x$d(61) : _0x$d(62);
+        ctx.fillStyle = color === "#ff5252" ? "rgba(255, 82, 82, 0.1)" : "rgba(57, 255, 20, 0.1)";
         ctx.fill();
         ctx.restore();
     },
@@ -694,7 +688,7 @@ var biomechanics = {
      *   未指定の場合はroll補正・実測mm換算なしの状態（=pxToCmRatioが無ければ
      *   算出不可）になる。
      */
-    updateRadar: function(kps, canvasRadar, ctxRadar, swayHistory, isRecording, color = _0x$d(2), copCtx) {
+    updateRadar: function(kps, canvasRadar, ctxRadar, swayHistory, isRecording, color = "#ff5252", copCtx) {
         var pos = computeCopOffsetMm(kps, copCtx);
         if (!pos) return;
 
@@ -720,7 +714,7 @@ var biomechanics = {
         // Draw historical sway path line
         if (swayHistory.length > 1) {
             ctxRadar.save();
-            ctxRadar.strokeStyle = color === _0x$d(2) ? _0x$d(63) : _0x$d(64);
+            ctxRadar.strokeStyle = color === "#ff5252" ? "rgba(255, 82, 82, 0.4)" : "rgba(57, 255, 20, 0.4)";
             ctxRadar.lineWidth = 1.5;
             ctxRadar.beginPath();
             ctxRadar.moveTo(w/2 + swayHistory[0].x, h/2 + swayHistory[0].y);
@@ -736,7 +730,7 @@ var biomechanics = {
 
         // Current real-time COP pointer dot
         ctxRadar.save();
-        ctxRadar.fillStyle = _0x$d(9);
+        ctxRadar.fillStyle = "#fff";
         ctxRadar.beginPath();
         ctxRadar.arc(w/2 + rx, h/2 + ry, 4.5, 0, 2*Math.PI);
         ctxRadar.fill();
@@ -773,14 +767,14 @@ var biomechanics = {
         if (!trajectory || trajectory.length < 2) return null;
 
         var size = 320;
-        var canvas = document.createElement(_0x$d(65));
+        var canvas = document.createElement('canvas');
         canvas.width = size;
         canvas.height = size;
-        var ctx = canvas.getContext(_0x$d(66));
+        var ctx = canvas.getContext('2d');
         var cx = size / 2, cy = size / 2;
 
         // 背景
-        ctx.fillStyle = _0x$d(67);
+        ctx.fillStyle = '#0b1220';
         ctx.fillRect(0, 0, size, size);
 
         // 軌跡の広がりに応じて、目盛り間隔(mm)を自動で決める（±10/20/50/100mm等）。
@@ -797,28 +791,28 @@ var biomechanics = {
         var pxPerMm = ((size / 2) - 28) / maxRingMm; // 端に余白(ラベル分)を残す
 
         // 目盛りリング＋ラベル（mm）
-        ctx.strokeStyle = _0x$d(68);
-        ctx.fillStyle = _0x$d(69);
-        ctx.font = _0x$d(70);
-        ctx.textAlign = _0x$d(26);
+        ctx.strokeStyle = 'rgba(255,255,255,0.18)';
+        ctx.fillStyle = 'rgba(255,255,255,0.55)';
+        ctx.font = '11px sans-serif';
+        ctx.textAlign = 'left';
         ctx.lineWidth = 1;
         for (var r = 1; r <= 3; r++) {
             var ringPx = ringStepMm * r * pxPerMm;
             ctx.beginPath();
             ctx.arc(cx, cy, ringPx, 0, 2 * Math.PI);
             ctx.stroke();
-            ctx.fillText((ringStepMm * r) + _0x$d(71), cx + 4, cy - ringPx - 3);
+            ctx.fillText((ringStepMm * r) + "mm", cx + 4, cy - ringPx - 3);
         }
 
         // 中心の十字線
-        ctx.strokeStyle = _0x$d(72);
+        ctx.strokeStyle = 'rgba(255,255,255,0.12)';
         ctx.beginPath();
         ctx.moveTo(cx, 28); ctx.lineTo(cx, size - 28);
         ctx.moveTo(28, cy); ctx.lineTo(size - 28, cy);
         ctx.stroke();
 
         // 軌跡（ジグザグの経路をそのまま描画。時間軸の表現はしない）
-        ctx.strokeStyle = precise ? _0x$d(73) : _0x$d(74);
+        ctx.strokeStyle = precise ? 'rgba(57, 255, 20, 0.85)' : 'rgba(255, 82, 82, 0.85)';
         ctx.lineWidth = 1.5;
         ctx.beginPath();
         trajectory.forEach(function (p, idx) {
@@ -829,20 +823,20 @@ var biomechanics = {
         ctx.stroke();
 
         // 中心（平均位置ではなく画像中心=0,0であることを示す小さな点）
-        ctx.fillStyle = _0x$d(75);
+        ctx.fillStyle = 'rgba(255,255,255,0.6)';
         ctx.beginPath();
         ctx.arc(cx, cy, 2.5, 0, 2 * Math.PI);
         ctx.fill();
 
         // 精度の注記（近似値の場合のみ）
         if (!precise) {
-            ctx.fillStyle = _0x$d(76);
-            ctx.font = _0x$d(77);
-            ctx.textAlign = _0x$d(48);
-            ctx.fillText(_0x$d(78), cx, size - 10);
+            ctx.fillStyle = 'rgba(255,255,255,0.45)';
+            ctx.font = '10px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('参考値（pxToCmRatioによる近似換算）', cx, size - 10);
         }
 
-        return canvas.toDataURL(_0x$d(79));
+        return canvas.toDataURL('image/png');
     }
 };
 
@@ -926,7 +920,7 @@ export function computeCopOffsetMm(kps, ctx) {
     ctx = ctx || {};
 
     var fkps = kps;
-    if (typeof ctx.rollDeg === _0x$d(15) && ctx.canvasWidth && ctx.canvasHeight) {
+    if (typeof ctx.rollDeg === 'number' && ctx.canvasWidth && ctx.canvasHeight) {
         fkps = rotateKeypointsForRoll(fkps, ctx.rollDeg, ctx.canvasWidth, ctx.canvasHeight);
     }
 
@@ -934,13 +928,13 @@ export function computeCopOffsetMm(kps, ctx) {
         return fkps.find(function (k) { return k && (k.name === name || k.name === numName); });
     }
 
-    var lAnkle = findKp(_0x$d(80), _0x$d(81));
-    var rAnkle = findKp(_0x$d(82), _0x$d(83));
-    var nose = findKp(_0x$d(84), '0');
-    var lSh = findKp(_0x$d(85), _0x$d(86));
-    var rSh = findKp(_0x$d(87), _0x$d(88));
-    var lHip = findKp(_0x$d(89), _0x$d(90));
-    var rHip = findKp(_0x$d(91), _0x$d(92));
+    var lAnkle = findKp('left_ankle', '27');
+    var rAnkle = findKp('right_ankle', '28');
+    var nose = findKp('nose', '0');
+    var lSh = findKp('left_shoulder', '11');
+    var rSh = findKp('right_shoulder', '12');
+    var lHip = findKp('left_hip', '23');
+    var rHip = findKp('right_hip', '24');
 
     if (!lAnkle || !rAnkle || (lAnkle.score || 0) < 0.3 || (rAnkle.score || 0) < 0.3) return null;
     if (!nose || !lSh || !rSh || !lHip || !rHip) return null;
@@ -995,19 +989,19 @@ biomechanics.renderPhotoWithOverlay = function (imageDataUrl, drawFn, rollDeg) {
                 var h = img.naturalHeight || img.height;
                 if (!w || !h) { resolve(imageDataUrl); return; }
 
-                var flatCanvas = document.createElement(_0x$d(65));
+                var flatCanvas = document.createElement('canvas');
                 flatCanvas.width = w;
                 flatCanvas.height = h;
-                var fctx = flatCanvas.getContext(_0x$d(66));
+                var fctx = flatCanvas.getContext('2d');
                 fctx.drawImage(img, 0, 0, w, h);
-                if (typeof drawFn === _0x$d(93)) {
+                if (typeof drawFn === 'function') {
                     try { drawFn(fctx, w, h); } catch (eDraw) {
-                        console.error(_0x$d(94), eDraw);
+                        console.error('[biomechanics] renderPhotoWithOverlayのdrawFnでエラー:', eDraw);
                     }
                 }
 
-                if (typeof rollDeg !== _0x$d(15) || !isFinite(rollDeg) || Math.abs(rollDeg) < 0.05) {
-                    resolve(flatCanvas.toDataURL(_0x$d(95), 0.9));
+                if (typeof rollDeg !== 'number' || !isFinite(rollDeg) || Math.abs(rollDeg) < 0.05) {
+                    resolve(flatCanvas.toDataURL('image/jpeg', 0.9));
                     return;
                 }
 
@@ -1017,20 +1011,20 @@ biomechanics.renderPhotoWithOverlay = function (imageDataUrl, drawFn, rollDeg) {
                 var absCos = Math.abs(Math.cos(rad)), absSin = Math.abs(Math.sin(rad));
                 var newW = Math.ceil(w * absCos + h * absSin);
                 var newH = Math.ceil(w * absSin + h * absCos);
-                var canvas = document.createElement(_0x$d(65));
+                var canvas = document.createElement('canvas');
                 canvas.width = newW;
                 canvas.height = newH;
-                var ctx = canvas.getContext(_0x$d(66));
-                ctx.fillStyle = _0x$d(96);
+                var ctx = canvas.getContext('2d');
+                ctx.fillStyle = '#050811';
                 ctx.fillRect(0, 0, newW, newH);
                 ctx.save();
                 ctx.translate(newW / 2, newH / 2);
                 ctx.rotate(rad);
                 ctx.drawImage(flatCanvas, -w / 2, -h / 2, w, h);
                 ctx.restore();
-                resolve(canvas.toDataURL(_0x$d(95), 0.9));
+                resolve(canvas.toDataURL('image/jpeg', 0.9));
             } catch (e) {
-                console.error(_0x$d(97), e);
+                console.error('[biomechanics] renderPhotoWithOverlay failed, falling back to plain photo:', e);
                 resolve(imageDataUrl);
             }
         };
@@ -1060,7 +1054,7 @@ biomechanics.renderPhotoWithOverlay = function (imageDataUrl, drawFn, rollDeg) {
 biomechanics.renderUprightPhoto = function (imageDataUrl, rollDeg) {
     return new Promise(function (resolve) {
         if (!imageDataUrl) { resolve(imageDataUrl || null); return; }
-        if (typeof rollDeg !== _0x$d(15) || !isFinite(rollDeg) || Math.abs(rollDeg) < 0.05) {
+        if (typeof rollDeg !== 'number' || !isFinite(rollDeg) || Math.abs(rollDeg) < 0.05) {
             resolve(imageDataUrl);
             return;
         }
@@ -1077,22 +1071,22 @@ biomechanics.renderUprightPhoto = function (imageDataUrl, rollDeg) {
                 var absCos = Math.abs(Math.cos(rad)), absSin = Math.abs(Math.sin(rad));
                 var newW = Math.ceil(w * absCos + h * absSin);
                 var newH = Math.ceil(w * absSin + h * absCos);
-                var canvas = document.createElement(_0x$d(65));
+                var canvas = document.createElement('canvas');
                 canvas.width = newW;
                 canvas.height = newH;
-                var ctx = canvas.getContext(_0x$d(66));
+                var ctx = canvas.getContext('2d');
                 // レターボックス部分の塗り色は、アプリのダークテーマの背景色に
                 // 合わせる（renderCopTrajectoryImageの背景色とも近い濃紺〜黒系）。
-                ctx.fillStyle = _0x$d(96);
+                ctx.fillStyle = '#050811';
                 ctx.fillRect(0, 0, newW, newH);
                 ctx.save();
                 ctx.translate(newW / 2, newH / 2);
                 ctx.rotate(rad);
                 ctx.drawImage(img, -w / 2, -h / 2, w, h);
                 ctx.restore();
-                resolve(canvas.toDataURL(_0x$d(95), 0.9));
+                resolve(canvas.toDataURL('image/jpeg', 0.9));
             } catch (e) {
-                console.error(_0x$d(98), e);
+                console.error('[biomechanics] renderUprightPhoto failed, falling back to original image:', e);
                 resolve(imageDataUrl);
             }
         };
@@ -1113,7 +1107,7 @@ biomechanics.renderUprightPhoto = function (imageDataUrl, rollDeg) {
  */
 biomechanics.renderMusculoskeletalAvatar = function (canvas, c2Cm, th3Cm, s2Cm, options) {
     if (!canvas) return;
-    var ctx = canvas.getContext(_0x$d(66));
+    var ctx = canvas.getContext('2d');
     var w = canvas.width;
     var h = canvas.height;
     ctx.clearRect(0, 0, w, h);
@@ -1122,7 +1116,7 @@ biomechanics.renderMusculoskeletalAvatar = function (canvas, c2Cm, th3Cm, s2Cm, 
     var scale = (h / 360) * 5.0; // cm to px scale
 
     // プラムライン描画（繊細な半透明スレート線）
-    ctx.strokeStyle = _0x$d(99);
+    ctx.strokeStyle = 'rgba(148, 163, 184, 0.25)';
     ctx.lineWidth = 1.2;
     ctx.setLineDash([3, 4]);
     ctx.beginPath();
@@ -1161,14 +1155,14 @@ biomechanics.renderMusculoskeletalAvatar = function (canvas, c2Cm, th3Cm, s2Cm, 
         ctx.lineTo(p2.x, p2.y);
         
         if (isOveractive) {
-            ctx.strokeStyle = _0x$d(100); // ローズクリムゾン（過緊張）
+            ctx.strokeStyle = '#e11d48'; // ローズクリムゾン（過緊張）
             ctx.lineWidth = 2.5;
         } else if (isInhibited) {
-            ctx.strokeStyle = _0x$d(101); // スチールスカイブルー（弱化）
+            ctx.strokeStyle = '#38bdf8'; // スチールスカイブルー（弱化）
             ctx.lineWidth = 1.5;
             ctx.setLineDash([3, 3]);
         } else {
-            ctx.strokeStyle = _0x$d(102); // スレートグレー（正常）
+            ctx.strokeStyle = '#334155'; // スレートグレー（正常）
             ctx.lineWidth = 1.2;
         }
         ctx.stroke();
@@ -1203,8 +1197,8 @@ biomechanics.renderMusculoskeletalAvatar = function (canvas, c2Cm, th3Cm, s2Cm, 
     drawMuscle({ x: hip.x + 10, y: hip.y + 12 }, { x: knee.x + 8, y: knee.y }, s2Cm < -2.0, false);
 
     // --- 2. 足部（足底・つま先・かかと）の描画 ---
-    ctx.fillStyle = _0x$d(103);
-    ctx.strokeStyle = _0x$d(104);
+    ctx.fillStyle = 'rgba(30, 41, 59, 0.4)';
+    ctx.strokeStyle = '#64748b';
     ctx.lineWidth = 1.5;
     ctx.beginPath();
     ctx.moveTo(heel.x, heel.y);
@@ -1218,15 +1212,15 @@ biomechanics.renderMusculoskeletalAvatar = function (canvas, c2Cm, th3Cm, s2Cm, 
     ctx.stroke();
 
     // つま先・かかとラベル
-    ctx.fillStyle = _0x$d(104);
-    ctx.font = _0x$d(105);
-    ctx.fillText(_0x$d(106), toe.x - 20, toe.y - 3);
-    ctx.fillText(_0x$d(107), heel.x + 4, heel.y - 3);
+    ctx.fillStyle = '#64748b';
+    ctx.font = '8px sans-serif';
+    ctx.fillText("つま先", toe.x - 20, toe.y - 3);
+    ctx.fillText("かかと", heel.x + 4, heel.y - 3);
 
     // --- 3. 骨格ボーンの描画 ---
-    ctx.strokeStyle = _0x$d(108);
+    ctx.strokeStyle = '#cbd5e1';
     ctx.lineWidth = 2.5;
-    ctx.lineCap = _0x$d(3);
+    ctx.lineCap = 'round';
     ctx.beginPath();
     ctx.moveTo(ankle.x, ankle.y);
     ctx.lineTo(knee.x, knee.y);
@@ -1238,8 +1232,8 @@ biomechanics.renderMusculoskeletalAvatar = function (canvas, c2Cm, th3Cm, s2Cm, 
     ctx.stroke();
 
     // --- 4. 頭部＆横顔プロファイルの描画 ---
-    ctx.fillStyle = _0x$d(109);
-    ctx.strokeStyle = _0x$d(110);
+    ctx.fillStyle = '#0f172a';
+    ctx.strokeStyle = '#94a3b8';
     ctx.lineWidth = 1.5;
     ctx.beginPath();
     ctx.arc(headCenter.x, headCenter.y, 14, 0, Math.PI * 2);
@@ -1253,12 +1247,12 @@ biomechanics.renderMusculoskeletalAvatar = function (canvas, c2Cm, th3Cm, s2Cm, 
     ctx.lineTo(headCenter.x - 11, headCenter.y + 4);
     ctx.lineTo(headCenter.x - 12, headCenter.y + 10);
     ctx.lineTo(headCenter.x - 3, headCenter.y + 14);
-    ctx.strokeStyle = _0x$d(110);
+    ctx.strokeStyle = '#94a3b8';
     ctx.lineWidth = 1.5;
     ctx.stroke();
 
     // 視線方向の矢印
-    ctx.strokeStyle = _0x$d(111);
+    ctx.strokeStyle = 'rgba(148, 163, 184, 0.4)';
     ctx.lineWidth = 1.0;
     ctx.beginPath();
     ctx.moveTo(headCenter.x - 17, headCenter.y);
@@ -1267,13 +1261,13 @@ biomechanics.renderMusculoskeletalAvatar = function (canvas, c2Cm, th3Cm, s2Cm, 
 
     // --- 5. 関節ノードの描画 ---
     var joints = [
-        { pt: c2, name: _0x$d(112), color: _0x$d(113) },
-        { pt: th3, name: _0x$d(114), color: _0x$d(113) },
-        { pt: l3, name: _0x$d(115), color: _0x$d(113) },
-        { pt: s2, name: _0x$d(116), color: _0x$d(113) },
-        { pt: hip, name: _0x$d(117), color: _0x$d(110) },
-        { pt: knee, name: _0x$d(118), color: _0x$d(110) },
-        { pt: ankle, name: _0x$d(119), color: _0x$d(110) }
+        { pt: c2, name: 'C2', color: '#f8fafc' },
+        { pt: th3, name: 'Th3', color: '#f8fafc' },
+        { pt: l3, name: 'L3', color: '#f8fafc' },
+        { pt: s2, name: 'S2', color: '#f8fafc' },
+        { pt: hip, name: 'Hip', color: '#94a3b8' },
+        { pt: knee, name: 'Knee', color: '#94a3b8' },
+        { pt: ankle, name: 'Ankle', color: '#94a3b8' }
     ];
 
     joints.forEach(function (j) {
@@ -1281,12 +1275,12 @@ biomechanics.renderMusculoskeletalAvatar = function (canvas, c2Cm, th3Cm, s2Cm, 
         ctx.beginPath();
         ctx.arc(j.pt.x, j.pt.y, 3.5, 0, Math.PI * 2);
         ctx.fill();
-        ctx.strokeStyle = _0x$d(109);
+        ctx.strokeStyle = '#0f172a';
         ctx.lineWidth = 1.5;
         ctx.stroke();
 
-        ctx.fillStyle = _0x$d(104);
-        ctx.font = _0x$d(120);
+        ctx.fillStyle = '#64748b';
+        ctx.font = '8.5px sans-serif';
         ctx.fillText(j.name, j.pt.x + 7, j.pt.y + 3);
     });
 };
@@ -1294,12 +1288,12 @@ biomechanics.renderMusculoskeletalAvatar = function (canvas, c2Cm, th3Cm, s2Cm, 
 /**
  * 側面姿勢ランドマークからC2, Th3, S2の実寸変位量 (cm) を抽出する
  * @param {Array} kps - MediaPipeランドマーク配列
- * @param {string} mode - _0x$d(13) または _0x$d(14)
+ * @param {string} mode - 'l_side' または 'r_side'
  * @returns {{c2Cm: number, th3Cm: number, s2Cm: number}|null}
  */
 biomechanics.extractKendallOffsets = function (kps, mode) {
     if (!kps || !Array.isArray(kps) || kps.length < 29) return null;
-    var isLeft = (mode === _0x$d(13));
+    var isLeft = (mode === 'l_side');
     var ear = isLeft ? kps[7] : kps[8];
     var shoulder = isLeft ? kps[11] : kps[12];
     var hip = isLeft ? kps[23] : kps[24];

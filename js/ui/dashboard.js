@@ -1,10 +1,4 @@
 /**
- * (c) Athletecore Proprietary Biomechanical Engine
- * CONFIDENTIAL & PROTECTED - ALL RIGHTS RESERVED.
- */
-var _0x$b=["PGgyPiQxPC9oMj4=","PGxpPjxzdHJvbmc+JDE8L3N0cm9uZz46IA==","PGxpPiQxPC9saT4=","PHA+PC9wPg==","PGJyPg==","ZGFzaGJvYXJkQ2xvc2VCdG4=","ZGFzaGJvYXJkT3ZlcmxheQ==","bm9uZQ==","aGlzdG9yeUJhdGNo","ZHluQ29uZmlybUhpc3Rvcnk=","ZHJhZnQ=","ZmluYWw=","W2Rhc2hib2FyZF0gRmFpbGVkIHRvIGF1dG8tZmluYWxpemUgc3RhdGljIGJhdGNoIG9uIHJlcG9ydCB2aWV3","YmF0Y2hSZXZpZXdPdmVybGF5","ZnVuY3Rpb24=","ZGFzaEdyaWQ=","PGRpdiBzdHlsZT0iZ3JpZC1jb2x1bW46IDEvLTE7IGNvbG9yOiB2YXIoLS1hY2NlbnQtYmx1ZSk7IHRleHQtYWxpZ246Y2VudGVyOyBmb250LXNpemU6MjBweDsgcGFkZGluZzo1MHB4OyI+8J+ThCDjg6zjg53jg7zjg4jnlJ/miJDkuK0uLi48L2Rpdj4=","YmxvY2s=","44Ky44K544OI","c2Vzc2lvbi5jYXB0dXJlZFJvbGxEZWc=","c2Vzc2lvbi5jYW52YXNXaWR0aC9IZWlnaHQ=","bnVtYmVy","Z2VtaW5pX2FwaV9rZXk=","IyMjIOOCqOODqeODvFxu44Os44Od44O844OI44Gu55Sf5oiQ44Gr5aSx5pWX44GX44G+44GX44GfOiA=","ZnJvbnQ=","bF9zaWRl","YmFjaw==","cl9zaWRl","W2Rhc2hib2FyZF0gNOaWueWQkee3j+WQiOaJgOimi+OBrueUn+aIkOOBq+WkseaVl+OBl+OBvuOBl+OBnzo=","PGRpdiBjbGFzcz0iZGFzaC1jYXJkIj48aDM+8J+njSDooqvmuKzlrprogIXjg5fjg63jg5XjgqHjgqTjg6s8L2gzPg==","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPuawj+WQjSAvIElEPC9zcGFuPjxzcGFuIGNsYXNzPSJ2YWwiPg==","IOanmDwvc3Bhbj48L2Rpdj4=","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPua4rOWumuODouODvOODiTwvc3Bhbj48c3BhbiBjbGFzcz0idmFsIj4=","PC9zcGFuPjwvZGl2Pg==","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPui6q+mVtzwvc3Bhbj48c3BhbiBjbGFzcz0idmFsIj4=","IGNtPC9zcGFuPjwvZGl2Pg==","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPui2s+OBruOCteOCpOOCujwvc3Bhbj48c3BhbiBjbGFzcz0idmFsIj4=","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPuOCueOCseODvOODqzwvc3Bhbj48c3BhbiBjbGFzcz0idmFsIj4=","IHB4L2Nt","5pyq5qCh5q2jICjoh6rli5Xmjqjlrpop","PC9kaXY+","5YmN6Z2i","5bem5YG06Z2i","5b6M6Z2i","5Y+z5YG06Z2i","44Kx44Oz44OA44Or5Z6C55u05Z+65rqW57ea","6I236YeN44OQ44Op44Oz44K55q+U546H5a++6LGh","PGRpdiBjbGFzcz0icmVwb3J0LWltYWdlLWNhcmQiPjxpbWcgc3JjPSI=","IiBhbHQ9Ig==","Ij4=","PGRpdiBjbGFzcz0icmVwb3J0LWltYWdlLWxhYmVsIj7wn6eNIA==","PGRpdiBjbGFzcz0icmVwb3J0LWltYWdlLXN1YiI+","PC9kaXY+PC9kaXY+","PGRpdiBjbGFzcz0icmVwb3J0LWltYWdlLWNhcmQiIHN0eWxlPSJvcGFjaXR5OiAwLjQ7Ij4=","PGRpdiBzdHlsZT0iYXNwZWN0LXJhdGlvOjQvMzsgYmFja2dyb3VuZDojMGYxYzNmOyBib3JkZXI6IDFweCBkYXNoZWQgcmdiYSgyNTUsMjU1LDI1NSwwLjIpOyBib3JkZXItcmFkaXVzOjRweDsgZGlzcGxheTpmbGV4OyBhbGlnbi1pdGVtczpjZW50ZXI7IGp1c3RpZnktY29udGVudDpjZW50ZXI7IGNvbG9yOnZhcigtLXRleHQtc2Vjb25kYXJ5KTsgZm9udC1zaXplOjExcHg7Ij7mnKrmuKzlrpo8L2Rpdj4=","PGRpdiBjbGFzcz0icmVwb3J0LWltYWdlLXN1YiI+44OH44O844K/44Gq44GXPC9kaXY+PC9kaXY+","PGRpdiBjbGFzcz0iZGFzaC1jYXJkIHJlcG9ydC1pbWFnZS1zZWN0aW9uIiBzdHlsZT0iZ3JpZC1jb2x1bW46IDEgLyAtMTsiPg==","PGRpdiBjbGFzcz0icmVwb3J0LWltYWdlLXRpdGxlIj7wn5O4IOmdmeatouWnv+WLouOCouODqeOCpOODoeODs+ODiCA05pa55ZCR5YiG5p6Q55S75YOPPC9kaXY+","PGRpdiBjbGFzcz0icmVwb3J0LWltYWdlLWdyaWQiPg==","PGRpdiBjbGFzcz0iZGFzaC1jYXJkIGFpLWV2YWwtY2FyZCIgc3R5bGU9ImdyaWQtY29sdW1uOiAxIC8gLTE7Ij48aDM+8J+nrSA05pa55ZCR57eP5ZCI5omA6KaLPC9oMz4=","PGRpdiBjbGFzcz0iYWktZXZhbC1ib3giPg==","PGRpdiBzdHlsZT0iY29sb3I6dmFyKC0tdGV4dC1zZWNvbmRhcnkpOyBmb250LXNpemU6MTFweDsgbWFyZ2luLXRvcDo4cHg7Ij7igLsg6KSH5pWw5pa55ZCR44Gu5ris5a6a57WQ5p6c44KS5qiq5pat44GX44Gm6KaL44Gf5Y+C6ICD5omA6KaL44Gn44GZ44CC5ZCE5pa55ZCR44GU44Go44Gu6Kmz57Sw6KmV5L6h44Gv5LiL6KiY44KS44GU56K66KqN44GP44Gg44GV44GE44CCPC9kaXY+","PGRpdiBjbGFzcz0iZGFzaC1jYXJkIj48aDM+4pqW77iPIOW3puWPs+iNt+mHjeODkOODqeODs+OCuQ==","PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZToxMXB4OyBjb2xvcjojYjM4OGZmOyBmb250LXdlaWdodDo0MDA7Ij7vvIjmraPkuK3nt5o6IOOCouODq+OCs+ODnuODvOOCq+ODvOWfuua6lu+8iTwvc3Bhbj4=","PC9oMz4=","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPuWFqOi6q+iNt+mHjSAo5bemIC8g5Y+zKTwvc3Bhbj48c3BhbiBjbGFzcz0idmFsIA==","d2Fybg==","Z29vZA==","JSAvIA==","JTwvc3Bhbj48L2Rpdj4=","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPuS4iuWNiui6q+iNt+mHjSAo5bemIC8g5Y+zKTwvc3Bhbj48c3BhbiBjbGFzcz0idmFsIj4=","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPuS4i+WNiui6q+iNt+mHjSAo5bemIC8g5Y+zKTwvc3Bhbj48c3BhbiBjbGFzcz0idmFsIj4=","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPuOCouOCt+ODs+ODoeODiOODquODvOWBj+S9jTwvc3Bhbj48c3BhbiBjbGFzcz0idmFsIj4=","JSA=","4pqg77iP","PC9zcGFuPjwvZGl2PjwvZGl2Pg==","PGRpdiBjbGFzcz0iZGFzaC1jYXJkIj48aDM+8J+TiCBDT1Dph43lv4Pli5Xmj7rjgqLjgrvjgrnjg6Hjg7Pjg4g=","77yINOmahUFyVWNv5bqK6Z2i5a6f5ris44O75a6f5a+477yJ","77yI5Y+C6ICD5YCk44O7bW3ov5HkvLzmj5vnrpfvvIk=","PGltZyBzcmM9Ig==","IiBhbHQ9IkNPUOi7jOi3oSIgc3R5bGU9IndpZHRoOjEwMCU7IG1heC13aWR0aDozMjBweDsgZGlzcGxheTpibG9jazsgbWFyZ2luOjAgYXV0byAxMHB4OyBib3JkZXItcmFkaXVzOjhweDsiPg==","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPuWLleaPuumdouepjSAoRWxsaXBzZSk8L3NwYW4+PHNwYW4gY2xhc3M9InZhbCA=","IG1twrI8L3NwYW4+PC9kaXY+","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPue3j+WLleaPuui7jOi3oemVtzwvc3Bhbj48c3BhbiBjbGFzcz0idmFsIj4=","IG1tPC9zcGFuPjwvZGl2Pg==","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPuW5s+Wdh+WLleaPuumAn+W6pjwvc3Bhbj48c3BhbiBjbGFzcz0idmFsIj4=","IG1tL3M=","566X5Ye65LiN5Y+v","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPuS4reW/g+WBj+S9jSAoWOi7uCk8L3NwYW4+PHNwYW4gY2xhc3M9InZhbCI+","IG1tICg=","5Y+z5a+E44KK","5bem5a+E44KK","KTwvc3Bhbj48L2Rpdj4=","PGRpdiBzdHlsZT0iY29sb3I6dmFyKC0tdGV4dC1zZWNvbmRhcnkpOyBmb250LXNpemU6MTFweDsgbWFyZ2luLXRvcDo2cHg7Ij7lj4LogIPlgKTjgafjgZnvvIg06ZqFQXJVY2/luorpnaLjgq3jg6Pjg6rjg5bjg6zjg7zjgrfjg6fjg7PmnKrlrp/mlr3jga7jgZ/jgoHjgIFweFRvQ21SYXRpb+OBq+OCiOOCi+i/keS8vOaPm+eul+WApOOCkuihqOekuuOBl+OBpuOBhOOBvuOBme+8iTwvZGl2Pg==","PGRpdiBjbGFzcz0iZGFzaC1jYXJkIj48aDM+8J+TkCDmuKzlrprplqLnr4Dop5Lluqbjg7vlj6/li5Xln588L2gzPg==","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPuW3puiGnemWouevgOinkuW6pjwvc3Bhbj48c3BhbiBjbGFzcz0idmFsIj4=","wrA8L3NwYW4+PC9kaXY+","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPuWPs+iGnemWouevgOinkuW6pjwvc3Bhbj48c3BhbiBjbGFzcz0idmFsIj4=","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPuS9k+W5ueWJjeWCvuinkuW6pjwvc3Bhbj48c3BhbiBjbGFzcz0idmFsIj4=","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPuiGneWxiOabsuinkuW6piAo5YG06Z2iKTwvc3Bhbj48c3BhbiBjbGFzcz0idmFsIj4=","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPuS4iuiFleaMmeS4iuinkuW6pjwvc3Bhbj48c3BhbiBjbGFzcz0idmFsIj4=","PGRpdiBjbGFzcz0iZGFzaC1tZXRyaWMiPjxzcGFuPuWJjeWxiC/lvozlsYjogqHplqLnr4Dop5LluqY8L3NwYW4+PHNwYW4gY2xhc3M9InZhbCI+","5b6M6aCt5LiL562L576k","5YOn5bi9562L5LiK6YOo","6IO46Y6W5Lmz56qB562LKOefree4rik=","6aCa6YOo5rex5bGk5bGI562L576k","5bCP6IO4562LKOefree4ruODu+W3u+OBjeiCqSk=","5YOn5bi9562L5LiK6YOoKOS7o+WEn+aAp+mBjue3iuW8tSk=","5aSn6IO4562L","6I+x5b2i562LKOiDjOmDqOiEseWKmyk=","5YmN6Yu4562L","5YOn5bi9562L5LiL6YOo","6IO45qSO5Ly45bGV562L576kKOmBjuW5s+iDjCk=","6IO45qSO55Sf55CG55qE5b6M5byv5qmf6IO9","44OP44Og44K544OI44Oq44Oz44Kw44K5KOmBjue3iuW8tSk=","5aSn6IW/562L6Iac5by1562L","6IWw6YOo5qSO6ZaT6Zai56+A5Ymq5pat","5aSn6IeA562LKOS4jea0u+aAp+WMlik=","6IW46IWw562LKOS8uOW8teiEseWKmyk=","6IW55qiq562LKOOCs+OCoik=","6IW46IWw562LKOefree4rik=","5aSn6IW/55u0562L","6IWw6IOM6YOo6ISK5p+x6LW356uL562L","6IW555u0562L","5aSn6IeA562L","44Gq44GX77yI5q2j5bi45Y2U6Kq/77yJ","44Gq44GX77yI5q2j5bi45rS75oCn77yJ","PGRpdiBjbGFzcz0iZGFzaC1jYXJkIG11c2N1bG9za2VsZXRhbC1jYXJkIiBzdHlsZT0iZ3JpZC1jb2x1bW46IDEgLyAtMTsgYmFja2dyb3VuZDpyZ2JhKDE1LDIzLDQyLDAuOSk7IGJvcmRlcjoxcHggc29saWQgIzFlMjkzYjsgYm9yZGVyLXJhZGl1czoxMnB4OyBwYWRkaW5nOjE2cHg7Ij4=","PGRpdiBzdHlsZT0iZGlzcGxheTpmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjsgYWxpZ24taXRlbXM6Y2VudGVyOyBib3JkZXItYm90dG9tOjFweCBzb2xpZCByZ2JhKDI1NSwyNTUsMjU1LDAuMDgpOyBwYWRkaW5nLWJvdHRvbToxMHB4OyBtYXJnaW4tYm90dG9tOjE0cHg7IGZsZXgtd3JhcDp3cmFwOyBnYXA6OHB4OyI+","PGRpdj48aDMgc3R5bGU9Im1hcmdpbjowOyBmb250LXNpemU6MTVweDsgY29sb3I6dmFyKC0tdGV4dC1wcmltYXJ5KTsgZGlzcGxheTpmbGV4OyBhbGlnbi1pdGVtczpjZW50ZXI7IGdhcDo2cHg7Ij7wn6esIOefoueKtumdoiDku6PlhJ/nrYvpqqjmoLzop6PmnpAgPHNwYW4gc3R5bGU9ImZvbnQtc2l6ZToxMXB4OyBjb2xvcjojOTRhM2I4OyBmb250LXdlaWdodDpub3JtYWw7Ij4oSmFuZGEgLyBLZW5kYWxsIC8gSGFuc3JhaiAvIFBsYWdlbmhvZWYg6YCj6Y6W44Oi44OH44OrKTwvc3Bhbj48L2gzPg==","PGRpdiBzdHlsZT0iZm9udC1zaXplOjExcHg7IGNvbG9yOnZhcigtLXRleHQtc2Vjb25kYXJ5KTsgbWFyZ2luLXRvcDoycHg7Ij7lrp/muKzjgqrjg5Xjgrvjg4Pjg4g6IEMyIA==","Y20gLyBUaDMg","Y20gLyBTMiA=","Y20=","ICjlubTpvaIg","5q2z6YGp5b+cKQ==","PGJ1dHRvbiB0eXBlPSJidXR0b24iIGlkPSJvcGVuQ291bnNlbGluZ0Zyb21SZXBvcnRCdG4iIGNsYXNzPSJidG4iIHN0eWxlPSJiYWNrZ3JvdW5kOiMwZjE3MmE7IGJvcmRlcjoxcHggc29saWQgIzM4YmRmODsgY29sb3I6IzM4YmRmODsgZm9udC1zaXplOjExcHg7IHBhZGRpbmc6NXB4IDEycHg7IGJvcmRlci1yYWRpdXM6NnB4OyBjdXJzb3I6cG9pbnRlcjsiPuOCt+ODn+ODpeODrOODvOOCv+ODvOOBp+eiuuiqjSDihpc8L2J1dHRvbj4=","PGRpdiBzdHlsZT0iZGlzcGxheTpncmlkOyBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdChhdXRvLWZpdCwgbWlubWF4KDI2MHB4LCAxZnIpKTsgZ2FwOjE2cHg7IGFsaWduLWl0ZW1zOmNlbnRlcjsiPg==","PGRpdiBzdHlsZT0iYmFja2dyb3VuZDojMDYwOTEzOyBib3JkZXI6MXB4IHNvbGlkICMxZTI5M2I7IGJvcmRlci1yYWRpdXM6MTBweDsgcGFkZGluZzoxMHB4OyBkaXNwbGF5OmZsZXg7IGZsZXgtZGlyZWN0aW9uOmNvbHVtbjsgYWxpZ24taXRlbXM6Y2VudGVyOyI+","PGNhbnZhcyBpZD0iZGFzaE11c2NsZUNhbnZhcyIgd2lkdGg9IjI4MCIgaGVpZ2h0PSIyODAiIHN0eWxlPSJtYXgtd2lkdGg6MjYwcHg7IHdpZHRoOjEwMCU7IGFzcGVjdC1yYXRpbzoxLzE7Ij48L2NhbnZhcz4=","PGRpdiBzdHlsZT0id2lkdGg6MTAwJTsgZGlzcGxheTpmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjsgZm9udC1zaXplOjlweDsgY29sb3I6I2NiZDVlMTsgYmFja2dyb3VuZDpyZ2JhKDE1LDIzLDQyLDAuOCk7IHBhZGRpbmc6M3B4IDhweDsgYm9yZGVyLXJhZGl1czo0cHg7IG1hcmdpbi10b3A6NHB4OyI+","PHNwYW4gc3R5bGU9ImNvbG9yOiNlMTFkNDg7Ij7ilqAg6YGO57eK5by1PC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjojNjQ3NDhiOyI+4pagIOato+W4uDwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6IzM4YmRmODsiPi0tIOOCteODnOOCiuetizwvc3Bhbj4=","PGRpdiBzdHlsZT0iZGlzcGxheTpmbGV4OyBmbGV4LWRpcmVjdGlvbjpjb2x1bW47IGdhcDo4cHg7Ij4=","PGRpdiBzdHlsZT0iYmFja2dyb3VuZDpyZ2JhKDE1LDIzLDQyLDAuOCk7IGJvcmRlcjoxcHggc29saWQgcmdiYSgyNTUsMjU1LDI1NSwwLjA4KTsgYm9yZGVyLXJhZGl1czo4cHg7IHBhZGRpbmc6OHB4IDEwcHg7Ij4=","PGRpdiBzdHlsZT0iZm9udC1zaXplOjExcHg7IGZvbnQtd2VpZ2h0OjYwMDsgY29sb3I6dmFyKC0tdGV4dC1wcmltYXJ5KTsgbWFyZ2luLWJvdHRvbTo0cHg7Ij7wn5OKIOiEiuafsTPlpKfjgrvjgrDjg6Hjg7Pjg4jpgKPli5XosqDojbfop6PmnpA8L2Rpdj4=","PGRpdiBzdHlsZT0iZGlzcGxheTpmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjsgZm9udC1zaXplOjEwLjVweDsgbWFyZ2luLWJvdHRvbToycHg7Ij48c3Bhbj7wn6egIOmgmuakjuWun+WKueiyoOiNtyAoQzIpPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjojZjhmYWZjOyBmb250LWZhbWlseTptb25vc3BhY2U7IGZvbnQtd2VpZ2h0OmJvbGQ7Ij4=","IGtnICg=","5YCNKTwvc3Bhbj48L2Rpdj4=","PGRpdiBzdHlsZT0iZGlzcGxheTpmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjsgZm9udC1zaXplOjEwLjVweDsgbWFyZ2luLWJvdHRvbToycHg7Ij48c3Bhbj7wn6uBIOiDuOakjuWJquaWreiyoOiNtyAoVGgzKTwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6I2Y4ZmFmYzsgZm9udC1mYW1pbHk6bW9ub3NwYWNlOyBmb250LXdlaWdodDpib2xkOyI+","PGRpdiBzdHlsZT0iZGlzcGxheTpmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjsgZm9udC1zaXplOjEwLjVweDsiPjxzcGFuPvCfprQg6IWw5qSOKEw1LVMxKeWJquaWreWKmzwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6I2Y4ZmFmYzsgZm9udC1mYW1pbHk6bW9ub3NwYWNlOyBmb250LXdlaWdodDpib2xkOyI+","PGRpdiBzdHlsZT0iYmFja2dyb3VuZDpyZ2JhKDIyNSwyOSw3MiwwLjEpOyBib3JkZXI6MXB4IHNvbGlkIHJnYmEoMjI1LDI5LDcyLDAuMyk7IGJvcmRlci1yYWRpdXM6NnB4OyBwYWRkaW5nOjhweCAxMHB4OyI+","PGRpdiBzdHlsZT0iZm9udC1zaXplOjEwLjVweDsgZm9udC13ZWlnaHQ6NjAwOyBjb2xvcjojZmI3MTg1OyBtYXJnaW4tYm90dG9tOjJweDsiPvCflKUg6YGO5Ymw5L2c55So77yI44Ok44Oz44OA6YGO57eK5by1562L77yJOjwvZGl2Pg==","PGRpdiBzdHlsZT0iZm9udC1zaXplOjExcHg7IGNvbG9yOiNmMWY1Zjk7Ij4=","PGRpdiBzdHlsZT0iYmFja2dyb3VuZDpyZ2JhKDU2LDE4OSwyNDgsMC4xKTsgYm9yZGVyOjFweCBzb2xpZCByZ2JhKDU2LDE4OSwyNDgsMC4zKTsgYm9yZGVyLXJhZGl1czo2cHg7IHBhZGRpbmc6OHB4IDEwcHg7Ij4=","PGRpdiBzdHlsZT0iZm9udC1zaXplOjEwLjVweDsgZm9udC13ZWlnaHQ6NjAwOyBjb2xvcjojMzhiZGY4OyBtYXJnaW4tYm90dG9tOjJweDsiPvCfkqQg5LiN5rS75oCn5YyW77yI44Ok44Oz44OA5byx5YyW44O744K144Oc44KK562L77yJOjwvZGl2Pg==","PGRpdiBzdHlsZT0iZm9udC1zaXplOjEwcHg7IGNvbG9yOnZhcigtLXRleHQtc2Vjb25kYXJ5KTsgbGluZS1oZWlnaHQ6MS40OyBtYXJnaW4tdG9wOjJweDsiPuKAuyDlgbTpnaLjga7pqqjmoLzlub7kvZXjgqLjg6njgqTjg6Hjg7Pjg4jjgYvjgonjgIHph43lv4Pkv53mjIHjga7jgZ/jgoHjgavpgY7osqDojbfjgajjgarjgaPjgabjgYTjgovnrYvnvqTjgYrjgojjgbPmqZ/og73kvY7kuIvjgZfjgabjgYTjgovnrYvnvqTjgpLoh6rli5XnibnlrprjgZfjgabjgYTjgb7jgZnjgII8L2Rpdj4=","PC9kaXY+PC9kaXY+PC9kaXY+","PGRpdiBjbGFzcz0iZGFzaC1jYXJkIGV4cGVydC1jYXJkIiBzdHlsZT0iZ3JpZC1jb2x1bW46IDEgLyAtMTsiPg==","PGgzPvCfk50g5bCC6ZaA5a6244O75oyH5bCO6ICF44Kr44Or44OG6KmV5L6h5YWl5Yqb77yI5LqL5qWt6ICF5bCC55So77yJPC9oMz4=","PGRpdiBjbGFzcz0iaW5wdXQtZmllbGQiPjxsYWJlbCBmb3I9ImV4cGVydENvbW1lbnRJbnB1dCIgc3R5bGU9ImNvbG9yOnZhcigtLWFjY2VudC1vcmFuZ2UpOyI+5oyH5bCO6ICF44Ki44K744K544Oh44Oz44OI44O744OV44Kj44O844OJ44OQ44OD44KvPC9sYWJlbD4=","PHRleHRhcmVhIGlkPSJleHBlcnRDb21tZW50SW5wdXQiIHN0eWxlPSJ3aWR0aDoxMDAlOyBoZWlnaHQ6ODBweDsgYmFja2dyb3VuZDojMGYxYzNmOyBib3JkZXI6MXB4IHNvbGlkIHZhcigtLWFjY2VudC1vcmFuZ2UpOyBib3JkZXItcmFkaXVzOjhweDsgY29sb3I6d2hpdGU7IHBhZGRpbmc6MTBweDsgZm9udC1mYW1pbHk6aW5oZXJpdDsgcmVzaXplOm5vbmU7IG91dGxpbmU6bm9uZTsgYm94LXNpemluZzpib3JkZXItYm94OyI+","PC90ZXh0YXJlYT48L2Rpdj4=","PGRpdiBjbGFzcz0iaW5wdXQtZmllbGQiPjxsYWJlbCBmb3I9ImV4cGVydEV4ZXJjaXNlc0lucHV0IiBzdHlsZT0iY29sb3I6dmFyKC0tYWNjZW50LW9yYW5nZSk7Ij7lh6bmlrnjgrnjg4jjg6zjg4Pjg4Hjg7vjg4jjg6zjg7zjg4vjg7PjgrDjg6rjg4/jg5Pjg6rjg6Hjg4vjg6Xjg7w8L2xhYmVsPg==","PHRleHRhcmVhIGlkPSJleHBlcnRFeGVyY2lzZXNJbnB1dCIgc3R5bGU9IndpZHRoOjEwMCU7IGhlaWdodDo4MHB4OyBiYWNrZ3JvdW5kOiMwZjFjM2Y7IGJvcmRlcjoxcHggc29saWQgdmFyKC0tYWNjZW50LW9yYW5nZSk7IGJvcmRlci1yYWRpdXM6OHB4OyBjb2xvcjp3aGl0ZTsgcGFkZGluZzoxMHB4OyBmb250LWZhbWlseTppbmhlcml0OyByZXNpemU6bm9uZTsgb3V0bGluZTpub25lOyBib3gtc2l6aW5nOmJvcmRlci1ib3g7Ij4=","PGRpdiBzdHlsZT0iZGlzcGxheTpmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6ZmxleC1lbmQ7IG1hcmdpbi10b3A6MTBweDsiPg==","PGJ1dHRvbiBvbmNsaWNrPSJzYXZlRXhwZXJ0Q29tbWVudCgpIiBjbGFzcz0iYnRuIHByaW1hcnktYnRuIiBzdHlsZT0iYmFja2dyb3VuZDp2YXIoLS1hY2NlbnQtb3JhbmdlKTsgY29sb3I6YmxhY2s7IGZvbnQtd2VpZ2h0OjcwMDsiPvCfk4sg6KmV5L6h44KS44Kr44Or44OG44Gr5L+d5a2YPC9idXR0b24+PC9kaXY+PC9kaXY+","PGRpdiBjbGFzcz0iZGFzaC1jYXJkIGFpLWV2YWwtY2FyZCIgaWQ9ImFpRXZhbENhcmQiPjxoMz7wn6egIEFJIOiHqOW6iuOCpOODs+OCteOCpOODiOODu+OCouOCu+OCueODoeODs+ODiDwvaDM+","PGRpdiBjbGFzcz0iYWktZXZhbC1ib3giIGlkPSJhaUV2YWxDb250ZW50Ij4=","ZGFzaE11c2NsZUNhbnZhcw==","b3BlbkNvdW5zZWxpbmdGcm9tUmVwb3J0QnRu"];
-function _0x$d(i){try{return decodeURIComponent(escape(atob(_0x$b[i])));}catch(e){return atob(_0x$b[i]);}}
-/**
  * dashboard.js
  * ---------------------------------------------------------------------------
  * 測定完了後のダッシュボード/レポート画面の生成。api.js（Gemini AIまたは
@@ -27,12 +21,12 @@ import { openCounselingModal } from './counseling.js';
  */
 function formatMarkdownToHtml(markdown) {
     return (markdown || "")
-        .replace(/### (.*)/g, _0x$d(0))
-        .replace(/## (.*)/g, _0x$d(0))
-        .replace(/- \*\*(.*?)\*\*:/g, _0x$d(1))
-        .replace(/- (.*)/g, _0x$d(2))
-        .replace(/\n\n/g, _0x$d(3))
-        .replace(/\n/g, _0x$d(4));
+        .replace(/### (.*)/g, '<h2>$1</h2>')
+        .replace(/## (.*)/g, '<h2>$1</h2>')
+        .replace(/- \*\*(.*?)\*\*:/g, '<li><strong>$1</strong>: ')
+        .replace(/- (.*)/g, '<li>$1</li>')
+        .replace(/\n\n/g, '<p></p>')
+        .replace(/\n/g, '<br>');
 }
 
 var _dataService = null;
@@ -45,19 +39,19 @@ export function initDashboard(dataService) {
     // （js/ui/batchReview.jsのhistoryモード）からレポートを開いた場合は、
     // 閉じたあとに元の4面まとめ画面へ戻す必要があるため、
     // state.dashboardReturnTargetを見て振り分ける。
-    var dashboardCloseBtn = document.getElementById(_0x$d(5));
+    var dashboardCloseBtn = document.getElementById('dashboardCloseBtn');
     if (dashboardCloseBtn) {
         dashboardCloseBtn.onclick = function () {
-            document.getElementById(_0x$d(6)).style.display = _0x$d(7);
+            document.getElementById('dashboardOverlay').style.display = 'none';
             // 「4方向総合所見」用に一時的にセットされたmultiViewSessionIdsは、
             // レポートを閉じた時点で必ずクリアする。次に開くレポートが
             // 単独セッション由来なのか4面まとめ由来なのかは、その都度
             // 呼び出し側が明示的にセットし直す設計（js/ui/batchReview.js参照）。
             state.multiViewSessionIds = null;
-            if (state.dashboardReturnTarget === _0x$d(8)) {
+            if (state.dashboardReturnTarget === 'historyBatch') {
                 state.dashboardReturnTarget = null;
                 if (window.__showHistoryBatchView) window.__showHistoryBatchView();
-            } else if (state.dashboardReturnTarget === _0x$d(9)) {
+            } else if (state.dashboardReturnTarget === 'dynConfirmHistory') {
                 // 動作解析の撮影確認画面(js/ui/dynConfirm.js)の履歴モードから
                 // 「📄 レポートを見る」を開いた場合、閉じたら同じ確認画面へ
                 // 戻す（historyBatchと同じ考え方、v4.6.24）。
@@ -71,7 +65,7 @@ export function initDashboard(dataService) {
         // 2026-08-18追加: 静止4方向は本来、撮影完了直後に自動で出る「4面確認・
         // 修正画面」の「✅ この内容で確定してレポート作成」（js/ui/batchReview.js
         // のfinalizeBatch()）から確定するのが正規の経路で、これを通ると4方向が
-        // status:_0x$d(10)→_0x$d(11)になり、履歴一覧で1件の「4面測定」としてまとまる
+        // status:'draft'→'final'になり、履歴一覧で1件の「4面測定」としてまとまる
         // （js/ui/history.jsのisGroupable判定）。しかし各ポーズ撮影直後の再生
         // ツールバーに常設されている「📄 レポート」ボタン（#printReportBtn、
         // 個々のポーズをその場で確認する用途）を、4面目（右側面）の直後に押すと、
@@ -92,22 +86,22 @@ export function initDashboard(dataService) {
                         await _dataService.finalizeSession(batchIds[bi]);
                     }
                 } catch (e) {
-                    console.error(_0x$d(12), e);
+                    console.error('[dashboard] Failed to auto-finalize static batch on report view', e);
                 }
-                var stillOpenBatchOverlay = document.getElementById(_0x$d(13));
-                if (stillOpenBatchOverlay) stillOpenBatchOverlay.style.display = _0x$d(7);
+                var stillOpenBatchOverlay = document.getElementById('batchReviewOverlay');
+                if (stillOpenBatchOverlay) stillOpenBatchOverlay.style.display = 'none';
                 STATIC_MODES.forEach(function (m) { state.currentBatchSessionIds[m] = null; });
-                if (typeof window.refreshHistoryList === _0x$d(14)) window.refreshHistoryList();
+                if (typeof window.refreshHistoryList === 'function') window.refreshHistoryList();
             }
         }
 
-        var overlay = document.getElementById(_0x$d(6));
-        var grid = document.getElementById(_0x$d(15));
+        var overlay = document.getElementById('dashboardOverlay');
+        var grid = document.getElementById('dashGrid');
 
-        grid.innerHTML = _0x$d(16);
-        overlay.style.display = _0x$d(17);
+        grid.innerHTML = '<div style="grid-column: 1/-1; color: var(--accent-blue); text-align:center; font-size:20px; padding:50px;">📄 レポート生成中...</div>';
+        overlay.style.display = 'block';
 
-        var patName = patientNameInput.value.trim() || _0x$d(18);
+        var patName = patientNameInput.value.trim() || "ゲスト";
 
         var activeSession = {
             mode: state.currentTab,
@@ -136,8 +130,8 @@ export function initDashboard(dataService) {
             capturedArucoMidlineY: (getEffectiveArucoMidlineX(state.currentTab) !== null) ? state.arucoMidlineY : null,
             // 2026-08-05追加（不具合修正）: 静止4方向のroll（端末傾き）補正
             // （v4.6.20）・アルコ正中線のroll補正（v4.9.0）が、js/api.jsの
-            // extractMetrics()内で_0x$d(19)と
-            // _0x$d(20)の有無を見て発動する作りになって
+            // extractMetrics()内で`session.capturedRollDeg`と
+            // `session.canvasWidth/Height`の有無を見て発動する作りになって
             // いるにもかかわらず、このactiveSessionオブジェクトが元々この
             // 3項目を含んでいなかったため、レポート表示のどの経路からでも
             // roll補正が実質的に発動しない状態になっていた（発見・修正:
@@ -151,7 +145,7 @@ export function initDashboard(dataService) {
             // js/ui/specialist.js）側で、レポート対象セッションの実際の
             // 値（静止4方向以外は常にnull）へ揃えてからprepareAndPrintReport()
             // を呼ぶ責任を持つ。
-            capturedRollDeg: (typeof state.activeSessionCapturedRollDeg === _0x$d(21)) ? state.activeSessionCapturedRollDeg : null,
+            capturedRollDeg: (typeof state.activeSessionCapturedRollDeg === 'number') ? state.activeSessionCapturedRollDeg : null,
             canvasWidth: state.activeSessionCanvasWidth || null,
             canvasHeight: state.activeSessionCanvasHeight || null,
             expertComment: state.activeExpertComment,
@@ -160,13 +154,13 @@ export function initDashboard(dataService) {
         };
 
         var metrics = apiManager.extractMetrics(activeSession);
-        var apiKey = localStorage.getItem(_0x$d(22)) || '';
+        var apiKey = localStorage.getItem('gemini_api_key') || '';
 
         var reportMarkdown = "";
         try {
             reportMarkdown = await apiManager.generateReport(activeSession, apiKey);
         } catch (e) {
-            reportMarkdown = _0x$d(23) + e;
+            reportMarkdown = "### エラー\nレポートの生成に失敗しました: " + e;
         }
 
         // --- 4方向総合所見 (multi-view synthesis, v4.6.16で追加) ---
@@ -178,7 +172,7 @@ export function initDashboard(dataService) {
         var multiViewMarkdown = null;
         try {
             var multiViewIds = state.multiViewSessionIds;
-            var multiViewModes = multiViewIds ? [_0x$d(24), _0x$d(25), _0x$d(26), _0x$d(27)].filter(function (m) { return !!multiViewIds[m]; }) : [];
+            var multiViewModes = multiViewIds ? ['front', 'l_side', 'back', 'r_side'].filter(function (m) { return !!multiViewIds[m]; }) : [];
             if (multiViewModes.length >= 2) {
                 var metricsByMode = {};
                 for (var mvi = 0; mvi < multiViewModes.length; mvi++) {
@@ -191,19 +185,19 @@ export function initDashboard(dataService) {
                 }
             }
         } catch (e) {
-            console.error(_0x$d(28), e);
+            console.error("[dashboard] 4方向総合所見の生成に失敗しました:", e);
             multiViewMarkdown = null;
         }
 
         var gridHtml = "";
 
-        gridHtml += _0x$d(29) +
-            _0x$d(30) + patName + _0x$d(31) +
-            _0x$d(32) + apiManager.getModeNameJp(metrics.mode) + _0x$d(33) +
-            _0x$d(34) + metrics.height + _0x$d(35) +
-            _0x$d(36) + metrics.footSize + _0x$d(35) +
-            _0x$d(37) + (metrics.pxToCmRatio ? (1 / metrics.pxToCmRatio).toFixed(1) + _0x$d(38) : _0x$d(39)) + _0x$d(33) +
-            _0x$d(40);
+        gridHtml += '<div class="dash-card"><h3>🧍 被測定者プロファイル</h3>' +
+            '<div class="dash-metric"><span>氏名 / ID</span><span class="val">' + patName + ' 様</span></div>' +
+            '<div class="dash-metric"><span>測定モード</span><span class="val">' + apiManager.getModeNameJp(metrics.mode) + '</span></div>' +
+            '<div class="dash-metric"><span>身長</span><span class="val">' + metrics.height + ' cm</span></div>' +
+            '<div class="dash-metric"><span>足のサイズ</span><span class="val">' + metrics.footSize + ' cm</span></div>' +
+            '<div class="dash-metric"><span>スケール</span><span class="val">' + (metrics.pxToCmRatio ? (1 / metrics.pxToCmRatio).toFixed(1) + ' px/cm' : '未校正 (自動推定)') + '</span></div>' +
+            '</div>';
 
         // 2026-08-24追加: レポートに載せる各方向の写真を、キャリブレーション
         // で分かっているカメラのroll角度ぶん回転させ、見た目の垂直を実際の
@@ -219,11 +213,11 @@ export function initDashboard(dataService) {
         // viewHistoryBatchReport参照）は、従来通り写真をそのまま（回転のみ）
         // 表示する。
         var rotatedImagesByMode = {};
-        await Promise.all([_0x$d(24), _0x$d(25), _0x$d(26), _0x$d(27)].map(async function (mode) {
+        await Promise.all(['front', 'l_side', 'back', 'r_side'].map(async function (mode) {
             var entry = reportDataStore[mode];
             var srcBase64 = (entry && entry.capturedImage) ? entry.capturedImage : null;
             if (!srcBase64) return;
-            var rollDeg = (entry && typeof entry.capturedRollDeg === _0x$d(21)) ? entry.capturedRollDeg : null;
+            var rollDeg = (entry && typeof entry.capturedRollDeg === 'number') ? entry.capturedRollDeg : null;
             var kps = (entry && Array.isArray(entry) && entry.length > 0) ? entry : null;
             rotatedImagesByMode[mode] = kps
                 ? await biomechanics.renderPhotoWithOverlay(srcBase64, function (ctx, w, h) { drawPoseOverlay(ctx, kps, mode, w, h); }, rollDeg)
@@ -231,73 +225,73 @@ export function initDashboard(dataService) {
         }));
 
         var imageCardsHtml = "";
-        var modeLabelsJp = { _0x$d(24): _0x$d(41), _0x$d(25): _0x$d(42), _0x$d(26): _0x$d(43), _0x$d(27): _0x$d(44) };
-        [_0x$d(24), _0x$d(25), _0x$d(26), _0x$d(27)].forEach(function (mode) {
+        var modeLabelsJp = { 'front': '前面', 'l_side': '左側面', 'back': '後面', 'r_side': '右側面' };
+        ['front', 'l_side', 'back', 'r_side'].forEach(function (mode) {
             var base64 = rotatedImagesByMode[mode] || null;
             if (base64) {
-                var subInfo = (mode === _0x$d(25) || mode === _0x$d(27)) ? _0x$d(45) : _0x$d(46);
-                imageCardsHtml += _0x$d(47) + base64 + _0x$d(48) + modeLabelsJp[mode] + _0x$d(49) +
-                    _0x$d(50) + modeLabelsJp[mode] + _0x$d(40) +
-                    _0x$d(51) + subInfo + _0x$d(52);
+                var subInfo = (mode === 'l_side' || mode === 'r_side') ? "ケンダル垂直基準線" : "荷重バランス比率対象";
+                imageCardsHtml += '<div class="report-image-card"><img src="' + base64 + '" alt="' + modeLabelsJp[mode] + '">' +
+                    '<div class="report-image-label">🧍 ' + modeLabelsJp[mode] + '</div>' +
+                    '<div class="report-image-sub">' + subInfo + '</div></div>';
             } else {
-                imageCardsHtml += _0x$d(53) +
-                    _0x$d(54) +
-                    _0x$d(50) + modeLabelsJp[mode] + _0x$d(40) +
-                    _0x$d(55);
+                imageCardsHtml += '<div class="report-image-card" style="opacity: 0.4;">' +
+                    '<div style="aspect-ratio:4/3; background:#0f1c3f; border: 1px dashed rgba(255,255,255,0.2); border-radius:4px; display:flex; align-items:center; justify-content:center; color:var(--text-secondary); font-size:11px;">未測定</div>' +
+                    '<div class="report-image-label">🧍 ' + modeLabelsJp[mode] + '</div>' +
+                    '<div class="report-image-sub">データなし</div></div>';
             }
         });
 
-        gridHtml += _0x$d(56) +
-            _0x$d(57) +
-            _0x$d(58) + imageCardsHtml + _0x$d(52);
+        gridHtml += '<div class="dash-card report-image-section" style="grid-column: 1 / -1;">' +
+            '<div class="report-image-title">📸 静止姿勢アライメント 4方向分析画像</div>' +
+            '<div class="report-image-grid">' + imageCardsHtml + '</div></div>';
 
         if (multiViewMarkdown) {
-            gridHtml += _0x$d(59) +
-                _0x$d(60) + formatMarkdownToHtml(multiViewMarkdown) + _0x$d(40) +
-                _0x$d(61) +
-                _0x$d(40);
+            gridHtml += '<div class="dash-card ai-eval-card" style="grid-column: 1 / -1;"><h3>🧭 4方向総合所見</h3>' +
+                '<div class="ai-eval-box">' + formatMarkdownToHtml(multiViewMarkdown) + '</div>' +
+                '<div style="color:var(--text-secondary); font-size:11px; margin-top:8px;">※ 複数方向の測定結果を横断して見た参考所見です。各方向ごとの詳細評価は下記をご確認ください。</div>' +
+                '</div>';
         }
 
         if (metrics.weightBearing) {
             var wDiff = Math.abs(metrics.weightBearing.total.L - metrics.weightBearing.total.R);
-            gridHtml += _0x$d(62) + (metrics.usedArucoMidline ? _0x$d(63) : '') + _0x$d(64) +
-                _0x$d(65) + (wDiff > 5 ? _0x$d(66) : _0x$d(67)) + _0x$d(49) + metrics.weightBearing.total.L.toFixed(1) + _0x$d(68) + metrics.weightBearing.total.R.toFixed(1) + _0x$d(69) +
-                _0x$d(70) + metrics.weightBearing.upper.L.toFixed(1) + _0x$d(68) + metrics.weightBearing.upper.R.toFixed(1) + _0x$d(69) +
-                _0x$d(71) + metrics.weightBearing.lower.L.toFixed(1) + _0x$d(68) + metrics.weightBearing.lower.R.toFixed(1) + _0x$d(69) +
-                _0x$d(72) + wDiff.toFixed(1) + _0x$d(73) + (wDiff > 5 ? _0x$d(74) : '✅') + _0x$d(75);
+            gridHtml += '<div class="dash-card"><h3>⚖️ 左右荷重バランス' + (metrics.usedArucoMidline ? '<span style="font-size:11px; color:#b388ff; font-weight:400;">（正中線: アルコマーカー基準）</span>' : '') + '</h3>' +
+                '<div class="dash-metric"><span>全身荷重 (左 / 右)</span><span class="val ' + (wDiff > 5 ? 'warn' : 'good') + '">' + metrics.weightBearing.total.L.toFixed(1) + '% / ' + metrics.weightBearing.total.R.toFixed(1) + '%</span></div>' +
+                '<div class="dash-metric"><span>上半身荷重 (左 / 右)</span><span class="val">' + metrics.weightBearing.upper.L.toFixed(1) + '% / ' + metrics.weightBearing.upper.R.toFixed(1) + '%</span></div>' +
+                '<div class="dash-metric"><span>下半身荷重 (左 / 右)</span><span class="val">' + metrics.weightBearing.lower.L.toFixed(1) + '% / ' + metrics.weightBearing.lower.R.toFixed(1) + '%</span></div>' +
+                '<div class="dash-metric"><span>アシンメトリー偏位</span><span class="val">' + wDiff.toFixed(1) + '% ' + (wDiff > 5 ? '⚠️' : '✅') + '</span></div></div>';
         }
 
         if (metrics.swayMetrics) {
             var sw = metrics.swayMetrics;
             var trajectoryImgSrc = biomechanics.renderCopTrajectoryImage(sw.trajectory, sw.precise);
-            gridHtml += _0x$d(76) + (sw.precise ? _0x$d(77) : _0x$d(78)) + _0x$d(64) +
-                (trajectoryImgSrc ? _0x$d(79) + trajectoryImgSrc + _0x$d(80) : '') +
-                _0x$d(81) + (sw.swayArea > 800 ? _0x$d(66) : _0x$d(67)) + _0x$d(49) + sw.swayArea.toFixed(1) + _0x$d(82) +
-                _0x$d(83) + sw.pathLength.toFixed(1) + _0x$d(84) +
-                _0x$d(85) + (sw.swaySpeed !== null ? sw.swaySpeed.toFixed(1) + _0x$d(86) : _0x$d(87)) + _0x$d(33) +
-                _0x$d(88) + sw.avgDeviationX.toFixed(1) + _0x$d(89) + (sw.avgDeviationX > 0 ? _0x$d(90) : _0x$d(91)) + _0x$d(92) +
-                (!sw.precise ? _0x$d(93) : '') +
-                _0x$d(40);
+            gridHtml += '<div class="dash-card"><h3>📈 COP重心動揺アセスメント' + (sw.precise ? '（4隅ArUco床面実測・実寸）' : '（参考値・mm近似換算）') + '</h3>' +
+                (trajectoryImgSrc ? '<img src="' + trajectoryImgSrc + '" alt="COP軌跡" style="width:100%; max-width:320px; display:block; margin:0 auto 10px; border-radius:8px;">' : '') +
+                '<div class="dash-metric"><span>動揺面積 (Ellipse)</span><span class="val ' + (sw.swayArea > 800 ? 'warn' : 'good') + '">' + sw.swayArea.toFixed(1) + ' mm²</span></div>' +
+                '<div class="dash-metric"><span>総動揺軌跡長</span><span class="val">' + sw.pathLength.toFixed(1) + ' mm</span></div>' +
+                '<div class="dash-metric"><span>平均動揺速度</span><span class="val">' + (sw.swaySpeed !== null ? sw.swaySpeed.toFixed(1) + ' mm/s' : '算出不可') + '</span></div>' +
+                '<div class="dash-metric"><span>中心偏位 (X軸)</span><span class="val">' + sw.avgDeviationX.toFixed(1) + ' mm (' + (sw.avgDeviationX > 0 ? '右寄り' : '左寄り') + ')</span></div>' +
+                (!sw.precise ? '<div style="color:var(--text-secondary); font-size:11px; margin-top:6px;">参考値です（4隅ArUco床面キャリブレーション未実施のため、pxToCmRatioによる近似換算値を表示しています）</div>' : '') +
+                '</div>';
         }
 
         if (Object.keys(metrics.jointAngles).length > 0) {
-            gridHtml += _0x$d(94);
-            if (metrics.jointAngles.leftKneeAngle) gridHtml += _0x$d(95) + metrics.jointAngles.leftKneeAngle.toFixed(1) + _0x$d(96);
-            if (metrics.jointAngles.rightKneeAngle) gridHtml += _0x$d(97) + metrics.jointAngles.rightKneeAngle.toFixed(1) + _0x$d(96);
-            if (metrics.jointAngles.trunkLean) gridHtml += _0x$d(98) + metrics.jointAngles.trunkLean.toFixed(1) + _0x$d(96);
-            if (metrics.jointAngles.kneeFlexion) gridHtml += _0x$d(99) + metrics.jointAngles.kneeFlexion.toFixed(1) + _0x$d(96);
-            if (metrics.jointAngles.shoulderArmAngle) gridHtml += _0x$d(100) + metrics.jointAngles.shoulderArmAngle.toFixed(1) + _0x$d(96);
-            if (metrics.jointAngles.hipFlexion) gridHtml += _0x$d(101) + metrics.jointAngles.hipFlexion.toFixed(1) + _0x$d(96);
-            gridHtml += _0x$d(40);
+            gridHtml += '<div class="dash-card"><h3>📐 測定関節角度・可動域</h3>';
+            if (metrics.jointAngles.leftKneeAngle) gridHtml += '<div class="dash-metric"><span>左膝関節角度</span><span class="val">' + metrics.jointAngles.leftKneeAngle.toFixed(1) + '°</span></div>';
+            if (metrics.jointAngles.rightKneeAngle) gridHtml += '<div class="dash-metric"><span>右膝関節角度</span><span class="val">' + metrics.jointAngles.rightKneeAngle.toFixed(1) + '°</span></div>';
+            if (metrics.jointAngles.trunkLean) gridHtml += '<div class="dash-metric"><span>体幹前傾角度</span><span class="val">' + metrics.jointAngles.trunkLean.toFixed(1) + '°</span></div>';
+            if (metrics.jointAngles.kneeFlexion) gridHtml += '<div class="dash-metric"><span>膝屈曲角度 (側面)</span><span class="val">' + metrics.jointAngles.kneeFlexion.toFixed(1) + '°</span></div>';
+            if (metrics.jointAngles.shoulderArmAngle) gridHtml += '<div class="dash-metric"><span>上腕挙上角度</span><span class="val">' + metrics.jointAngles.shoulderArmAngle.toFixed(1) + '°</span></div>';
+            if (metrics.jointAngles.hipFlexion) gridHtml += '<div class="dash-metric"><span>前屈/後屈股関節角度</span><span class="val">' + metrics.jointAngles.hipFlexion.toFixed(1) + '°</span></div>';
+            gridHtml += '</div>';
         }
 
         // 側方データがある場合の代償筋骨格解析カード生成 (Janda & Kendall 連鎖モデル)
-        var sideKps = (reportDataStore[_0x$d(25)] && reportDataStore[_0x$d(25)].length > 0)
-            ? reportDataStore[_0x$d(25)]
-            : ((reportDataStore[_0x$d(27)] && reportDataStore[_0x$d(27)].length > 0)
-                ? reportDataStore[_0x$d(27)]
-                : ((metrics.mode === _0x$d(25) || metrics.mode === _0x$d(27)) ? (session.keypoints || null) : null));
-        var sideMode = (reportDataStore[_0x$d(25)] && reportDataStore[_0x$d(25)].length > 0) ? _0x$d(25) : ((reportDataStore[_0x$d(27)] && reportDataStore[_0x$d(27)].length > 0) ? _0x$d(27) : metrics.mode);
+        var sideKps = (reportDataStore['l_side'] && reportDataStore['l_side'].length > 0)
+            ? reportDataStore['l_side']
+            : ((reportDataStore['r_side'] && reportDataStore['r_side'].length > 0)
+                ? reportDataStore['r_side']
+                : ((metrics.mode === 'l_side' || metrics.mode === 'r_side') ? (session.keypoints || null) : null));
+        var sideMode = (reportDataStore['l_side'] && reportDataStore['l_side'].length > 0) ? 'l_side' : ((reportDataStore['r_side'] && reportDataStore['r_side'].length > 0) ? 'r_side' : metrics.mode);
         var kendallOffsets = sideKps ? biomechanics.extractKendallOffsets(sideKps, sideMode) : null;
 
         if (kendallOffsets) {
@@ -334,66 +328,66 @@ export function initDashboard(dataService) {
             var overactive = [];
             var inhibited = [];
             if (c2 > 2.0) {
-                overactive.push(_0x$d(102), _0x$d(103), _0x$d(104));
-                inhibited.push(_0x$d(105));
+                overactive.push("後頭下筋群", "僧帽筋上部", "胸鎖乳突筋(短縮)");
+                inhibited.push("頚部深層屈筋群");
             }
             if (th3 > 1.5) {
-                overactive.push(_0x$d(106), _0x$d(107), _0x$d(108));
-                inhibited.push(_0x$d(109), _0x$d(110), _0x$d(111));
+                overactive.push("小胸筋(短縮・巻き肩)", "僧帽筋上部(代償性過緊張)", "大胸筋");
+                inhibited.push("菱形筋(背部脱力)", "前鋸筋", "僧帽筋下部");
             } else if (th3 < -1.5) {
-                overactive.push(_0x$d(112));
-                inhibited.push(_0x$d(113));
+                overactive.push("胸椎伸展筋群(過平背)");
+                inhibited.push("胸椎生理的後弯機能");
             }
             if (s2 < -2.0) {
-                overactive.push(_0x$d(114), _0x$d(115), _0x$d(116));
-                inhibited.push(_0x$d(117), _0x$d(118), _0x$d(119));
+                overactive.push("ハムストリングス(過緊張)", "大腿筋膜張筋", "腰部椎間関節剪断");
+                inhibited.push("大臀筋(不活性化)", "腸腰筋(伸張脱力)", "腹横筋(コア)");
             } else if (s2 > 2.0) {
-                overactive.push(_0x$d(120), _0x$d(121), _0x$d(122));
-                inhibited.push(_0x$d(123), _0x$d(124));
+                overactive.push("腸腰筋(短縮)", "大腿直筋", "腰背部脊柱起立筋");
+                inhibited.push("腹直筋", "大臀筋");
             }
-            if (overactive.length === 0) overactive.push(_0x$d(125));
-            if (inhibited.length === 0) inhibited.push(_0x$d(126));
+            if (overactive.length === 0) overactive.push("なし（正常協調）");
+            if (inhibited.length === 0) inhibited.push("なし（正常活性）");
 
-            gridHtml += _0x$d(127) +
-                _0x$d(128) +
-                _0x$d(129) +
-                _0x$d(130) + (c2 > 0 ? '+' : '') + c2 + _0x$d(131) + (th3 > 0 ? '+' : '') + th3 + _0x$d(132) + (s2 > 0 ? '+' : '') + s2 + _0x$d(133) + (patientAge ? _0x$d(134) + patientAge + _0x$d(135) : '') + _0x$d(52) +
-                _0x$d(136) +
-                _0x$d(40) +
-                _0x$d(137) +
-                _0x$d(138) +
-                _0x$d(139) +
-                _0x$d(140) +
-                _0x$d(141) +
-                _0x$d(52) +
-                _0x$d(142) +
-                _0x$d(143) +
-                _0x$d(144) +
-                _0x$d(145) + cervicalLoadKg.toFixed(1) + _0x$d(146) + cervicalMult + _0x$d(147) +
-                _0x$d(148) + thoracicLoadKg.toFixed(1) + _0x$d(146) + thoracicMult + _0x$d(147) +
-                _0x$d(149) + lumbarLoadKg.toFixed(1) + _0x$d(146) + lumbarMult + _0x$d(147) +
-                _0x$d(40) +
-                _0x$d(150) +
-                _0x$d(151) +
-                _0x$d(152) + overactive.join("、") + _0x$d(40) +
-                _0x$d(40) +
-                _0x$d(153) +
-                _0x$d(154) +
-                _0x$d(152) + inhibited.join("、") + _0x$d(40) +
-                _0x$d(40) +
-                _0x$d(155) +
-                _0x$d(156);
+            gridHtml += '<div class="dash-card musculoskeletal-card" style="grid-column: 1 / -1; background:rgba(15,23,42,0.9); border:1px solid #1e293b; border-radius:12px; padding:16px;">' +
+                '<div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:10px; margin-bottom:14px; flex-wrap:wrap; gap:8px;">' +
+                '<div><h3 style="margin:0; font-size:15px; color:var(--text-primary); display:flex; align-items:center; gap:6px;">🧬 矢状面 代償筋骨格解析 <span style="font-size:11px; color:#94a3b8; font-weight:normal;">(Janda / Kendall / Hansraj / Plagenhoef 連鎖モデル)</span></h3>' +
+                '<div style="font-size:11px; color:var(--text-secondary); margin-top:2px;">実測オフセット: C2 ' + (c2 > 0 ? '+' : '') + c2 + 'cm / Th3 ' + (th3 > 0 ? '+' : '') + th3 + 'cm / S2 ' + (s2 > 0 ? '+' : '') + s2 + 'cm' + (patientAge ? ' (年齢 ' + patientAge + '歳適応)' : '') + '</div></div>' +
+                '<button type="button" id="openCounselingFromReportBtn" class="btn" style="background:#0f172a; border:1px solid #38bdf8; color:#38bdf8; font-size:11px; padding:5px 12px; border-radius:6px; cursor:pointer;">シミュレーターで確認 ↗</button>' +
+                '</div>' +
+                '<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px; align-items:center;">' +
+                '<div style="background:#060913; border:1px solid #1e293b; border-radius:10px; padding:10px; display:flex; flex-direction:column; align-items:center;">' +
+                '<canvas id="dashMuscleCanvas" width="280" height="280" style="max-width:260px; width:100%; aspect-ratio:1/1;"></canvas>' +
+                '<div style="width:100%; display:flex; justify-content:space-between; font-size:9px; color:#cbd5e1; background:rgba(15,23,42,0.8); padding:3px 8px; border-radius:4px; margin-top:4px;">' +
+                '<span style="color:#e11d48;">■ 過緊張</span><span style="color:#64748b;">■ 正常</span><span style="color:#38bdf8;">-- サボり筋</span>' +
+                '</div></div>' +
+                '<div style="display:flex; flex-direction:column; gap:8px;">' +
+                '<div style="background:rgba(15,23,42,0.8); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px 10px;">' +
+                '<div style="font-size:11px; font-weight:600; color:var(--text-primary); margin-bottom:4px;">📊 脊柱3大セグメント連動負荷解析</div>' +
+                '<div style="display:flex; justify-content:space-between; font-size:10.5px; margin-bottom:2px;"><span>🧠 頚椎実効負荷 (C2)</span><span style="color:#f8fafc; font-family:monospace; font-weight:bold;">' + cervicalLoadKg.toFixed(1) + ' kg (' + cervicalMult + '倍)</span></div>' +
+                '<div style="display:flex; justify-content:space-between; font-size:10.5px; margin-bottom:2px;"><span>🫁 胸椎剪断負荷 (Th3)</span><span style="color:#f8fafc; font-family:monospace; font-weight:bold;">' + thoracicLoadKg.toFixed(1) + ' kg (' + thoracicMult + '倍)</span></div>' +
+                '<div style="display:flex; justify-content:space-between; font-size:10.5px;"><span>🦴 腰椎(L5-S1)剪断力</span><span style="color:#f8fafc; font-family:monospace; font-weight:bold;">' + lumbarLoadKg.toFixed(1) + ' kg (' + lumbarMult + '倍)</span></div>' +
+                '</div>' +
+                '<div style="background:rgba(225,29,72,0.1); border:1px solid rgba(225,29,72,0.3); border-radius:6px; padding:8px 10px;">' +
+                '<div style="font-size:10.5px; font-weight:600; color:#fb7185; margin-bottom:2px;">🔥 過剰作用（ヤンダ過緊張筋）:</div>' +
+                '<div style="font-size:11px; color:#f1f5f9;">' + overactive.join("、") + '</div>' +
+                '</div>' +
+                '<div style="background:rgba(56,189,248,0.1); border:1px solid rgba(56,189,248,0.3); border-radius:6px; padding:8px 10px;">' +
+                '<div style="font-size:10.5px; font-weight:600; color:#38bdf8; margin-bottom:2px;">💤 不活性化（ヤンダ弱化・サボり筋）:</div>' +
+                '<div style="font-size:11px; color:#f1f5f9;">' + inhibited.join("、") + '</div>' +
+                '</div>' +
+                '<div style="font-size:10px; color:var(--text-secondary); line-height:1.4; margin-top:2px;">※ 側面の骨格幾何アライメントから、重心保持のために過負荷となっている筋群および機能低下している筋群を自動特定しています。</div>' +
+                '</div></div></div>';
         }
 
         if (state.isSpecialist) {
-            gridHtml += _0x$d(157) +
-                _0x$d(158) +
-                _0x$d(159) +
-                _0x$d(160) + state.activeExpertComment + _0x$d(161) +
-                _0x$d(162) +
-                _0x$d(163) + state.activeExpertExercises + _0x$d(161) +
-                _0x$d(164) +
-                _0x$d(165);
+            gridHtml += '<div class="dash-card expert-card" style="grid-column: 1 / -1;">' +
+                '<h3>📝 専門家・指導者カルテ評価入力（事業者専用）</h3>' +
+                '<div class="input-field"><label for="expertCommentInput" style="color:var(--accent-orange);">指導者アセスメント・フィードバック</label>' +
+                '<textarea id="expertCommentInput" style="width:100%; height:80px; background:#0f1c3f; border:1px solid var(--accent-orange); border-radius:8px; color:white; padding:10px; font-family:inherit; resize:none; outline:none; box-sizing:border-box;">' + state.activeExpertComment + '</textarea></div>' +
+                '<div class="input-field"><label for="expertExercisesInput" style="color:var(--accent-orange);">処方ストレッチ・トレーニングリハビリメニュー</label>' +
+                '<textarea id="expertExercisesInput" style="width:100%; height:80px; background:#0f1c3f; border:1px solid var(--accent-orange); border-radius:8px; color:white; padding:10px; font-family:inherit; resize:none; outline:none; box-sizing:border-box;">' + state.activeExpertExercises + '</textarea></div>' +
+                '<div style="display:flex; justify-content:flex-end; margin-top:10px;">' +
+                '<button onclick="saveExpertComment()" class="btn primary-btn" style="background:var(--accent-orange); color:black; font-weight:700;">📋 評価をカルテに保存</button></div></div>';
         }
 
         var formattedReport = formatMarkdownToHtml(reportMarkdown);
@@ -401,19 +395,19 @@ export function initDashboard(dataService) {
         // 2026-08-26削除: レポート下部の「専門家メンターに個別相談する
         // （有料予約）」ボタン（bookMentorBtn）は、企画者の依頼によりホーム
         // 画面の同機能カード（index.htmlのhomeMentorCard）とあわせて撤去した。
-        gridHtml += _0x$d(166) +
-            _0x$d(167) + formattedReport + _0x$d(40) +
-            _0x$d(40);
+        gridHtml += '<div class="dash-card ai-eval-card" id="aiEvalCard"><h3>🧠 AI 臨床インサイト・アセスメント</h3>' +
+            '<div class="ai-eval-box" id="aiEvalContent">' + formattedReport + '</div>' +
+            '</div>';
 
         grid.innerHTML = gridHtml;
 
         // レポート描画後のCanvas描画およびイベント配線
         if (kendallOffsets) {
-            var dashCanvas = document.getElementById(_0x$d(168));
+            var dashCanvas = document.getElementById('dashMuscleCanvas');
             if (dashCanvas) {
                 biomechanics.renderMusculoskeletalAvatar(dashCanvas, kendallOffsets.c2Cm, kendallOffsets.th3Cm, kendallOffsets.s2Cm);
             }
-            var openSimBtn = document.getElementById(_0x$d(169));
+            var openSimBtn = document.getElementById('openCounselingFromReportBtn');
             if (openSimBtn) {
                 openSimBtn.onclick = function () {
                     openCounselingModal(kendallOffsets.c2Cm, kendallOffsets.th3Cm, kendallOffsets.s2Cm);

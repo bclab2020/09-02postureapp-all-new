@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    :root {
+      --bg-dark: #090d16;
+      --card-dark: #0f172a;
+      --card-border: #1e293b;
+      --text-main: #f1f5f9;
+      --text-sub: #94a3b8;
+      --text-muted: #64748b;
+      
+      /* 洗練されたメディカルカラーパレット（非ネオン） */
+      --color-overactive: #e11d48;  /* 深みのあるローズクリムゾン */
+      --color-inhibited: #38bdf8;   /* 落ち着いたスチールスカイブルー */
+      --color-neutral: #10b981;     /* 上品なセージエメラルド */
+      --color-bone: #cbd5e1;        /* チタンオフホワイト */
+    }
+    input[type=range] {
+      accent-color: #38bdf8;
+    }
+  </style>
+</head>
+<body class="bg-transparent text-slate-200 antialiased p-2 md:p-4">
+  <div class="bg-[#0b1120] border border-slate-800 rounded-2xl p-5 shadow-2xl max-w-4xl mx-auto backdrop-blur-md">
+    
+    <!-- ヘッダーエリア（上品なタイポグラフィとマットバッジ） -->
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 pb-4 border-b border-slate-800/80">
+      <div>
+        <div class="flex items-center gap-2.5 flex-wrap">
+          <div class="w-2.5 h-2.5 rounded-full bg-sky-400"></div>
+          <h2 class="text-base md:text-lg font-semibold text-slate-100 tracking-wide font-sans">
+            矢状面 代償筋骨格解析モデル
+          </h2>
+          <span class="text-[11px] text-slate-400 tracking-wider font-mono">SAGITTAL KINETIC ENGINE</span>
+        </div>
+        
+        <!-- 学術的エビデンス（マットなタグデザイン） -->
+        <div class="flex gap-2 mt-2 flex-wrap items-center">
+          <span class="text-[10px] text-slate-400 uppercase tracking-widest font-medium">準拠理論:</span>
+          <span class="bg-slate-900 text-slate-300 border border-slate-800 px-2.5 py-0.5 rounded-md text-[10px] font-medium tracking-wide">
+            Janda 上下交差症候群
+          </span>
+          <span class="bg-slate-900 text-slate-300 border border-slate-800 px-2.5 py-0.5 rounded-md text-[10px] font-medium tracking-wide">
+            Kendall 運動連鎖理論
+          </span>
+          <span class="bg-slate-900 text-slate-300 border border-slate-800 px-2.5 py-0.5 rounded-md text-[10px] font-medium tracking-wide">
+            Hansraj 頚椎負荷モデル
+          </span>
+        </div>
+
+        <p class="text-slate-400 text-xs mt-2.5 leading-relaxed max-w-2xl">
+          骨格変位（C2〜S2）に伴い発生する、筋群の過剰作用（過緊張・短縮）と不活性化（脱力・伸張）の力学連鎖をリアルタイムに解析・シミュレーションします。
+        </p>
+      </div>
+
+      <!-- プリセットセレクター（上品なセグメントボタンスタイル） -->
+      <div class="flex bg-slate-900/90 p-1 rounded-lg border border-slate-800/90 gap-1 shrink-0">
+        <button onclick="setPreset(0, 0, 0)" id="btnPre0" class="px-2.5 py-1 text-xs rounded-md font-medium text-slate-300 hover:text-white transition-all bg-slate-800 shadow-sm">標準 (Neutral)</button>
+        <button onclick="setPreset(5.0, 3.2, -3.8)" id="btnPre1" class="px-2.5 py-1 text-xs rounded-md font-medium text-slate-400 hover:text-white transition-all">スウェイバック</button>
+        <button onclick="setPreset(3.5, 3.0, 3.5)" id="btnPre2" class="px-2.5 py-1 text-xs rounded-md font-medium text-slate-400 hover:text-white transition-all">反り腰・猫背</button>
+      </div>
+    </div>
+
+    <!-- メインコンテンツ -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-5 mt-4">
+      
+      <!-- 左：筋骨格ビジュアルキャンバス (7カラム) -->
+      <div class="md:col-span-7 bg-[#060913] rounded-xl border border-slate-800/90 p-3 relative flex flex-col items-center justify-center min-h-[390px] shadow-inner">
+        
+        <!-- 方向ガイドインジケーター（繊細な表示） -->
+        <div class="absolute top-2.5 inset-x-4 flex justify-between text-[10px] text-slate-400 font-medium tracking-wider select-none pointer-events-none">
+          <span class="text-slate-400 flex items-center gap-1">◀ 前面 (Anterior / つま先)</span>
+          <span class="text-slate-500 flex items-center gap-1">背面 (Posterior / かかと) ▶</span>
+        </div>
+
+        <canvas id="muscleCanvas" width="360" height="360" class="w-full max-w-[320px] aspect-square mt-2"></canvas>
+
+        <!-- 洗練された凡例インジケーター -->
+        <div class="absolute bottom-2.5 inset-x-3 flex justify-between items-center text-[9.5px] bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-800 select-none pointer-events-none">
+          <div class="flex items-center gap-1.5">
+            <span class="w-2.5 h-1 rounded-full bg-[#e11d48]"></span>
+            <span class="text-slate-300">過剰作用（過緊張・短縮）</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="w-2.5 h-1 rounded-full bg-[#475569]"></span>
+            <span class="text-slate-400">ニュートラル</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="w-2.5 h-1 border-b border-dashed border-[#38bdf8]"></span>
+            <span class="text-slate-300">不活性化（サボり筋・脱力）</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右：力学コントロール＆代償解析データ (5カラム) -->
+      <div class="md:col-span-5 flex flex-col justify-between space-y-3.5">
+        
+        <!-- スライダー操作（洗練されたダークカード） -->
+        <div class="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800/80 space-y-3">
+          <div class="flex justify-between items-center pb-1 border-b border-slate-800/60">
+            <span class="text-xs font-semibold text-slate-200 tracking-wide">骨格アライメント変位操作</span>
+            <span class="text-[10px] text-sky-400 font-mono">LIVE CONTROL</span>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs text-slate-300 mb-1">
+              <span class="text-slate-400">頭部・頚椎 (C2) 前方変位:</span>
+              <b id="valC2" class="font-mono text-slate-100 font-medium">0.0 cm</b>
+            </div>
+            <input type="range" id="sliderC2" min="-4.0" max="8.0" step="0.5" value="0.0" class="w-full h-1.5 bg-slate-800 rounded-lg cursor-pointer" oninput="updateSim()">
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs text-slate-300 mb-1">
+              <span class="text-slate-400">胸椎 (Th3) 後弯変位:</span>
+              <b id="valTh3" class="font-mono text-slate-100 font-medium">0.0 cm</b>
+            </div>
+            <input type="range" id="sliderTh3" min="-2.0" max="6.0" step="0.5" value="0.0" class="w-full h-1.5 bg-slate-800 rounded-lg cursor-pointer" oninput="updateSim()">
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs text-slate-300 mb-1">
+              <span class="text-slate-400">仙骨・骨盤 (S2) 前後変位:</span>
+              <b id="valS2" class="font-mono text-slate-100 font-medium">0.0 cm</b>
+            </div>
+            <input type="range" id="sliderS2" min="-6.0" max="6.0" step="0.5" value="0.0" class="w-full h-1.5 bg-slate-800 rounded-lg cursor-pointer" oninput="updateSim()">
+          </div>
+        </div>
+
+        <!-- リアルタイム力学解析出力カード -->
+        <div class="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800/80 space-y-2.5 text-xs">
+          <div class="flex justify-between items-center pb-1.5 border-b border-slate-800/60">
+            <span class="font-semibold text-slate-200 tracking-wide">代償バイオメカニクス解析</span>
+            <span id="loadBadge" class="bg-slate-800 text-emerald-400 border border-slate-700 px-2 py-0.5 rounded text-[10px] font-medium">負荷: 正常</span>
+          </div>
+
+          <!-- 年代・発育段階適応セレクター -->
+          <div class="flex justify-between items-center py-0.5 text-[11px]">
+            <span class="text-slate-400">発育・年代適応（頭部基準）:</span>
+            <select id="selectAgeGroup" onchange="updateSim()" class="bg-slate-800 text-slate-200 border border-slate-700 text-[10px] rounded px-1.5 py-0.5 outline-none font-medium">
+              <option value="adult" selected>成人 (19-64歳 / 体重65kg)</option>
+              <option value="youth">ユース (15-18歳 / 体重58kg)</option>
+              <option value="junior">ジュニア (10-14歳 / 体重45kg)</option>
+              <option value="child">小児 (6-9歳 / 体重25kg)</option>
+              <option value="senior">シニア (65歳以上 / 体重58kg)</option>
+            </select>
+          </div>
+
+          <!-- 脊柱3大セグメント連動負荷メーター -->
+          <div class="space-y-1 py-1 border-y border-slate-800/50">
+            <div class="flex justify-between items-center text-[11px]">
+              <span class="text-slate-400">🧠 頚椎実効負荷 (C2):</span>
+              <b id="cervicalLoad" class="font-mono text-slate-100 font-semibold">5.0 kg <span class="text-[10px] text-slate-400 font-normal">(1.0倍)</span></b>
+            </div>
+            <div class="flex justify-between items-center text-[11px]">
+              <span class="text-slate-400">🫁 胸椎剪断負荷 (Th3):</span>
+              <b id="thoracicLoad" class="font-mono text-slate-100 font-semibold">20.0 kg <span class="text-[10px] text-slate-400 font-normal">(1.0倍)</span></b>
+            </div>
+            <div class="flex justify-between items-center text-[11px]">
+              <span class="text-slate-400">🦴 腰椎(L5-S1)剪断ストレス:</span>
+              <b id="lumbarLoad" class="font-mono text-slate-100 font-semibold">50.0 kg <span class="text-[10px] text-slate-400 font-normal">(1.0倍)</span></b>
+            </div>
+          </div>
+
+          <div class="space-y-1 pt-1">
+            <div class="text-[11px] font-medium text-rose-400 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+              <span>過剰作用（過緊張・短縮筋）:</span>
+            </div>
+            <p id="overactiveList" class="text-[11px] text-slate-300 pl-3 leading-relaxed">なし（正常協調）</p>
+          </div>
+
+          <div class="space-y-1 pt-1 border-t border-slate-800/50">
+            <div class="text-[11px] font-medium text-sky-400 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+              <span>不活性化（弱化・サボり筋）:</span>
+            </div>
+            <p id="inhibitedList" class="text-[11px] text-slate-300 pl-3 leading-relaxed">なし（正常活性）</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- アコーディオン式：学術的エビデンス詳細 -->
+    <div class="mt-4 pt-3 border-t border-slate-800/80">
+      <details class="group">
+        <summary class="cursor-pointer text-xs font-medium text-slate-400 hover:text-slate-200 flex items-center justify-between select-none">
+          <span class="flex items-center gap-2">
+            <span class="text-sky-400">📄</span>
+            <span>学術的エビデンス・数理モデル仕様と引用文献</span>
+          </span>
+          <span class="text-[10px] text-slate-500 group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        
+        <div class="mt-3 bg-[#060913] p-4 rounded-xl border border-slate-800/80 text-xs text-slate-300 space-y-3 leading-relaxed">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-2.5">
+            <div class="bg-slate-900/60 p-2.5 rounded-lg border border-slate-800">
+              <b class="text-slate-200 block text-xs mb-1">1. Janda Crossed Syndrome</b>
+              <p class="text-slate-400 text-[10px] leading-relaxed">
+                姿勢筋の短縮と相動筋の相反性抑制による筋力低下が交差状に発生する神経筋メカニズム（Janda, 1987）。
+              </p>
+            </div>
+            <div class="bg-slate-900/60 p-2.5 rounded-lg border border-slate-800">
+              <b class="text-slate-200 block text-xs mb-1">2. Kendall Kinetic Chain</b>
+              <p class="text-slate-400 text-[10px] leading-relaxed">
+                鉛直基準線（Plumb Line）に対する各脊椎セグメントの代償的変位と運動連鎖パターン（Kendall et al., 2005）。
+              </p>
+            </div>
+            <div class="bg-slate-900/60 p-2.5 rounded-lg border border-slate-800">
+              <b class="text-slate-200 block text-xs mb-1">3. Hansraj Cervical Load</b>
+              <p class="text-slate-400 text-[10px] leading-relaxed">
+                頭部前方変位に伴うモーメント増大による実効荷重計算式：$F = m_{\text{head}} \times (1 + \Delta x / 2.5 \times 1.5)$（Hansraj, 2014）。
+              </p>
+            </div>
+            <div class="bg-slate-900/60 p-2.5 rounded-lg border border-slate-800">
+              <b class="text-slate-200 block text-xs mb-1">4. Plagenhoef 年代別人体計測</b>
+              <p class="text-slate-400 text-[10px] leading-relaxed">
+                発育段階（小児3.5kg〜成人5.0kg）に応じた頭身比・体節質量比率の自動適応モデル（Plagenhoef, 1983）。
+              </p>
+            </div>
+          </div>
+          <div class="text-[10px] text-slate-500 pt-1 border-t border-slate-800/60 flex justify-between flex-wrap gap-2">
+            <span><b>References</b>: Janda V (1987) / Kendall FP et al. (2005) / Hansraj KK (2014) / Plagenhoef S et al. (1983) / Hasegawa K et al. (2016)</span>
+            <span class="text-slate-400">CONNECT AI CLINICAL BIOMECHANICS</span>
+          </div>
+        </div>
+      </details>
+    </div>
+
+  </div>
+
+  <script>
+/**
+ * (c) Athletecore Proprietary Biomechanical Engine
+ * CONFIDENTIAL & PROTECTED - ALL RIGHTS RESERVED.
+ * Unauthorized reverse-engineering, decompilation or redistribution is strictly prohibited.
+ */
+var _0x$tbl = ["\x6d\x75\x73\x63\x6c\x65\x43\x61\x6e\x76\x61\x73","\x32\x64","\x73\x6c\x69\x64\x65\x72\x43\x32","\x73\x6c\x69\x64\x65\x72\x54\x68\x33","\x73\x6c\x69\x64\x65\x72\x53\x32","\x62\x74\x6e\x50\x72\x65\x30","\x62\x74\x6e\x50\x72\x65\x31","\x62\x74\x6e\x50\x72\x65\x32","\x70\x78\x2d\x32\x2e\x35\x20\x70\x79\x2d\x31\x20\x74\x65\x78\x74\x2d\x78\x73\x20\x72\x6f\x75\x6e\x64\x65\x64\x2d\x6d\x64\x20\x66\x6f\x6e\x74\x2d\x6d\x65\x64\x69\x75\x6d\x20\x74\x65\x78\x74\x2d\x73\x6c\x61\x74\x65\x2d\x34\x30\x30\x20\x68\x6f\x76\x65\x72\x3a\x74\x65\x78\x74\x2d\x77\x68\x69\x74\x65\x20\x74\x72\x61\x6e\x73\x69\x74\x69\x6f\x6e\x2d\x61\x6c\x6c","\x70\x78\x2d\x32\x2e\x35\x20\x70\x79\x2d\x31\x20\x74\x65\x78\x74\x2d\x78\x73\x20\x72\x6f\x75\x6e\x64\x65\x64\x2d\x6d\x64\x20\x66\x6f\x6e\x74\x2d\x6d\x65\x64\x69\x75\x6d\x20\x74\x65\x78\x74\x2d\x73\x6c\x61\x74\x65\x2d\x31\x30\x30\x20\x62\x67\x2d\x73\x6c\x61\x74\x65\x2d\x38\x30\x30\x20\x73\x68\x61\x64\x6f\x77\x2d\x73\x6d","\x70\x78\x2d\x32\x2e\x35\x20\x70\x79\x2d\x31\x20\x74\x65\x78\x74\x2d\x78\x73\x20\x72\x6f\x75\x6e\x64\x65\x64\x2d\x6d\x64\x20\x66\x6f\x6e\x74\x2d\x6d\x65\x64\x69\x75\x6d\x20\x74\x65\x78\x74\x2d\x72\x6f\x73\x65\x2d\x33\x30\x30\x20\x62\x67\x2d\x72\x6f\x73\x65\x2d\x39\x35\x30\x2f\x38\x30\x20\x62\x6f\x72\x64\x65\x72\x20\x62\x6f\x72\x64\x65\x72\x2d\x72\x6f\x73\x65\x2d\x39\x30\x30\x2f\x36\x30\x20\x73\x68\x61\x64\x6f\x77\x2d\x73\x6d","\x70\x78\x2d\x32\x2e\x35\x20\x70\x79\x2d\x31\x20\x74\x65\x78\x74\x2d\x78\x73\x20\x72\x6f\x75\x6e\x64\x65\x64\x2d\x6d\x64\x20\x66\x6f\x6e\x74\x2d\x6d\x65\x64\x69\x75\x6d\x20\x74\x65\x78\x74\x2d\x61\x6d\x62\x65\x72\x2d\x33\x30\x30\x20\x62\x67\x2d\x61\x6d\x62\x65\x72\x2d\x39\x35\x30\x2f\x38\x30\x20\x62\x6f\x72\x64\x65\x72\x20\x62\x6f\x72\x64\x65\x72\x2d\x61\x6d\x62\x65\x72\x2d\x39\x30\x30\x2f\x36\x30\x20\x73\x68\x61\x64\x6f\x77\x2d\x73\x6d","\x76\x61\x6c\x43\x32","\x2b","\x20\x63\x6d","\x76\x61\x6c\x54\x68\x33","\x76\x61\x6c\x53\x32","\x73\x65\x6c\x65\x63\x74\x41\x67\x65\x47\x72\x6f\x75\x70","\x61\x64\x75\x6c\x74","\x63\x65\x72\x76\x69\x63\x61\x6c\x4c\x6f\x61\x64","\x74\x65\x78\x74\x2d\x5b\x31\x30\x70\x78\x5d\x20\x74\x65\x78\x74\x2d\x73\x6c\x61\x74\x65\x2d\x34\x30\x30\x20\x66\x6f\x6e\x74\x2d\x6e\x6f\x72\x6d\x61\x6c","\x74\x68\x6f\x72\x61\x63\x69\x63\x4c\x6f\x61\x64","\x6c\x75\x6d\x62\x61\x72\x4c\x6f\x61\x64","\xe5\xbe\x8c\xe9\xa0\xad\xe4\xb8\x8b\xe7\xad\x8b\xe7\xbe\xa4","\xe5\x83\xa7\xe5\xb8\xbd\xe7\xad\x8b\xe4\xb8\x8a\xe9\x83\xa8","\xe8\x83\xb8\xe9\x8e\x96\xe4\xb9\xb3\xe7\xaa\x81\xe7\xad\x8b\x28\xe7\x9f\xad\xe7\xb8\xae\x29","\xe9\xa0\x9a\xe9\x83\xa8\xe6\xb7\xb1\xe5\xb1\xa4\xe5\xb1\x88\xe7\xad\x8b\xe7\xbe\xa4","\xe5\xb0\x8f\xe8\x83\xb8\xe7\xad\x8b\x28\xe7\x9f\xad\xe7\xb8\xae\xe3\x83\xbb\xe5\xb7\xbb\xe3\x81\x8d\xe8\x82\xa9\x29","\xe5\x83\xa7\xe5\xb8\xbd\xe7\xad\x8b\xe4\xb8\x8a\xe9\x83\xa8\x28\xe4\xbb\xa3\xe5\x84\x9f\xe6\x80\xa7\xe9\x81\x8e\xe7\xb7\x8a\xe5\xbc\xb5\x29","\xe5\xa4\xa7\xe8\x83\xb8\xe7\xad\x8b","\xe8\x8f\xb1\xe5\xbd\xa2\xe7\xad\x8b\x28\xe8\x83\x8c\xe9\x83\xa8\xe8\x84\xb1\xe5\x8a\x9b\x29","\xe5\x89\x8d\xe9\x8b\xb8\xe7\xad\x8b","\xe5\x83\xa7\xe5\xb8\xbd\xe7\xad\x8b\xe4\xb8\x8b\xe9\x83\xa8","\xe8\x83\xb8\xe6\xa4\x8e\xe4\xbc\xb8\xe5\xb1\x95\xe7\xad\x8b\xe7\xbe\xa4\x28\xe9\x81\x8e\xe5\xb9\xb3\xe8\x83\x8c\x29","\xe8\x83\xb8\xe6\xa4\x8e\xe7\x94\x9f\xe7\x90\x86\xe7\x9a\x84\xe5\xbe\x8c\xe5\xbc\xaf\xe6\xa9\x9f\xe8\x83\xbd","\xe3\x83\x8f\xe3\x83\xa0\xe3\x82\xb9\xe3\x83\x88\xe3\x83\xaa\xe3\x83\xb3\xe3\x82\xb0\xe3\x82\xb9\x28\xe9\x81\x8e\xe7\xb7\x8a\xe5\xbc\xb5\x29","\xe5\xa4\xa7\xe8\x85\xbf\xe7\xad\x8b\xe8\x86\x9c\xe5\xbc\xb5\xe7\xad\x8b","\xe8\x85\xb0\xe9\x83\xa8\xe6\xa4\x8e\xe9\x96\x93\xe9\x96\xa2\xe7\xaf\x80\xe5\x89\xaa\xe6\x96\xad","\xe5\xa4\xa7\xe8\x87\x80\xe7\xad\x8b\x28\xe4\xb8\x8d\xe6\xb4\xbb\xe6\x80\xa7\xe5\x8c\x96\x29","\xe8\x85\xb8\xe8\x85\xb0\xe7\xad\x8b\x28\xe4\xbc\xb8\xe5\xbc\xb5\xe8\x84\xb1\xe5\x8a\x9b\x29","\xe8\x85\xb9\xe6\xa8\xaa\xe7\xad\x8b\x28\xe3\x82\xb3\xe3\x82\xa2\x29","\xe8\x85\xb8\xe8\x85\xb0\xe7\xad\x8b\x28\xe7\x9f\xad\xe7\xb8\xae\x29","\xe5\xa4\xa7\xe8\x85\xbf\xe7\x9b\xb4\xe7\xad\x8b","\xe8\x85\xb0\xe8\x83\x8c\xe9\x83\xa8\xe8\x84\x8a\xe6\x9f\xb1\xe8\xb5\xb7\xe7\xab\x8b\xe7\xad\x8b","\xe8\x85\xb9\xe7\x9b\xb4\xe7\xad\x8b","\xe5\xa4\xa7\xe8\x87\x80\xe7\xad\x8b","\xe3\x81\xaa\xe3\x81\x97\xef\xbc\x88\xe6\xad\xa3\xe5\xb8\xb8\xe5\x8d\x94\xe8\xaa\xbf\xef\xbc\x89","\xe3\x81\xaa\xe3\x81\x97\xef\xbc\x88\xe6\xad\xa3\xe5\xb8\xb8\xe6\xb4\xbb\xe6\x80\xa7\xef\xbc\x89","\x6f\x76\x65\x72\x61\x63\x74\x69\x76\x65\x4c\x69\x73\x74","\xe3\x80\x81","\x69\x6e\x68\x69\x62\x69\x74\x65\x64\x4c\x69\x73\x74","\x6c\x6f\x61\x64\x42\x61\x64\x67\x65","\x62\x67\x2d\x72\x6f\x73\x65\x2d\x39\x35\x30\x2f\x38\x30\x20\x74\x65\x78\x74\x2d\x72\x6f\x73\x65\x2d\x33\x30\x30\x20\x62\x6f\x72\x64\x65\x72\x20\x62\x6f\x72\x64\x65\x72\x2d\x72\x6f\x73\x65\x2d\x39\x30\x30\x20\x70\x78\x2d\x32\x20\x70\x79\x2d\x30\x2e\x35\x20\x72\x6f\x75\x6e\x64\x65\x64\x20\x74\x65\x78\x74\x2d\x5b\x31\x30\x70\x78\x5d\x20\x66\x6f\x6e\x74\x2d\x6d\x65\x64\x69\x75\x6d","\xe9\x87\x8d\xe5\xba\xa6\xe4\xbb\xa3\xe5\x84\x9f\xe3\x82\xb9\xe3\x83\x88\xe3\x83\xac\xe3\x82\xb9","\x62\x67\x2d\x61\x6d\x62\x65\x72\x2d\x39\x35\x30\x2f\x38\x30\x20\x74\x65\x78\x74\x2d\x61\x6d\x62\x65\x72\x2d\x33\x30\x30\x20\x62\x6f\x72\x64\x65\x72\x20\x62\x6f\x72\x64\x65\x72\x2d\x61\x6d\x62\x65\x72\x2d\x39\x30\x30\x20\x70\x78\x2d\x32\x20\x70\x79\x2d\x30\x2e\x35\x20\x72\x6f\x75\x6e\x64\x65\x64\x20\x74\x65\x78\x74\x2d\x5b\x31\x30\x70\x78\x5d\x20\x66\x6f\x6e\x74\x2d\x6d\x65\x64\x69\x75\x6d","\xe8\xbb\xbd\xe5\xba\xa6\xe4\xbb\xa3\xe5\x84\x9f","\x62\x67\x2d\x73\x6c\x61\x74\x65\x2d\x38\x30\x30\x20\x74\x65\x78\x74\x2d\x65\x6d\x65\x72\x61\x6c\x64\x2d\x34\x30\x30\x20\x62\x6f\x72\x64\x65\x72\x20\x62\x6f\x72\x64\x65\x72\x2d\x73\x6c\x61\x74\x65\x2d\x37\x30\x30\x20\x70\x78\x2d\x32\x20\x70\x79\x2d\x30\x2e\x35\x20\x72\x6f\x75\x6e\x64\x65\x64\x20\x74\x65\x78\x74\x2d\x5b\x31\x30\x70\x78\x5d\x20\x66\x6f\x6e\x74\x2d\x6d\x65\x64\x69\x75\x6d","\xe8\xb2\xa0\xe8\x8d\xb7\x3a\x20\xe6\xad\xa3\xe5\xb8\xb8","\x72\x67\x62\x61\x28\x31\x34\x38\x2c\x20\x31\x36\x33\x2c\x20\x31\x38\x34\x2c\x20\x30\x2e\x32\x35\x29","\x23\x65\x31\x31\x64\x34\x38","\x23\x33\x38\x62\x64\x66\x38","\x23\x33\x33\x34\x31\x35\x35","\x72\x67\x62\x61\x28\x33\x30\x2c\x20\x34\x31\x2c\x20\x35\x39\x2c\x20\x30\x2e\x34\x29","\x23\x36\x34\x37\x34\x38\x62","\x38\x70\x78\x20\x73\x61\x6e\x73\x2d\x73\x65\x72\x69\x66","\xe3\x81\xa4\xe3\x81\xbe\xe5\x85\x88","\xe3\x81\x8b\xe3\x81\x8b\xe3\x81\xa8","\x23\x63\x62\x64\x35\x65\x31","\x72\x6f\x75\x6e\x64","\x23\x30\x66\x31\x37\x32\x61","\x23\x39\x34\x61\x33\x62\x38","\x72\x67\x62\x61\x28\x31\x34\x38\x2c\x20\x31\x36\x33\x2c\x20\x31\x38\x34\x2c\x20\x30\x2e\x34\x29","\x43\x32","\x23\x66\x38\x66\x61\x66\x63","\x54\x68\x33","\x4c\x33","\x53\x32","\x48\x69\x70","\x4b\x6e\x65\x65","\x41\x6e\x6b\x6c\x65","\x38\x2e\x35\x70\x78\x20\x73\x61\x6e\x73\x2d\x73\x65\x72\x69\x66"];
+function _0x$getStr(idx) {
+    var raw = _0x$tbl[idx];
+    try {
+        var bytes = raw.match(/\\x[0-9a-f]{2}/gi);
+        if (!bytes) return raw;
+        var u8 = new Uint8Array(bytes.map(function(b){ return parseInt(b.slice(2), 16); }));
+        return new TextDecoder('utf-8').decode(u8);
+    } catch(e) { return raw; }
+}
+
+    const canvas = document.getElementById(_0x$getStr(0));
+    const ctx = canvas.getContext(_0x$getStr(1));
+
+    function setPreset(c2, th3, s2) {
+      document.getElementById(_0x$getStr(2)).value = c2;
+      document.getElementById(_0x$getStr(3)).value = th3;
+      document.getElementById(_0x$getStr(4)).value = s2;
+      
+      const b0 = document.getElementById(_0x$getStr(5));
+      const b1 = document.getElementById(_0x$getStr(6));
+      const b2 = document.getElementById(_0x$getStr(7));
+      [b0, b1, b2].forEach(b => { b.className = _0x$getStr(8); });
+      
+      if (c2 === 0) b0.className = _0x$getStr(9);
+      else if (s2 < -2) b1.className = _0x$getStr(10);
+      else b2.className = _0x$getStr(11);
+
+      updateSim();
+    }
+
+    function updateSim() {
+      const c2 = parseFloat(document.getElementById(_0x$getStr(2)).value);
+      const th3 = parseFloat(document.getElementById(_0x$getStr(3)).value);
+      const s2 = parseFloat(document.getElementById(_0x$getStr(4)).value);
+
+      document.getElementById(_0x$getStr(12)).innerText = (c2 > 0 ? _0x$getStr(13) : '') + c2.toFixed(1) + _0x$getStr(14);
+      document.getElementById(_0x$getStr(15)).innerText = (th3 > 0 ? _0x$getStr(13) : '') + th3.toFixed(1) + _0x$getStr(14);
+      document.getElementById(_0x$getStr(16)).innerText = (s2 > 0 ? _0x$getStr(13) : '') + s2.toFixed(1) + _0x$getStr(14);
+
+      // 年代別発育・体重支持プロファイル（文部科学省・学校保健統計およびPlagenhoef人体計測）
+      const AGE_PROFILES = {
+        child:  { headKg: 3.5, thoracicKg: 9.0,  lumbarKg: 15.0 }, // 小児(6-9歳: 体重約25kg)
+        junior: { headKg: 4.2, thoracicKg: 16.0, lumbarKg: 27.0 }, // ジュニア(10-14歳: 体重約45kg)
+        youth:  { headKg: 4.8, thoracicKg: 20.0, lumbarKg: 35.0 }, // ユース(15-18歳: 体重約58kg)
+        adult:  { headKg: 5.0, thoracicKg: 23.0, lumbarKg: 40.0 }, // 成人(19-64歳: 体重約65kg)
+        senior: { headKg: 4.6, thoracicKg: 20.0, lumbarKg: 35.0 }  // シニア(65歳以上: 体重約58kg)
+      };
+
+      const ageKey = document.getElementById(_0x$getStr(17)).value || _0x$getStr(18);
+      const profile = AGE_PROFILES[ageKey] || AGE_PROFILES.adult;
+
+      // 1. 頚部実効負荷（Hansrajモデル）
+      const cervicalLoadKg = profile.headKg * (1 + Math.max(0, c2) / 2.5 * 1.5);
+      const cervicalMultiplier = (cervicalLoadKg / profile.headKg).toFixed(1);
+      document.getElementById(_0x$getStr(19)).innerHTML = `${cervicalLoadKg.toFixed(1)} kg <span class=_0x$getStr(20)>(${cervicalMultiplier}倍)</span>`;
+
+      // 2. 胸椎剪断負荷（胸椎後弯モーメント）
+      const thoracicLoadKg = profile.thoracicKg * (1 + Math.max(0, th3) / 3.0 * 0.8);
+      const thoracicMultiplier = (thoracicLoadKg / profile.thoracicKg).toFixed(1);
+      document.getElementById(_0x$getStr(21)).innerHTML = `${thoracicLoadKg.toFixed(1)} kg <span class=_0x$getStr(20)>(${thoracicMultiplier}倍)</span>`;
+
+      // 3. 腰椎・骨盤部剪断ストレス（Nachemsonモデル）
+      const lumbarLoadKg = profile.lumbarKg * (1 + Math.abs(s2) / 3.0 * 0.7);
+      const lumbarMultiplier = (lumbarLoadKg / profile.lumbarKg).toFixed(1);
+      document.getElementById(_0x$getStr(22)).innerHTML = `${lumbarLoadKg.toFixed(1)} kg <span class=_0x$getStr(20)>(${lumbarMultiplier}倍)</span>`;
+
+      // 過緊張・弱化リスト判定 (ヤンダ理論)
+      let overactive = [];
+      let inhibited = [];
+
+      if (c2 > 2.0) {
+        overactive.push(_0x$getStr(23), _0x$getStr(24), _0x$getStr(25));
+        inhibited.push(_0x$getStr(26));
+      }
+      if (th3 > 1.5) {
+        overactive.push(_0x$getStr(27), _0x$getStr(28), _0x$getStr(29));
+        inhibited.push(_0x$getStr(30), _0x$getStr(31), _0x$getStr(32));
+      } else if (th3 < -1.5) {
+        overactive.push(_0x$getStr(33));
+        inhibited.push(_0x$getStr(34));
+      }
+      if (s2 < -2.0) { // スウェイバック
+        overactive.push(_0x$getStr(35), _0x$getStr(36), _0x$getStr(37));
+        inhibited.push(_0x$getStr(38), _0x$getStr(39), _0x$getStr(40));
+      } else if (s2 > 2.0) { // 反り腰
+        overactive.push(_0x$getStr(41), _0x$getStr(42), _0x$getStr(43));
+        inhibited.push(_0x$getStr(44), _0x$getStr(45));
+      }
+
+      if (overactive.length === 0) overactive.push(_0x$getStr(46));
+      if (inhibited.length === 0) inhibited.push(_0x$getStr(47));
+
+      document.getElementById(_0x$getStr(48)).innerText = overactive.join(_0x$getStr(49));
+      document.getElementById(_0x$getStr(50)).innerText = inhibited.join(_0x$getStr(49));
+
+      const badge = document.getElementById(_0x$getStr(51));
+      if (c2 > 3.5 || Math.abs(s2) > 3.0 || Math.abs(th3) > 3.0) {
+        badge.className = _0x$getStr(52);
+        badge.innerText = _0x$getStr(53);
+      } else if (c2 > 1.5 || Math.abs(s2) > 1.5 || Math.abs(th3) > 1.5) {
+        badge.className = _0x$getStr(54);
+        badge.innerText = _0x$getStr(55);
+      } else {
+        badge.className = _0x$getStr(56);
+        badge.innerText = _0x$getStr(57);
+      }
+
+      drawModel(c2, th3, s2);
+    }
+
+    function drawModel(c2Cm, th3Cm, s2Cm) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const cx = 190; // プラムラインX
+      const scale = 5.0; // cm to px
+
+      // プラムライン描画（繊細な半透明スレート線）
+      ctx.strokeStyle = _0x$getStr(58);
+      ctx.lineWidth = 1.2;
+      ctx.setLineDash([3, 4]);
+      ctx.beginPath();
+      ctx.moveTo(cx, 15);
+      ctx.lineTo(cx, 345);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // 骨格座標の計算 (左向きプロファイル: 前面・顔・つま先は画面左側 -X)
+      // 足部
+      const heel = { x: cx + 18, y: 330 }; // かかと
+      const ankle = { x: cx + 5, y: 310 }; // 外果
+      const toe = { x: cx - 45, y: 330 };  // つま先
+
+      // 下肢・体幹
+      const knee = { x: cx - (s2Cm < -2 ? 8 : 0), y: 245 };
+      const hip = { x: cx - (s2Cm * scale * 0.8), y: 175 };
+      const s2 = { x: cx - (s2Cm * scale) + 12, y: 165 };
+      const l3 = { x: cx - ((s2Cm * 0.6 + th3Cm * 0.4) * scale) - 6, y: 125 };
+      const th3 = { x: cx + (th3Cm * scale) + 8, y: 78 };
+      const c2 = { x: cx - (c2Cm * scale), y: 48 };
+      const headCenter = { x: c2.x, y: 28 };
+
+      // 筋肉テンションラインを描画するヘルパー
+      function drawMuscle(p1, p2, isOveractive, isInhibited) {
+        ctx.beginPath();
+        ctx.moveTo(p1.x, p1.y);
+        ctx.lineTo(p2.x, p2.y);
+        
+        if (isOveractive) {
+          ctx.strokeStyle = _0x$getStr(59); // 洗練されたローズクリムゾン
+          ctx.lineWidth = 2.5;
+        } else if (isInhibited) {
+          ctx.strokeStyle = _0x$getStr(60); // スチールスカイブルー
+          ctx.lineWidth = 1.5;
+          ctx.setLineDash([3, 3]);
+        } else {
+          ctx.strokeStyle = _0x$getStr(61); // 控えめなスレートグレー
+          ctx.lineWidth = 1.2;
+        }
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+
+      // --- 1. 筋肉バンドの描画 (ヤンダ交差症候群の連鎖) ---
+      // 後頭下筋・僧帽筋上部 (C2 - Th3 背面)
+      drawMuscle({ x: c2.x + 5, y: c2.y }, { x: th3.x + 5, y: th3.y }, (c2Cm > 2.0 || th3Cm > 2.0), false);
+      // 頚部深層屈筋 (C2 - Th3 前面)
+      drawMuscle({ x: c2.x - 12, y: c2.y + 4 }, { x: th3.x - 14, y: th3.y }, c2Cm < -1.5, (c2Cm > 2.0 || th3Cm > 2.0));
+      
+      // 小胸筋・胸部前面 (Th3前面 - 巻き肩ライン)
+      drawMuscle({ x: th3.x - 6, y: th3.y }, { x: th3.x - 20, y: th3.y + 16 }, th3Cm > 1.5, false);
+      // 菱形筋・肩甲骨間背部 (Th3後面 - 背部脱力ライン)
+      drawMuscle({ x: th3.x + 6, y: th3.y + 4 }, { x: th3.x + 18, y: th3.y + 16 }, false, th3Cm > 1.5);
+
+      // 脊柱起立筋群 (Th3 - L3 - S2 背面)
+      drawMuscle({ x: th3.x + 6, y: th3.y + 10 }, { x: l3.x + 6, y: l3.y }, (s2Cm > 2.0 || th3Cm > 2.5), false);
+      drawMuscle({ x: l3.x + 6, y: l3.y }, { x: s2.x + 4, y: s2.y }, s2Cm > 2.0, false);
+
+      // 腹筋コア群 (Th3前面 - 骨盤前面)
+      drawMuscle({ x: th3.x - 16, y: th3.y + 10 }, { x: hip.x - 14, y: hip.y - 5 }, false, s2Cm < -2.0);
+
+      // 腸腰筋 (L3 - 股関節前面)
+      drawMuscle(l3, { x: hip.x - 8, y: hip.y + 10 }, s2Cm > 2.0, s2Cm < -2.0);
+
+      // 大臀筋 (S2 - 大腿骨後面)
+      drawMuscle({ x: s2.x + 5, y: s2.y + 5 }, { x: hip.x + 12, y: hip.y + 20 }, false, Math.abs(s2Cm) > 2.0);
+
+      // ハムストリングス (骨盤坐骨 - 膝裏)
+      drawMuscle({ x: hip.x + 10, y: hip.y + 12 }, { x: knee.x + 8, y: knee.y }, s2Cm < -2.0, false);
+
+      // --- 2. 足部（足底・つま先・かかと）の洗練された描画 ---
+      ctx.fillStyle = _0x$getStr(62);
+      ctx.strokeStyle = _0x$getStr(63);
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(heel.x, heel.y);
+      ctx.lineTo(toe.x, toe.y); // 足裏
+      ctx.quadraticCurveTo(toe.x - 6, toe.y - 5, toe.x - 2, toe.y - 10); // つま先
+      ctx.lineTo(ankle.x - 4, ankle.y); // 甲
+      ctx.lineTo(ankle.x + 8, ankle.y);
+      ctx.lineTo(heel.x, heel.y);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      // つま先・かかとラベル（繊細な表示）
+      ctx.fillStyle = _0x$getStr(63);
+      ctx.font = _0x$getStr(64);
+      ctx.fillText(_0x$getStr(65), toe.x - 20, toe.y - 3);
+      ctx.fillText(_0x$getStr(66), heel.x + 4, heel.y - 3);
+
+      // --- 3. 骨格ボーンの描画（チタンオフホワイト） ---
+      ctx.strokeStyle = _0x$getStr(67);
+      ctx.lineWidth = 2.5;
+      ctx.lineCap = _0x$getStr(68);
+      ctx.beginPath();
+      ctx.moveTo(ankle.x, ankle.y);
+      ctx.lineTo(knee.x, knee.y);
+      ctx.lineTo(hip.x, hip.y);
+      ctx.lineTo(s2.x, s2.y);
+      ctx.lineTo(l3.x, l3.y);
+      ctx.lineTo(th3.x, th3.y);
+      ctx.lineTo(c2.x, c2.y);
+      ctx.stroke();
+
+      // --- 4. 頭部＆横顔プロファイルの描画（落ち着いたスレート） ---
+      ctx.fillStyle = _0x$getStr(69);
+      ctx.strokeStyle = _0x$getStr(70);
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.arc(headCenter.x, headCenter.y, 14, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+
+      // 鼻と横顔のシルエット
+      ctx.beginPath();
+      ctx.moveTo(headCenter.x - 10, headCenter.y - 7);
+      ctx.lineTo(headCenter.x - 20, headCenter.y);
+      ctx.lineTo(headCenter.x - 11, headCenter.y + 4);
+      ctx.lineTo(headCenter.x - 12, headCenter.y + 10);
+      ctx.lineTo(headCenter.x - 3, headCenter.y + 14);
+      ctx.strokeStyle = _0x$getStr(70);
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+
+      // 視線方向の繊細なインジケーター
+      ctx.strokeStyle = _0x$getStr(71);
+      ctx.lineWidth = 1.0;
+      ctx.beginPath();
+      ctx.moveTo(headCenter.x - 20, headCenter.y);
+      ctx.lineTo(headCenter.x - 32, headCenter.y);
+      ctx.stroke();
+
+      // --- 5. 関節ノードの描画（ミニマルなドット） ---
+      const joints = [
+        { pt: c2, name: _0x$getStr(72), color: _0x$getStr(73) },
+        { pt: th3, name: _0x$getStr(74), color: _0x$getStr(73) },
+        { pt: l3, name: _0x$getStr(75), color: _0x$getStr(73) },
+        { pt: s2, name: _0x$getStr(76), color: _0x$getStr(73) },
+        { pt: hip, name: _0x$getStr(77), color: _0x$getStr(70) },
+        { pt: knee, name: _0x$getStr(78), color: _0x$getStr(70) },
+        { pt: ankle, name: _0x$getStr(79), color: _0x$getStr(70) }
+      ];
+
+      joints.forEach(j => {
+        ctx.fillStyle = j.color;
+        ctx.beginPath();
+        ctx.arc(j.pt.x, j.pt.y, 3.5, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.strokeStyle = _0x$getStr(69);
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+
+        ctx.fillStyle = _0x$getStr(63);
+        ctx.font = _0x$getStr(80);
+        ctx.fillText(j.name, j.pt.x + 7, j.pt.y + 3);
+      });
+    }
+
+    // 初期化実行
+    updateSim();
+  
+</script>
+</body>
+</html>

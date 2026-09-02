@@ -1100,8 +1100,8 @@ biomechanics.renderUprightPhoto = function (imageDataUrl, rollDeg) {
 /**
  * 矢状面 代償筋骨格アバター描画エンジン (Janda / Kendall / Hansraj 数理モデル)
  * @param {HTMLCanvasElement} canvas - 描画対象のCanvas
- * @param {number} c2Cm - C2（頭部）前方変位量 (cm)
- * @param {number} th3Cm - Th3（胸椎）後弯変位量 (cm)
+ * @param {number} c2Cm - C2（頭部・頚椎）前方変位量 (cm)
+ * @param {number} th3Cm - Th3（胸椎）前後変位量 (cm)
  * @param {number} s2Cm - S2（仙骨・骨盤）前後変位量 (cm)
  * @param {Object} [options] - オプション設定
  */
@@ -1112,11 +1112,11 @@ biomechanics.renderMusculoskeletalAvatar = function (canvas, c2Cm, th3Cm, s2Cm, 
     var h = canvas.height;
     ctx.clearRect(0, 0, w, h);
 
-    var cx = Math.round(w * 0.52); // プラムラインX
-    var scale = (h / 360) * 5.0; // cm to px scale
+    var cx = Math.round(w * 0.52); // プラムライン重力鉛直基準X
+    var scale = (h / 360) * 4.5; // cm to px scale
 
-    // プラムライン描画（繊細な半透明スレート線）
-    ctx.strokeStyle = 'rgba(148, 163, 184, 0.25)';
+    // プラムライン描画（繊細な半透明スレート破線）
+    ctx.strokeStyle = 'rgba(148, 163, 184, 0.3)';
     ctx.lineWidth = 1.2;
     ctx.setLineDash([3, 4]);
     ctx.beginPath();
@@ -1125,7 +1125,7 @@ biomechanics.renderMusculoskeletalAvatar = function (canvas, c2Cm, th3Cm, s2Cm, 
     ctx.stroke();
     ctx.setLineDash([]);
 
-    // 骨格座標の計算 (左向きプロファイル: 前面・顔・つま先は画面左側 -X)
+    // 骨格座標の計算 (左向きプロファイル: 前面・顔・つま先は画面左側 -X, 後面・背中は画面右側 +X)
     var heelY = Math.round(h * 0.91);
     var ankleY = Math.round(h * 0.86);
     var kneeY = Math.round(h * 0.68);
@@ -1137,14 +1137,15 @@ biomechanics.renderMusculoskeletalAvatar = function (canvas, c2Cm, th3Cm, s2Cm, 
     var headY = Math.round(h * 0.08);
 
     var heel = { x: cx + 18, y: heelY };
-    var ankle = { x: cx + 5, y: ankleY };
-    var toe = { x: cx - 45, y: heelY };
+    var ankle = { x: cx + 2, y: ankleY };
+    var toe = { x: cx - 42, y: heelY };
 
-    var knee = { x: cx - (s2Cm < -2 ? 8 : 0), y: kneeY };
-    var hip = { x: cx - (s2Cm * scale * 0.8), y: hipY };
-    var s2 = { x: cx - (s2Cm * scale) + 12, y: s2Y };
-    var l3 = { x: cx - ((s2Cm * 0.6 + th3Cm * 0.4) * scale) - 6, y: l3Y };
-    var th3 = { x: cx + (th3Cm * scale) + 8, y: th3Y };
+    // 各セグメントの変位（正: 前方-X, 負: 後方+X）
+    var s2 = { x: cx - (s2Cm * scale) + 6, y: s2Y };
+    var hip = { x: s2.x - 12, y: hipY };
+    var knee = { x: cx - 4, y: kneeY };
+    var th3 = { x: cx - (th3Cm * scale) + 6, y: th3Y };
+    var l3 = { x: Math.round((th3.x + s2.x) / 2) - Math.round(10 * scale / 4.5), y: l3Y };
     var c2 = { x: cx - (c2Cm * scale), y: c2Y };
     var headCenter = { x: c2.x, y: headY };
 
@@ -1162,7 +1163,7 @@ biomechanics.renderMusculoskeletalAvatar = function (canvas, c2Cm, th3Cm, s2Cm, 
             ctx.lineWidth = 1.5;
             ctx.setLineDash([3, 3]);
         } else {
-            ctx.strokeStyle = '#334155'; // スレートグレー（正常）
+            ctx.strokeStyle = '#334155'; // スレートグレー（正常協調）
             ctx.lineWidth = 1.2;
         }
         ctx.stroke();
@@ -1171,33 +1172,33 @@ biomechanics.renderMusculoskeletalAvatar = function (canvas, c2Cm, th3Cm, s2Cm, 
 
     // --- 1. 筋肉バンドの描画 (ヤンダ交差症候群の連鎖) ---
     // 後頭下筋・僧帽筋上部 (C2 - Th3 背面)
-    drawMuscle({ x: c2.x + 5, y: c2.y }, { x: th3.x + 5, y: th3.y }, (c2Cm > 2.0 || th3Cm > 2.0), false);
+    drawMuscle({ x: c2.x + 5, y: c2.y }, { x: th3.x + 5, y: th3.y }, (c2Cm > 1.5 || (c2Cm - th3Cm) > 2.0), false);
     // 頚部深層屈筋 (C2 - Th3 前面)
-    drawMuscle({ x: c2.x - 12, y: c2.y + 4 }, { x: th3.x - 14, y: th3.y }, c2Cm < -1.5, (c2Cm > 2.0 || th3Cm > 2.0));
+    drawMuscle({ x: c2.x - 12, y: c2.y + 4 }, { x: th3.x - 14, y: th3.y }, false, (c2Cm > 1.5 || (c2Cm - th3Cm) > 2.0));
     
     // 小胸筋・胸部前面 (Th3前面 - 巻き肩ライン)
-    drawMuscle({ x: th3.x - 6, y: th3.y }, { x: th3.x - 20, y: th3.y + 16 }, th3Cm > 1.5, false);
+    drawMuscle({ x: th3.x - 6, y: th3.y }, { x: th3.x - 20, y: th3.y + 16 }, th3Cm < -2.0, false);
     // 菱形筋・肩甲骨間背部 (Th3後面 - 背部脱力ライン)
-    drawMuscle({ x: th3.x + 6, y: th3.y + 4 }, { x: th3.x + 18, y: th3.y + 16 }, false, th3Cm > 1.5);
+    drawMuscle({ x: th3.x + 6, y: th3.y + 4 }, { x: th3.x + 18, y: th3.y + 16 }, false, th3Cm < -2.0);
 
     // 脊柱起立筋群 (Th3 - L3 - S2 背面)
-    drawMuscle({ x: th3.x + 6, y: th3.y + 10 }, { x: l3.x + 6, y: l3.y }, (s2Cm > 2.0 || th3Cm > 2.5), false);
+    drawMuscle({ x: th3.x + 6, y: th3.y + 10 }, { x: l3.x + 6, y: l3.y }, (s2Cm > 2.0), false);
     drawMuscle({ x: l3.x + 6, y: l3.y }, { x: s2.x + 4, y: s2.y }, s2Cm > 2.0, false);
 
     // 腹筋コア群 (Th3前面 - 骨盤前面)
-    drawMuscle({ x: th3.x - 16, y: th3.y + 10 }, { x: hip.x - 14, y: hip.y - 5 }, false, s2Cm < -2.0);
+    drawMuscle({ x: th3.x - 16, y: th3.y + 10 }, { x: hip.x - 10, y: hip.y - 5 }, false, s2Cm < -1.5);
 
     // 腸腰筋 (L3 - 股関節前面)
-    drawMuscle(l3, { x: hip.x - 8, y: hip.y + 10 }, s2Cm > 2.0, s2Cm < -2.0);
+    drawMuscle(l3, { x: hip.x - 6, y: hip.y + 10 }, s2Cm > 2.0, s2Cm < -1.5);
 
     // 大臀筋 (S2 - 大腿骨後面)
-    drawMuscle({ x: s2.x + 5, y: s2.y + 5 }, { x: hip.x + 12, y: hip.y + 20 }, false, Math.abs(s2Cm) > 2.0);
+    drawMuscle({ x: s2.x + 5, y: s2.y + 5 }, { x: hip.x + 10, y: hip.y + 20 }, false, Math.abs(s2Cm) > 1.5);
 
     // ハムストリングス (骨盤坐骨 - 膝裏)
-    drawMuscle({ x: hip.x + 10, y: hip.y + 12 }, { x: knee.x + 8, y: knee.y }, s2Cm < -2.0, false);
+    drawMuscle({ x: hip.x + 8, y: hip.y + 12 }, { x: knee.x + 6, y: knee.y }, s2Cm < -1.5, false);
 
     // --- 2. 足部（足底・つま先・かかと）の描画 ---
-    ctx.fillStyle = 'rgba(30, 41, 59, 0.4)';
+    ctx.fillStyle = 'rgba(30, 41, 59, 0.5)';
     ctx.strokeStyle = '#64748b';
     ctx.lineWidth = 1.5;
     ctx.beginPath();
@@ -1287,32 +1288,77 @@ biomechanics.renderMusculoskeletalAvatar = function (canvas, c2Cm, th3Cm, s2Cm, 
 
 /**
  * 側面姿勢ランドマークからC2, Th3, S2の実寸変位量 (cm) を抽出する
+ * ※ drawKendallAlignment（カメラ画面表示）と100%同一の数理モデルで完全一致算出
  * @param {Array} kps - MediaPipeランドマーク配列
  * @param {string} mode - 'l_side' または 'r_side'
- * @param {number} [pxToCmRatio] - 1pxあたりのcm換算比率（省略時は0.35cm/pxの標準値を採用）
- * @returns {{c2Cm: number, th3Cm: number, s2Cm: number}|null}
+ * @param {number} [pxToCmRatio] - 1pxあたりのcm換算比率
+ * @param {number} [footSize] - 足サイズ (cm)
+ * @param {number} [estimatedPelvicTilt] - 骨盤傾斜角 (度)
+ * @param {number} [arucoMidlineX] - アルコ正中線X座標
+ * @returns {{c2Cm: number, th3Cm: number, th11Cm: number, l3Cm: number, s2Cm: number}|null}
  */
-biomechanics.extractKendallOffsets = function (kps, mode, pxToCmRatio) {
+biomechanics.extractKendallOffsets = function (kps, mode, pxToCmRatio, footSize, estimatedPelvicTilt, arucoMidlineX) {
     if (!kps || !Array.isArray(kps) || kps.length < 29) return null;
     var isLeft = (mode === 'l_side');
+    var dir = isLeft ? -1 : 1;
+
     var ear = isLeft ? kps[7] : kps[8];
-    var shoulder = isLeft ? kps[11] : kps[12];
+    var sh = isLeft ? kps[11] : kps[12];
     var hip = isLeft ? kps[23] : kps[24];
     var ankle = isLeft ? kps[27] : kps[28];
 
-    if (!ear || !shoulder || !hip || !ankle) return null;
+    var targetAnkle = (ankle && ankle.score > 0.1) ? ankle : null;
+    if (!targetAnkle) {
+        var heel = isLeft ? kps[29] : kps[30];
+        if (heel && heel.score > 0.1) targetAnkle = heel;
+    }
 
-    var ratio = pxToCmRatio || 0.35;
-    var dir = isLeft ? 1 : -1;
-    var plumbX = ankle.x;
+    if (!ear || !sh || !hip || !targetAnkle || ear.score < 0.1 || sh.score < 0.1 || hip.score < 0.1) return null;
 
-    var c2Cm = ((ear.x - (dir * 1.0 / ratio)) - plumbX) * ratio * dir;
-    var th3Cm = (shoulder.x - plumbX) * ratio * dir;
-    var s2Cm = ((hip.x - (dir * 3.0 / ratio)) - plumbX) * ratio * dir;
+    var ratio = pxToCmRatio || 0.15;
+    var footCm = footSize || 25;
+    var useAruco = typeof arucoMidlineX === 'number' && isFinite(arucoMidlineX);
+
+    var plumbX;
+    if (useAruco) {
+        plumbX = arucoMidlineX;
+    } else {
+        // Plumbline falls slightly anterior to the lateral malleolus (外果の約15%前方)
+        var plumbOffsetPx = (footCm * 0.15) / ratio;
+        plumbX = targetAnkle.x + (dir * plumbOffsetPx);
+    }
+
+    // 5大メルクマール座標（drawKendallAlignmentと完全一致）
+    var c2 = { x: ear.x - (dir * (1.0 / ratio)), y: ear.y + (2.0 / ratio) };
+    var th3 = { x: sh.x, y: sh.y };
+
+    var tiltRad = (estimatedPelvicTilt || 0) * (Math.PI / 180);
+    var s2OffsetZ = 3.0 / ratio;
+    var s2OffsetY = 2.0 / ratio;
+    var s2X = hip.x - (dir * (s2OffsetZ * Math.cos(tiltRad) - s2OffsetY * Math.sin(tiltRad)));
+    var s2Y = hip.y + (s2OffsetZ * Math.sin(tiltRad) + s2OffsetY * Math.cos(tiltRad));
+    var s2 = { x: s2X, y: s2Y };
+
+    var lumbarDepth = (3.0 + ((estimatedPelvicTilt || 0) * 0.1)) / ratio;
+    var l3Y = s2.y - ((s2.y - sh.y) * 0.3);
+    var l3X = s2.x + (dir * lumbarDepth);
+    var l3 = { x: l3X, y: l3Y };
+
+    var th11Y = s2.y - ((s2.y - sh.y) * 0.65);
+    var th11X = s2.x + (dir * (0.8 / ratio));
+    var th11 = { x: th11X, y: th11Y };
+
+    var c2Cm = (c2.x - plumbX) * ratio * dir;
+    var th3Cm = (th3.x - plumbX) * ratio * dir;
+    var th11Cm = (th11.x - plumbX) * ratio * dir;
+    var l3Cm = (l3.x - plumbX) * ratio * dir;
+    var s2Cm = (s2.x - plumbX) * ratio * dir;
 
     return {
         c2Cm: parseFloat(c2Cm.toFixed(1)),
         th3Cm: parseFloat(th3Cm.toFixed(1)),
+        th11Cm: parseFloat(th11Cm.toFixed(1)),
+        l3Cm: parseFloat(l3Cm.toFixed(1)),
         s2Cm: parseFloat(s2Cm.toFixed(1))
     };
 };

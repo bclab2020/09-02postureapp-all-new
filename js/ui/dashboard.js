@@ -164,20 +164,15 @@ export function initDashboard(dataService) {
         }
 
         // --- 4方向総合所見 (multi-view synthesis, v4.6.16で追加) ---
-        // state.multiViewSessionIdsは、履歴の4面まとめ画面からのレポート
-        // 表示（js/ui/batchReview.jsのviewHistoryBatchReport）や、ライブ
-        // 撮影の4面確定直後（finalizeBatch）からのみ明示的にセットされる。
-        // それ以外の文脈（履歴の個別セッションのレポート等）では常にnullの
-        // ままなので、既存のレポート内容・見た目は一切変わらない。
         var multiViewMarkdown = null;
         try {
             var multiViewIds = state.multiViewSessionIds;
             var multiViewModes = multiViewIds ? ['front', 'l_side', 'back', 'r_side'].filter(function (m) { return !!multiViewIds[m]; }) : [];
-            if (multiViewModes.length >= 2) {
+            if (multiViewModes.length >= 2 && _dataService) {
                 var metricsByMode = {};
                 for (var mvi = 0; mvi < multiViewModes.length; mvi++) {
                     var mvMode = multiViewModes[mvi];
-                    var mvSession = await dataService.getSessionFull(multiViewIds[mvMode]);
+                    var mvSession = await _dataService.getSessionFull(multiViewIds[mvMode]);
                     if (mvSession) metricsByMode[mvMode] = apiManager.extractMetrics(mvSession);
                 }
                 if (Object.keys(metricsByMode).length >= 2) {
@@ -286,98 +281,114 @@ export function initDashboard(dataService) {
         }
 
         // 側方データがある場合の代償筋骨格解析カード生成 (Janda & Kendall 連鎖モデル)
-        var sideKps = (reportDataStore['l_side'] && reportDataStore['l_side'].length > 0)
-            ? reportDataStore['l_side']
-            : ((reportDataStore['r_side'] && reportDataStore['r_side'].length > 0)
-                ? reportDataStore['r_side']
-                : ((metrics.mode === 'l_side' || metrics.mode === 'r_side') ? (activeSession.poseData && activeSession.poseData[0] ? activeSession.poseData[0].keypoints : null) : null));
-        var sideMode = (reportDataStore['l_side'] && reportDataStore['l_side'].length > 0) ? 'l_side' : ((reportDataStore['r_side'] && reportDataStore['r_side'].length > 0) ? 'r_side' : metrics.mode);
-        var kendallOffsets = sideKps ? biomechanics.extractKendallOffsets(sideKps, sideMode) : null;
+        var sideKps = null;
+        var sideMode = 'l_side';
 
-        if (kendallOffsets) {
-            var c2 = kendallOffsets.c2Cm;
-            var th3 = kendallOffsets.th3Cm;
-            var s2 = kendallOffsets.s2Cm;
-
-            var patientAge = (activeSession && activeSession.patientAge) ? parseInt(activeSession.patientAge, 10) : null;
-            var AGE_PROFILES = {
-                child:  { headKg: 3.5, thoracicKg: 9.0,  lumbarKg: 15.0 }, // 6-9歳 (体重約25kg)
-                junior: { headKg: 4.2, thoracicKg: 16.0, lumbarKg: 27.0 }, // 10-14歳 (体重約45kg)
-                youth:  { headKg: 4.8, thoracicKg: 20.0, lumbarKg: 35.0 }, // 15-18歳 (体重約58kg)
-                adult:  { headKg: 5.0, thoracicKg: 23.0, lumbarKg: 40.0 }, // 19-64歳 (体重約65kg)
-                senior: { headKg: 4.6, thoracicKg: 20.0, lumbarKg: 35.0 }  // 65歳以上 (体重約58kg)
-            };
-
-            var profile = AGE_PROFILES.adult;
-            if (patientAge) {
-                if (patientAge <= 9) profile = AGE_PROFILES.child;
-                else if (patientAge <= 14) profile = AGE_PROFILES.junior;
-                else if (patientAge <= 18) profile = AGE_PROFILES.youth;
-                else if (patientAge >= 65) profile = AGE_PROFILES.senior;
+        if (reportDataStore['l_side'] && Array.isArray(reportDataStore['l_side']) && reportDataStore['l_side'].length > 0) {
+            sideKps = reportDataStore['l_side'];
+            sideMode = 'l_side';
+        } else if (reportDataStore['r_side'] && Array.isArray(reportDataStore['r_side']) && reportDataStore['r_side'].length > 0) {
+            sideKps = reportDataStore['r_side'];
+            sideMode = 'r_side';
+        } else if (activeSession.mode === 'l_side' || activeSession.mode === 'r_side') {
+            sideMode = activeSession.mode;
+            if (activeSession.poseData && activeSession.poseData.length > 0) {
+                var lastFrame = activeSession.poseData[activeSession.poseData.length - 1];
+                sideKps = lastFrame.keypoints || (Array.isArray(lastFrame) ? lastFrame : null);
             }
-
-            var cervicalLoadKg = profile.headKg * (1 + Math.max(0, c2) / 2.5 * 1.5);
-            var cervicalMult = (cervicalLoadKg / profile.headKg).toFixed(1);
-
-            var thoracicLoadKg = profile.thoracicKg * (1 + Math.max(0, th3) / 3.0 * 0.8);
-            var thoracicMult = (thoracicLoadKg / profile.thoracicKg).toFixed(1);
-
-            var lumbarLoadKg = profile.lumbarKg * (1 + Math.abs(s2) / 3.0 * 0.7);
-            var lumbarMult = (lumbarLoadKg / profile.lumbarKg).toFixed(1);
-
-            var overactive = [];
-            var inhibited = [];
-            if (c2 > 2.0) {
-                overactive.push("後頭下筋群", "僧帽筋上部", "胸鎖乳突筋(短縮)");
-                inhibited.push("頚部深層屈筋群");
-            }
-            if (th3 > 1.5) {
-                overactive.push("小胸筋(短縮・巻き肩)", "僧帽筋上部(代償性過緊張)", "大胸筋");
-                inhibited.push("菱形筋(背部脱力)", "前鋸筋", "僧帽筋下部");
-            } else if (th3 < -1.5) {
-                overactive.push("胸椎伸展筋群(過平背)");
-                inhibited.push("胸椎生理的後弯機能");
-            }
-            if (s2 < -2.0) {
-                overactive.push("ハムストリングス(過緊張)", "大腿筋膜張筋", "腰部椎間関節剪断");
-                inhibited.push("大臀筋(不活性化)", "腸腰筋(伸張脱力)", "腹横筋(コア)");
-            } else if (s2 > 2.0) {
-                overactive.push("腸腰筋(短縮)", "大腿直筋", "腰背部脊柱起立筋");
-                inhibited.push("腹直筋", "大臀筋");
-            }
-            if (overactive.length === 0) overactive.push("なし（正常協調）");
-            if (inhibited.length === 0) inhibited.push("なし（正常活性）");
-
-            gridHtml += '<div class="dash-card musculoskeletal-card" style="grid-column: 1 / -1; background:rgba(15,23,42,0.9); border:1px solid #1e293b; border-radius:12px; padding:16px;">' +
-                '<div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:10px; margin-bottom:14px; flex-wrap:wrap; gap:8px;">' +
-                '<div><h3 style="margin:0; font-size:15px; color:var(--text-primary); display:flex; align-items:center; gap:6px;">🧬 矢状面 代償筋骨格解析 <span style="font-size:11px; color:#94a3b8; font-weight:normal;">(Janda / Kendall / Hansraj / Plagenhoef 連鎖モデル)</span></h3>' +
-                '<div style="font-size:11px; color:var(--text-secondary); margin-top:2px;">実測オフセット: C2 ' + (c2 > 0 ? '+' : '') + c2 + 'cm / Th3 ' + (th3 > 0 ? '+' : '') + th3 + 'cm / S2 ' + (s2 > 0 ? '+' : '') + s2 + 'cm' + (patientAge ? ' (年齢 ' + patientAge + '歳適応)' : '') + '</div></div>' +
-                '<button type="button" id="openCounselingFromReportBtn" class="btn" style="background:#0f172a; border:1px solid #38bdf8; color:#38bdf8; font-size:11px; padding:5px 12px; border-radius:6px; cursor:pointer;">シミュレーターで確認 ↗</button>' +
-                '</div>' +
-                '<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px; align-items:center;">' +
-                '<div style="background:#060913; border:1px solid #1e293b; border-radius:10px; padding:10px; display:flex; flex-direction:column; align-items:center;">' +
-                '<canvas id="dashMuscleCanvas" width="280" height="280" style="max-width:260px; width:100%; aspect-ratio:1/1;"></canvas>' +
-                '<div style="width:100%; display:flex; justify-content:space-between; font-size:9px; color:#cbd5e1; background:rgba(15,23,42,0.8); padding:3px 8px; border-radius:4px; margin-top:4px;">' +
-                '<span style="color:#e11d48;">■ 過緊張</span><span style="color:#64748b;">■ 正常</span><span style="color:#38bdf8;">-- サボり筋</span>' +
-                '</div></div>' +
-                '<div style="display:flex; flex-direction:column; gap:8px;">' +
-                '<div style="background:rgba(15,23,42,0.8); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px 10px;">' +
-                '<div style="font-size:11px; font-weight:600; color:var(--text-primary); margin-bottom:4px;">📊 脊柱3大セグメント連動負荷解析</div>' +
-                '<div style="display:flex; justify-content:space-between; font-size:10.5px; margin-bottom:2px;"><span>🧠 頚椎実効負荷 (C2)</span><span style="color:#f8fafc; font-family:monospace; font-weight:bold;">' + cervicalLoadKg.toFixed(1) + ' kg (' + cervicalMult + '倍)</span></div>' +
-                '<div style="display:flex; justify-content:space-between; font-size:10.5px; margin-bottom:2px;"><span>🫁 胸椎剪断負荷 (Th3)</span><span style="color:#f8fafc; font-family:monospace; font-weight:bold;">' + thoracicLoadKg.toFixed(1) + ' kg (' + thoracicMult + '倍)</span></div>' +
-                '<div style="display:flex; justify-content:space-between; font-size:10.5px;"><span>🦴 腰椎(L5-S1)剪断力</span><span style="color:#f8fafc; font-family:monospace; font-weight:bold;">' + lumbarLoadKg.toFixed(1) + ' kg (' + lumbarMult + '倍)</span></div>' +
-                '</div>' +
-                '<div style="background:rgba(225,29,72,0.1); border:1px solid rgba(225,29,72,0.3); border-radius:6px; padding:8px 10px;">' +
-                '<div style="font-size:10.5px; font-weight:600; color:#fb7185; margin-bottom:2px;">🔥 過剰作用（ヤンダ過緊張筋）:</div>' +
-                '<div style="font-size:11px; color:#f1f5f9;">' + overactive.join("、") + '</div>' +
-                '</div>' +
-                '<div style="background:rgba(56,189,248,0.1); border:1px solid rgba(56,189,248,0.3); border-radius:6px; padding:8px 10px;">' +
-                '<div style="font-size:10.5px; font-weight:600; color:#38bdf8; margin-bottom:2px;">💤 不活性化（ヤンダ弱化・サボり筋）:</div>' +
-                '<div style="font-size:11px; color:#f1f5f9;">' + inhibited.join("、") + '</div>' +
-                '</div>' +
-                '<div style="font-size:10px; color:var(--text-secondary); line-height:1.4; margin-top:2px;">※ 側面の骨格幾何アライメントから、重心保持のために過負荷となっている筋群および機能低下している筋群を自動特定しています。</div>' +
-                '</div></div></div>';
+        } else if (state.playbackDataMP && state.playbackDataMP.length > 0 && (state.currentTab === 'l_side' || state.currentTab === 'r_side')) {
+            sideMode = state.currentTab;
+            sideKps = state.playbackDataMP[state.playbackDataMP.length - 1].keypoints;
         }
+
+        var kendallOffsets = sideKps ? biomechanics.extractKendallOffsets(sideKps, sideMode) : null;
+        // 側面データが未計測の場合でも、基準値(0,0,0)をベースにシミュレーターをフル活用可能にする
+        if (!kendallOffsets) {
+            kendallOffsets = { c2Cm: 0, th3Cm: 0, s2Cm: 0, isDefault: true };
+        }
+
+        var c2 = kendallOffsets.c2Cm;
+        var th3 = kendallOffsets.th3Cm;
+        var s2 = kendallOffsets.s2Cm;
+
+        var patientAge = (activeSession && activeSession.patientAge) ? parseInt(activeSession.patientAge, 10) : null;
+        var AGE_PROFILES = {
+            child:  { headKg: 3.5, thoracicKg: 9.0,  lumbarKg: 15.0 }, // 6-9歳 (体重約25kg)
+            junior: { headKg: 4.2, thoracicKg: 16.0, lumbarKg: 27.0 }, // 10-14歳 (体重約45kg)
+            youth:  { headKg: 4.8, thoracicKg: 20.0, lumbarKg: 35.0 }, // 15-18歳 (体重約58kg)
+            adult:  { headKg: 5.0, thoracicKg: 23.0, lumbarKg: 40.0 }, // 19-64歳 (体重約65kg)
+            senior: { headKg: 4.6, thoracicKg: 20.0, lumbarKg: 35.0 }  // 65歳以上 (体重約58kg)
+        };
+
+        var profile = AGE_PROFILES.adult;
+        if (patientAge) {
+            if (patientAge <= 9) profile = AGE_PROFILES.child;
+            else if (patientAge <= 14) profile = AGE_PROFILES.junior;
+            else if (patientAge <= 18) profile = AGE_PROFILES.youth;
+            else if (patientAge >= 65) profile = AGE_PROFILES.senior;
+        }
+
+        var cervicalLoadKg = profile.headKg * (1 + Math.max(0, c2) / 2.5 * 1.5);
+        var cervicalMult = (cervicalLoadKg / profile.headKg).toFixed(1);
+
+        var thoracicLoadKg = profile.thoracicKg * (1 + Math.max(0, th3) / 3.0 * 0.8);
+        var thoracicMult = (thoracicLoadKg / profile.thoracicKg).toFixed(1);
+
+        var lumbarLoadKg = profile.lumbarKg * (1 + Math.abs(s2) / 3.0 * 0.7);
+        var lumbarMult = (lumbarLoadKg / profile.lumbarKg).toFixed(1);
+
+        var overactive = [];
+        var inhibited = [];
+        if (c2 > 2.0) {
+            overactive.push("後頭下筋群", "僧帽筋上部", "胸鎖乳突筋(短縮)");
+            inhibited.push("頚部深層屈筋群");
+        }
+        if (th3 > 1.5) {
+            overactive.push("小胸筋(短縮・巻き肩)", "僧帽筋上部(代償性過緊張)", "大胸筋");
+            inhibited.push("菱形筋(背部脱力)", "前鋸筋", "僧帽筋下部");
+        } else if (th3 < -1.5) {
+            overactive.push("胸椎伸展筋群(過平背)");
+            inhibited.push("胸椎生理的後弯機能");
+        }
+        if (s2 < -2.0) {
+            overactive.push("ハムストリングス(過緊張)", "大腿筋膜張筋", "腰部椎間関節剪断");
+            inhibited.push("大臀筋(不活性化)", "腸腰筋(伸張脱力)", "腹横筋(コア)");
+        } else if (s2 > 2.0) {
+            overactive.push("腸腰筋(短縮)", "大腿直筋", "腰背部脊柱起立筋");
+            inhibited.push("腹直筋", "大臀筋");
+        }
+        if (overactive.length === 0) overactive.push("なし（正常協調）");
+        if (inhibited.length === 0) inhibited.push("なし（正常活性）");
+
+        gridHtml += '<div class="dash-card musculoskeletal-card" style="grid-column: 1 / -1; background:rgba(15,23,42,0.9); border:1px solid #1e293b; border-radius:12px; padding:16px;">' +
+            '<div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:10px; margin-bottom:14px; flex-wrap:wrap; gap:8px;">' +
+            '<div><h3 style="margin:0; font-size:15px; color:var(--text-primary); display:flex; align-items:center; gap:6px;">🧬 矢状面 代償筋骨格解析 <span style="font-size:11px; color:#94a3b8; font-weight:normal;">(Janda / Kendall / Hansraj / Plagenhoef 連鎖モデル)</span></h3>' +
+            '<div style="font-size:11px; color:var(--text-secondary); margin-top:2px;">実測オフセット: C2 ' + (c2 > 0 ? '+' : '') + c2 + 'cm / Th3 ' + (th3 > 0 ? '+' : '') + th3 + 'cm / S2 ' + (s2 > 0 ? '+' : '') + s2 + 'cm' + (patientAge ? ' (年齢 ' + patientAge + '歳適応)' : '') + (kendallOffsets.isDefault ? ' <span style="color:#38bdf8;">(基準ニュートラル)</span>' : '') + '</div></div>' +
+            '<button type="button" id="openCounselingFromReportBtn" class="btn" style="background:#0f172a; border:1px solid #38bdf8; color:#38bdf8; font-size:11px; padding:5px 12px; border-radius:6px; cursor:pointer;">シミュレーターで確認 ↗</button>' +
+            '</div>' +
+            '<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px; align-items:center;">' +
+            '<div style="background:#060913; border:1px solid #1e293b; border-radius:10px; padding:10px; display:flex; flex-direction:column; align-items:center;">' +
+            '<canvas id="dashMuscleCanvas" width="280" height="280" style="max-width:260px; width:100%; aspect-ratio:1/1;"></canvas>' +
+            '<div style="width:100%; display:flex; justify-content:space-between; font-size:9px; color:#cbd5e1; background:rgba(15,23,42,0.8); padding:3px 8px; border-radius:4px; margin-top:4px;">' +
+            '<span style="color:#e11d48;">■ 過緊張</span><span style="color:#64748b;">■ 正常</span><span style="color:#38bdf8;">-- サボり筋</span>' +
+            '</div></div>' +
+            '<div style="display:flex; flex-direction:column; gap:8px;">' +
+            '<div style="background:rgba(15,23,42,0.8); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px 10px;">' +
+            '<div style="font-size:11px; font-weight:600; color:var(--text-primary); margin-bottom:4px;">📊 脊柱3大セグメント連動負荷解析</div>' +
+            '<div style="display:flex; justify-content:space-between; font-size:10.5px; margin-bottom:2px;"><span>🧠 頚椎実効負荷 (C2)</span><span style="color:#f8fafc; font-family:monospace; font-weight:bold;">' + cervicalLoadKg.toFixed(1) + ' kg (' + cervicalMult + '倍)</span></div>' +
+            '<div style="display:flex; justify-content:space-between; font-size:10.5px; margin-bottom:2px;"><span>🫁 胸椎剪断負荷 (Th3)</span><span style="color:#f8fafc; font-family:monospace; font-weight:bold;">' + thoracicLoadKg.toFixed(1) + ' kg (' + thoracicMult + '倍)</span></div>' +
+            '<div style="display:flex; justify-content:space-between; font-size:10.5px;"><span>🦴 腰椎(L5-S1)剪断力</span><span style="color:#f8fafc; font-family:monospace; font-weight:bold;">' + lumbarLoadKg.toFixed(1) + ' kg (' + lumbarMult + '倍)</span></div>' +
+            '</div>' +
+            '<div style="background:rgba(225,29,72,0.1); border:1px solid rgba(225,29,72,0.3); border-radius:6px; padding:8px 10px;">' +
+            '<div style="font-size:10.5px; font-weight:600; color:#fb7185; margin-bottom:2px;">🔥 過剰作用（ヤンダ過緊張筋）:</div>' +
+            '<div style="font-size:11px; color:#f1f5f9;">' + overactive.join("、") + '</div>' +
+            '</div>' +
+            '<div style="background:rgba(56,189,248,0.1); border:1px solid rgba(56,189,248,0.3); border-radius:6px; padding:8px 10px;">' +
+            '<div style="font-size:10.5px; font-weight:600; color:#38bdf8; margin-bottom:2px;">💤 不活性化（ヤンダ弱化・サボり筋）:</div>' +
+            '<div style="font-size:11px; color:#f1f5f9;">' + inhibited.join("、") + '</div>' +
+            '</div>' +
+            '<div style="font-size:10px; color:var(--text-secondary); line-height:1.4; margin-top:2px;">※ 側面の骨格幾何アライメントから、重心保持のために過負荷となっている筋群および機能低下している筋群を自動特定しています。</div>' +
+            '</div></div></div>';
 
         if (state.isSpecialist) {
             gridHtml += '<div class="dash-card expert-card" style="grid-column: 1 / -1;">' +
@@ -392,9 +403,6 @@ export function initDashboard(dataService) {
 
         var formattedReport = formatMarkdownToHtml(reportMarkdown);
 
-        // 2026-08-26削除: レポート下部の「専門家メンターに個別相談する
-        // （有料予約）」ボタン（bookMentorBtn）は、企画者の依頼によりホーム
-        // 画面の同機能カード（index.htmlのhomeMentorCard）とあわせて撤去した。
         gridHtml += '<div class="dash-card ai-eval-card" id="aiEvalCard"><h3>🧠 AI 臨床インサイト・アセスメント</h3>' +
             '<div class="ai-eval-box" id="aiEvalContent">' + formattedReport + '</div>' +
             '</div>';
@@ -402,17 +410,19 @@ export function initDashboard(dataService) {
         grid.innerHTML = gridHtml;
 
         // レポート描画後のCanvas描画およびイベント配線
-        if (kendallOffsets) {
+        try {
             var dashCanvas = document.getElementById('dashMuscleCanvas');
             if (dashCanvas) {
-                biomechanics.renderMusculoskeletalAvatar(dashCanvas, kendallOffsets.c2Cm, kendallOffsets.th3Cm, kendallOffsets.s2Cm);
+                biomechanics.renderMusculoskeletalAvatar(dashCanvas, c2, th3, s2);
             }
             var openSimBtn = document.getElementById('openCounselingFromReportBtn');
             if (openSimBtn) {
                 openSimBtn.onclick = function () {
-                    openCounselingModal(kendallOffsets.c2Cm, kendallOffsets.th3Cm, kendallOffsets.s2Cm);
+                    openCounselingModal(c2, th3, s2);
                 };
             }
+        } catch (cardErr) {
+            console.error("[dashboard] Canvas/Button binding error:", cardErr);
         }
     };
 }

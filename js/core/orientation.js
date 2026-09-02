@@ -149,6 +149,9 @@ export function updateDigitalLevel() {
 }
 
 export function speakGuidance(text) {
+    // 2026-09-02修正: セルフ撮影（自撮り）モード以外では音声ガイダンスを鳴らさない（企画者要望）
+    if (!state.isSelfie) return;
+
     if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
         var utterance = new SpeechSynthesisUtterance(text);

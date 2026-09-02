@@ -10,8 +10,13 @@ import { openModal, closeModal, wireModal } from './modal.js';
 import { reportDataStore } from '../core/state.js';
 
 export function initCounselingUI() {
-    var modalId = 'counselingModal';
-    wireModal(modalId, 'closeCounselingBtn');
+    var modal = document.getElementById('counselingModal');
+    var closeBtn = document.getElementById('closeCounselingBtn');
+    if (closeBtn && modal) {
+        closeBtn.onclick = function () {
+            modal.style.display = 'none';
+        };
+    }
 
     var homeBtn = document.getElementById('homeCounselingCard');
     if (homeBtn) {
@@ -45,6 +50,7 @@ export function initCounselingUI() {
 }
 
 export function openCounselingModal(initialC2, initialTh3, initialS2) {
+    var modal = document.getElementById('counselingModal');
     var sliderC2 = document.getElementById('counselingSliderC2');
     var sliderTh3 = document.getElementById('counselingSliderTh3');
     var sliderS2 = document.getElementById('counselingSliderS2');
@@ -61,7 +67,10 @@ export function openCounselingModal(initialC2, initialTh3, initialS2) {
         }
     }
 
-    openModal('counselingModal');
+    if (modal) {
+        modal.style.display = 'flex';
+    }
+    updateCounselingSimulation();
     setTimeout(updateCounselingSimulation, 50);
 }
 

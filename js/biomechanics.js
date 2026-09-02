@@ -1289,9 +1289,10 @@ biomechanics.renderMusculoskeletalAvatar = function (canvas, c2Cm, th3Cm, s2Cm, 
  * 側面姿勢ランドマークからC2, Th3, S2の実寸変位量 (cm) を抽出する
  * @param {Array} kps - MediaPipeランドマーク配列
  * @param {string} mode - 'l_side' または 'r_side'
+ * @param {number} [pxToCmRatio] - 1pxあたりのcm換算比率（省略時は0.35cm/pxの標準値を採用）
  * @returns {{c2Cm: number, th3Cm: number, s2Cm: number}|null}
  */
-biomechanics.extractKendallOffsets = function (kps, mode) {
+biomechanics.extractKendallOffsets = function (kps, mode, pxToCmRatio) {
     if (!kps || !Array.isArray(kps) || kps.length < 29) return null;
     var isLeft = (mode === 'l_side');
     var ear = isLeft ? kps[7] : kps[8];
@@ -1301,7 +1302,7 @@ biomechanics.extractKendallOffsets = function (kps, mode) {
 
     if (!ear || !shoulder || !hip || !ankle) return null;
 
-    var ratio = state.pxToCmRatio || 0.35;
+    var ratio = pxToCmRatio || 0.35;
     var dir = isLeft ? 1 : -1;
     var plumbX = ankle.x;
 

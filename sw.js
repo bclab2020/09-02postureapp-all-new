@@ -1,4 +1,4 @@
-const CACHE_NAME = "athletecore-cache-v4.9.21";
+const CACHE_NAME = "athletecore-cache-v4.9.40-live";
 const ASSETS = [
   "./",
   "./index.html",
@@ -18,6 +18,8 @@ const ASSETS = [
   "./js/data/dataService.js",
   "./js/data/cloudStore.js",
   "./js/ui/controls.js",
+  "./js/ui/counseling.js",
+  "./js/ui/dynConfirm.js",
   "./js/ui/specialist.js",
   "./js/ui/history.js",
   "./js/ui/dashboard.js",

@@ -301,7 +301,7 @@ export function initDashboard(dataService) {
             sideKps = state.playbackDataMP[state.playbackDataMP.length - 1].keypoints;
         }
 
-        var kendallOffsets = sideKps ? biomechanics.extractKendallOffsets(sideKps, sideMode) : null;
+        var kendallOffsets = sideKps ? biomechanics.extractKendallOffsets(sideKps, sideMode, activeSession.pxToCmRatio) : null;
         // 側面データが未計測の場合でも、基準値(0,0,0)をベースにシミュレーターをフル活用可能にする
         if (!kendallOffsets) {
             kendallOffsets = { c2Cm: 0, th3Cm: 0, s2Cm: 0, isDefault: true };

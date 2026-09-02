@@ -393,12 +393,21 @@ export function captureSkeletonImage(mode) {
     // する（drawPoseOverlay参照）。理由の詳細はcamera.js側のコメント参照。
     if (canvasMP) {
         try {
-            var base64 = (typeof window.__captureCleanVideoFrameDataUrl === 'function')
-                ? window.__captureCleanVideoFrameDataUrl(0.85)
-                : null;
+            var base64 = null;
+            // 2026-09-02強化: 撮影終了時(stopRecording)にクリーンな静止画像(staticBackgroundData)が
+            // 既に確定している場合は、動いているビデオではなくその確定画像からJPEGを生成する。
+            if (state.staticBackgroundData) {
+                var off = document.createElement('canvas');
+                off.width = state.staticBackgroundData.width;
+                off.height = state.staticBackgroundData.height;
+                var octx = off.getContext('2d');
+                octx.putImageData(state.staticBackgroundData, 0, 0);
+                base64 = off.toDataURL('image/jpeg', 0.85);
+            } else if (typeof window.__captureCleanVideoFrameDataUrl === 'function') {
+                base64 = window.__captureCleanVideoFrameDataUrl(0.85);
+            }
             // ブリッジが万一使えない場合（カメラ未起動時の呼び出し等）は、
-            // 従来通りcanvasMPの内容をフォールバックとして使う（骨格線が
-            // 焼き込まれる可能性はあるが、写真が全く保存されないよりまし）。
+            // 従来通りcanvasMPの内容をフォールバックとして使う
             if (!base64) base64 = canvasMP.toDataURL('image/jpeg', 0.85);
             if (!reportDataStore[mode]) reportDataStore[mode] = [];
             reportDataStore[mode].capturedImage = base64;
@@ -667,7 +676,14 @@ export function exitPlaybackMode() {
 }
 
 export async function advanceToNextMeasurement(speakGuidanceFn) {
-    captureSkeletonImage(state.currentTab);
+    // 2026-09-02修正: 以前はここで無条件にcaptureSkeletonImage(state.currentTab)を呼んでいたが、
+    // 規定の5秒撮影終了時(stopRecording)に既に正しい姿勢写真が保存されている。
+    // ここで再度撮影すると、被測定者が「決定して次へ」を押すために前かがみになったり
+    // カメラへ歩み寄った瞬間の映像で正しい姿勢写真が上書きされてしまう不具合の
+    // 原因となっていたため、既に画像がある場合は上書きせず保護する。
+    if (!reportDataStore[state.currentTab] || !reportDataStore[state.currentTab].capturedImage) {
+        captureSkeletonImage(state.currentTab);
+    }
 
     // 4面確認・修正画面からの「🔁 撮り直す」経由の場合は、連続撮影チェーンには
     // 入らず、この1ポーズの撮影完了後にそのまま確認・修正画面へ戻る。
